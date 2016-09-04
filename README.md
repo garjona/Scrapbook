@@ -1,1 +1,6 @@
-# analisis-y-dise-o-de-software
+# Scrapbook
+Grupo 9
+Integrantes:
+Jorge Aliste
+Gabriel Arjona
+Felipe Monsalve

@@ -2,5 +2,5 @@
 Grupo 9 CSJ
 Integrantes:
 Jorge Aliste
-Gabriel Arjon
+Gabriel Arjona
 Felipe Monsalve

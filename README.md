@@ -1,5 +1,5 @@
 # Scrapbook
-Grupo 9
+Grupo 9 CSJ
 Integrantes:
 Jorge Aliste
 Gabriel Arjona G.

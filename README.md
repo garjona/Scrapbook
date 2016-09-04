@@ -2,5 +2,5 @@
 Grupo 9
 Integrantes:
 Jorge Aliste
-Gabriel Arjona
+Gabriel Arjona G.
 Felipe Monsalve

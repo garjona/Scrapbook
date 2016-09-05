@@ -9,6 +9,8 @@ var connection = mysql.createConnection({
     database : 'scrapbook'
 });
 
+
+
 connection.connect();
 
 connection.query("INSERT INTO administrador (mail, nombre, contrasenia) VALUES ('.usm.cl','gabriel arjona',230);");

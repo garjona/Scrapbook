@@ -17,6 +17,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="server.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="../css/skel-noscript.css" />
 			<link rel="stylesheet" href="../css/style.css" />
@@ -35,15 +36,15 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="#">Autonomy</a></h1>
+					<h1><a href="#">Scrapbook</a></h1>
 				</div>
 				
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Inicio</a></li>
-						<li><a href="IniciarSesion.html">Iniciar Sesión</a></li>
-						<li><a href="Registrarse.html">Registrarse</a></li>
+						<!--<li><a href="IniciarSesion.html">Iniciar Sesión</a></li>-->
+						<!--<li><a href="Registrarse.html">Registrarse</a></li>-->
 						<li class="active"><a href="Test.html">Test</a></li>
 					</ul>
 				</nav>
@@ -68,7 +69,7 @@
 									  <div style="margin-right:27px; text-align:justify;">
                                         <h4>Test de Kolb</h4>
                                         <p>                                         
- </p><form action="guardar_kolb.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="return validar(this)">
+ </p><form action="test" method="post" enctype="multipart/form-data" name="form1" onsubmit="return validar(this)">
 <table align="center" bgcolor="#FFFFFF" class="texto1"> 
   <tbody><tr><td colspan="4" bgcolor="#EBEBEB"> <div class="pre">
       1.- Cuando ante un problema debe dar una solución u obtener un resultado  urgente ¿cómo se comporta?
@@ -604,10 +605,10 @@ d)
 	alert(mns_error + mns_error2);
 			
 	}else{
-		
+        alert("Respuesta enviada correctamente");
 		document.form1.submit();
 	}
-}	
+}
 </script></body>
 
 						</section>

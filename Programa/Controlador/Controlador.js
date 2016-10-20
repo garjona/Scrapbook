@@ -17,7 +17,10 @@ app.controller('Test', function($scope) {
 });
 
 app.controller('Perfil', function($scope) {
-    $scope.message = 'Hola Desde Perfil';
+    $scope.Nombre='Felipe Monsalve';
+    $scope.Cargo='Alumno';
+    $scope.Carrera='Informática';
+    $scope.Campus='San Joaquín';
 });
 
 app.controller('Datos', function ($scope) {

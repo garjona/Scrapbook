@@ -16,6 +16,11 @@ app.controller('Test', function($scope) {
     $scope.message = 'Hola Desde Registrarse';
 });
 
+app.controller('Edicion', function($scope) {
+    $scope.message = 'Hola Desde Edición';
+});
+
+
 app.controller('Perfil', function($scope) {
     $scope.Nombre='Felipe Monsalve';
     $scope.Cargo='Alumno';
@@ -58,6 +63,10 @@ app.config(function($routeProvider) {
         .when('/Perfil', {
             templateUrl : '../Vista/Paginas/Perfil.html',
             controller  : 'Perfil'
+        })
+        .when('/Edicion', {
+            templateUrl : '../Vista/Paginas/Edición.html',
+            controller  : 'Edicion'
         })
 
         .otherwise({redirectTo: '/'});

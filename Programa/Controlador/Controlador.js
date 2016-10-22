@@ -1,5 +1,7 @@
 var app = angular.module('Controller',['ngRoute']);
 
+
+
 app.controller('Inicio', function($scope) {
     $scope.message = 'Hola Desde Inicio';
 });

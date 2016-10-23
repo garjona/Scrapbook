@@ -39,21 +39,32 @@
         </div>
         <div class=" uk-text-center">
             <div class="uk-vertical-align-middle" style="width: 300px;">
-                <form class="uk-panel uk-panel-box uk-form">
+                <form ng-submit="iniciarSesion()" id="iniciarSesion" name="iniciarSesion" class="uk-panel uk-panel-box uk-form">
                     <div class="uk-form-row">
-                        <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail Sansano">
+                        <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail Sansano" name="mail" id="mail" ng-model="user.mail">
                     </div>
                     <div class="uk-form-row">
-                        <input class="uk-width-1-1 uk-form-large" type="password" placeholder="Contraseña">
+                        <input class="uk-width-1-1 uk-form-large" type="password" placeholder="Contraseña" name="contrasenia" id="contrasenia" ng-model="user.contrasenia">
                     </div>
                     <div class="uk-form-row">
-                        <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="#/IniciarSesion">{{IniciarSesion}}</a>
+                        <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" id="enviar" onclick="funcion()" href=# ng-click="update(user)">{{IniciarSesion}}</a>
+                        <script type="text/javascript">
+
+                            function funcion() {
+                                var mail =  document.iniciarSesion.mail.value;
+                                //var contrasenia = document.iniciarSesion.contrasenia.value;
+                                document.getElementById("enviar").href = ConsultaBD(mail);
+                            }
+
+                        </script>
                     </div>
                     <div class="uk-form-row uk-text-small">
                         <label class="uk-float-left"><input type="checkbox"> Recordar mis datos</label>
                         <a class="uk-float-right uk-link uk-link-muted" href="#">¿Olvidaste tu contraseña?</a>
                     </div>
                 </form>
+                <pre>user = {{user | json}}</pre>
+                <pre>master = {{master | json}}</pre>
             </div>
         </div>
         <div class="uk-panel-space">

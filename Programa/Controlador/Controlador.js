@@ -1,6 +1,17 @@
 var app = angular.module('Controller',['ngRoute']);
 
+app.controller('IniciarSesion()',['$scope', function($scope) {
+    $scope.master = {};
 
+    $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+    };
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+
+    $scope.reset();
+}]);
 
 app.controller('Inicio', function($scope) {
     $scope.message = 'Hola Desde Inicio';
@@ -34,9 +45,9 @@ app.controller('Datos', function ($scope) {
     $scope.Inicio =  'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
     $scope.Registrarse = ' Registrarse ';
-    $scope.Mail='Mail Sansano'
-    $scope.Rol= 'Rol (Sin Guión)'
-    $scope.Contraseña= 'Contraseña'
+    $scope.Mail='Mail Sansano';
+    $scope.Rol= 'Rol (Sin Guión)';
+    $scope.Contraseña= 'Contraseña';
 
 });
 

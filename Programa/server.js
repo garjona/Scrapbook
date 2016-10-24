@@ -51,9 +51,12 @@ var servidor=http.createServer(function(pedido,respuesta){
     encaminar(pedido,respuesta,camino);
 });
 function ConsultaBDIniciarSesion(mail,contrasenia) {
-    var datos = [["gabriel.arjona.14","gabriel"],["jorge.aliste.14","jorge"]];
+    var datos = [["gabriel.arjona.14","gabriel","0"],["jorge.aliste.14","jorge","0"],["a","a","0"],["profesor","profesor","1"]];
     for (var i=0; i<datos.length; i++){
-        if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)){
+        if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)&&(datos[i][2]=="1")){
+            return "#/PerfilProfesor";
+        }
+        else if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)&&(datos[i][2]=="0")){
             return "#/Perfil";
         }
     }

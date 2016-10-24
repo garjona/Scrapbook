@@ -22,6 +22,18 @@ app.controller('Edicion', function($scope) {
     $scope.message = 'Hola Desde Edición';
 });
 
+app.controller('Perfil', function($scope) {
+    $scope.message = 'Hola Desde Perfil';
+});
+
+app.controller('PerfilProfesor', function($scope) {
+    $scope.message = 'Hola Desde Perfil Profesor';
+});
+
+app.controller('FIS120', function($scope) {
+    $scope.message = 'Hola Desde FIS120';
+});
+
 
 app.controller('Perfil', function($scope) {
     $scope.Nombre='Felipe Monsalve';
@@ -30,15 +42,25 @@ app.controller('Perfil', function($scope) {
     $scope.Campus='San Joaquín';
 });
 
+app.controller('PerfilProfesor', function($scope) {
+    $scope.Nombre='Dexter';
+    $scope.Cargo='Profesor';
+    $scope.Carrera='FIS 120';
+    $scope.Campus='San Joaquín';
+});
+
+
 app.controller('Datos', function ($scope) {
     $scope.Inicio =  'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
     $scope.Registrarse = ' Registrarse ';
-    $scope.Mail='Mail Sansano'
-    $scope.Rol= 'Rol (Sin Guión)'
-    $scope.Contraseña= 'Contraseña'
+    $scope.Mail='Mail Sansano';
+    $scope.Rol= 'Rol (Sin Guión)';
+    $scope.Contraseña= 'Contraseña';
 
 });
+
+
 
 app.controller('InlineEditorController', function($scope){
 
@@ -96,6 +118,14 @@ app.config(function($routeProvider) {
         .when('/Edicion', {
             templateUrl : '../Vista/Paginas/Edición.html',
             controller  : 'Edicion'
+        })
+        .when('/FIS120', {
+            templateUrl : '../Vista/Paginas/FIS120.html',
+            controller  : 'FIS120'
+        })
+        .when('/PerfilProfesor', {
+            templateUrl : '../Vista/Paginas/PerfilProfesor.html',
+            controller  : 'PerfilProfesor'
         })
 
         .otherwise({redirectTo: '/'});

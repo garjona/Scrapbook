@@ -50,6 +50,15 @@ var servidor=http.createServer(function(pedido,respuesta){
 
     encaminar(pedido,respuesta,camino);
 });
+function ConsultaBDIniciarSesion(mail,contrasenia) {
+    var datos = [["gabriel.arjona.14","gabriel"],["jorge.aliste.14","jorge"]];
+    for (var i=0; i<datos.length; i++){
+        if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)){
+            return "#/Perfil";
+        }
+    }
+    return "#/IniciarSesion"
+}
 
 function encaminar (pedido,respuesta,camino) {
     console.log(camino);

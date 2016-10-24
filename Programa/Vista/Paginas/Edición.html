@@ -40,12 +40,12 @@
     </div>
 </div>
 
-<div class="uk-grid ">
+<div class="uk-grid " ng-controller="InlineEditorController" ng-click="hideTooltip()">
     <div class="uk-width-1-3 ">
         <div class="Adaptador">
             <form class="uk-panel uk-panel-box uk-form">
                 <h4>Adaptador</h4>
-                <p>"It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+                <p id = "asd">"It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.
 
                     Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy…." </p>
             </form>
@@ -67,7 +67,9 @@
         <div class="Convergente">
             <form class="uk-panel uk-panel-box uk-form">
                 <h4>Convergente</h4>
-                <p>Luke Skywalker has returned to his home planet of Tatooine in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt. Little does Luke know that the GALACTIC EMPIRE has secretly begun construction on a new armored space station even more powerful than the first dreaded Death Star. When completed, this ultimate weapon will spell certain doom for the small band of rebels struggling to restore freedom to the galaxy...</p>
+                <p>Luke Skywalker has returned to his home planet of Tatooine
+                    in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt.
+                        Little does Luke know that the GALACTIC EMPIRE has secretly begun construction on a new armored space station even more powerful than the first dreaded Death Star. When completed, this ultimate weapon will spell certain doom for the small band of rebels struggling to restore freedom to the galaxy...</p>
             </form>
             <div class="uk-panel-space">
             </div>
@@ -133,13 +135,33 @@
         <div class="Adaptador Asimilador">
             <form class="uk-panel uk-panel-box uk-form">
                 <h4>Adaptador y Asimilador</h4>
-                <p>"There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi...."
-                </p>
+                <!--<p>"There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi...."
+                </p>-->
+                <!-- When this element is clicked, hide the tooltip -->
+                <div id="main" ng-controller="InlineEditorController" ng-click="hideTooltip()" ng-init="value= 'It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+
+         Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship'">
+
+                    <!-- This is the tooltip. It is shown only when the showtooltip variable is truthful -->
+                    <div class="tooltip" ng-click="$event.stopPropagation()" ng-show="showtooltip">
+
+                        <!-- ng-model binds the contents of the text field with the "value" model.
+                         Any changes to the text field will automatically update the value, and
+                         all other bindings on the page that depend on it.  -->
+                        <textarea type="text" ng-model="value" ></textarea>
+                    </div>
+
+                    <!-- Call a method defined in the InlineEditorController that toggles
+                     the showtooltip variable -->
+                    <p ng-click="toggleTooltip($event)">{{value}}</p>
+
+                </div>
             </form>
             <div class="uk-panel-space">
             </div>
         </div>
     </div>
+
 
 
     <div class="uk-width-1-3 ">

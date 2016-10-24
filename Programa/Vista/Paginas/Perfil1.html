@@ -1,0 +1,72 @@
+<nav ng-controller="Datos" class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+    </ul>
+</nav>
+<div class="uk-grid">
+    <div class="uk-width-3-4">
+        <div class="uk-flex-right">
+            <div class="uk-panel-space">
+            </div>
+            <div class="uk-align-center" style="width: 800px;">
+                <div class="uk-panel uk-panel-box ">
+                    <div class="uk-text-left-medium uk-align-left">
+                        <h1>Cursos</h1>
+                    </div>
+                    <div class="uk-text-large uk-text-left-medium uk-align-left">
+                        <ul>
+                            <li>Informática
+                                <ul>
+                                    <li>Estructura de Datos</li>
+                                    <li>Programación</li>
+                                    <li>Estructuras Discretas</li>
+                                    <li>Algoritmo y Complejidad</li>
+                                    <li>Fisica de Waffles</li>
+                                </ul>
+                            </li>
+                            <div class="uk-panel-space">
+                            </div>
+                            <li>Física
+                                <ul>
+                                    <li>FIS 100</li>
+                                    <li>FIS 110</li>
+                                    <li><a href="#/FIS1201"> FIS 120</a></li>
+                                    <li>FIS 130</li>
+                                    <li>FIS 140</li>
+                                </ul>
+                            </li>
+                            <div class="uk-panel-space">
+                            </div>
+                            <li>Matemática
+                                <ul>
+                                    <li>Mate I</li>
+                                    <li>Mate II</li>
+                                    <li>Mate III</li>
+                                    <li>Mate VI</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-4">
+        <div class="uk-panel-space">
+        </div>
+        <div class="uk-align-center" style="width: 300px;">
+            <div ng-controller="Jorge" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+                <img class="uk-border-circle" width="120" height="120"
+                     src="https://s-media-cache-ak0.pinimg.com/564x/5f/2e/8b/5f2e8bb9837ac966fe4346387082d346.jpg"
+                     alt="">
+                <input type="button" class="uk-width-1-1 uk-button uk-button-danger uk-active"
+                           value="{{Nombre}}">
+                <h5>{{Cargo}}</h5>
+                <h5>{{Carrera}}</h5>
+                <h5>{{Campus}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -33,6 +33,9 @@ app.controller('PerfilProfesor', function($scope) {
 app.controller('FIS120', function($scope) {
     $scope.message = 'Hola Desde FIS120';
 });
+app.controller('Perfil1', function($scope) {
+    $scope.message = 'Hola Desde Perfil1';
+});
 
 
 app.controller('Perfil', function($scope) {
@@ -46,6 +49,13 @@ app.controller('PerfilProfesor', function($scope) {
     $scope.Nombre='Dexter';
     $scope.Cargo='Profesor';
     $scope.Carrera='FIS 120';
+    $scope.Campus='San Joaquín';
+});
+
+app.controller('Jorge', function($scope) {
+    $scope.Nombre='Jorge Aliste';
+    $scope.Cargo='Alumno';
+    $scope.Carrera='Informática';
     $scope.Campus='San Joaquín';
 });
 
@@ -123,10 +133,22 @@ app.config(function($routeProvider) {
             templateUrl : '../Vista/Paginas/FIS120.html',
             controller  : 'FIS120'
         })
+
+        .when('/FIS1201', {
+            templateUrl : '../Vista/Paginas/FIS1201.html',
+            controller  : 'FIS1201'
+        })
+
         .when('/PerfilProfesor', {
             templateUrl : '../Vista/Paginas/PerfilProfesor.html',
             controller  : 'PerfilProfesor'
         })
+
+        .when('/Perfil1', {
+            templateUrl : '../Vista/Paginas/Perfil1.html',
+            controller  : 'Perfil1'
+        })
+
 
         .otherwise({redirectTo: '/'});
 });

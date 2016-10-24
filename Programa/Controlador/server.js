@@ -1,22 +1,17 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'scrapbook'
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "scrapbook"
 });
 
-var express = require('express');
 
+var express = require('express');
 //instanciar
 var app = express();
 
-app.get('/', function(req,res) {
-    res.sendfile(__dirname + '/Views/index.html');
-});
-app.get('/about', function(req, res){
-    res.sendfile(__dirname + 'Views/Registrarse.html');
-});
+
 
 
 var http=require('http');
@@ -39,17 +34,28 @@ var servidor=http.createServer(function(pedido,respuesta){
     if(camino=='/') {
         camino = 'Vista/Index.html';
     } else if(camino.substring(0, 15)=="/Controlador.js"){
-        camino = 'Controlador/controlador.js';
-    } else if(camino.substring(0,4)=="/Con"){
+        camino = 'Controlador/Controlador.js';
+    } else if(camino.substring(0,5)=="/Cont"){
         camino = "Controlador/Controlador.js";
     } else if (camino.substring(0,4)=="/Vis") {
         camino=camino.substring(1);
-    }else{
+    } else if (camino.substring(0,4)=="/ser") {
+        camino = "Controlador"+camino.substring();
+    }else {
             camino = 'Vista'+camino;
     }
 
     encaminar(pedido,respuesta,camino);
 });
+function ConsultaBDIniciarSesion(mail,contrasenia) {
+    var datos = [["gabriel.arjona.14","gabriel"],["jorge.aliste.14","jorge"]];
+    for (var i=0; i<datos.length; i++){
+        if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)){
+            return "#/Perfil";
+        }
+    }
+    return "#/IniciarSesion"
+}
 
 function encaminar (pedido,respuesta,camino) {
     console.log(camino);

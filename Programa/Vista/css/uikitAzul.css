@@ -2131,6 +2131,79 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   margin: 0;
   padding: 0;
 }
+
+
+textarea {
+    height:auto;
+    max-width:600px;
+    color:#999;
+    font:15px/1.3 'Open Sans', sans-serif;
+    width:77%;
+    background:#fff;
+    border-radius:3px;
+    line-height:2em;
+    border:none;
+    box-shadow:0px 0px 5px 1px rgba(0,0,0,0.1);
+    padding:30px;
+    -webkit-transition: height 2s ease;
+    -moz-transition: height 2s ease;
+    -ms-transition: height 2s ease;
+    -o-transition: height 2s ease;
+    transition: height 2s ease;
+}
+
+
+/*-------------------------
+	The edit tooltip
+--------------------------*/
+
+.tooltip{
+  background-color:#5c9bb7;
+
+  background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
+  background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
+  background-image:linear-gradient(top, #5c9bb7, #5392ad);
+
+  box-shadow: 0 1px 1px #ccc;
+  border-radius:3px;
+  width: 290px;
+  padding: 10px;
+
+  position: absolute;
+  left:50%;
+  margin-left:-150px;
+  top: 80px;
+}
+
+.tooltip:after{
+  /* The tip of the tooltip */
+  content:'';
+  position:absolute;
+  border:6px solid #5190ac;
+  border-color:#5190ac transparent transparent;
+  width:0;
+  height:0;
+  bottom:-12px;
+  left:50%;
+  margin-left:-6px;
+}
+
+.tooltip input{
+  border: none;
+  width: 100%;
+  line-height: 34px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px #bbb inset;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  color: #8d9395;
+  font-weight: bold;
+  outline: none;
+}
+
+
+
 .uk-form textarea {
   overflow: auto;
   vertical-align: top;

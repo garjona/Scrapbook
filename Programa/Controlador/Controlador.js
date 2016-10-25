@@ -42,6 +42,10 @@ app.controller('Perfil1', function($scope) {
     $scope.message = 'Hola Desde Perfil1';
 });
 
+app.controller('Mail', function($scope) {
+    $scope.message = 'Hola Desde Mail';
+});
+
 
 app.controller('Perfil', function($scope) {
     $scope.Nombre='Felipe Monsalve';
@@ -154,6 +158,10 @@ app.config(function($routeProvider) {
             controller  : 'Perfil1'
         })
 
+        .when('/Mail', {
+            templateUrl : '../Vista/Paginas/Mail.html',
+            controller  : 'Mail'
+        })
 
         .otherwise({redirectTo: '/'});
 });

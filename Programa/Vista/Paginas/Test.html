@@ -6,6 +6,8 @@
 <div class="uk-panel-space">
 </div>
 
+
+
 <div ng-controller="Datos" class="uk-grid">
     <div class="uk-width-1-10">
     </div>
@@ -707,6 +709,7 @@
                         <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="validar()"
                                value="Enviar">
                         <p id="mensaje"></p>
+                        <a id="redirigir" href="#/Mail"></a>
                     </div>
                 </div>
 
@@ -938,6 +941,7 @@
         else {
             CAEC = (p1c + p2c + p3c + p4c + p5c + p6c + p7c + p8c + p9c + p10c + p11c + p12c) - (p1a + p2a + p3a + p4a + p5a + p6a + p7a + p8a + p9a + p10a + p11a + p12a);
             EAOR = (p1d + p2d + p3d + p4d + p5d + p6d + p7d + p8d + p9d + p10d + p11d + p12d) - (p1b + p2b + p3b + p4b + p5b + p6b + p7b + p8b + p9b + p10b + p11b + p12b);
+            redireccion="Siguiente";
             if ((CAEC < 4) && (EAOR > 5 )) {
                 text = "Usted es un Adaptador";
             }
@@ -955,5 +959,6 @@
             }
         }
         document.getElementById("mensaje").innerHTML = text;
+        document.getElementById("redirigir").innerHTML = redireccion;
     }
 </script>

@@ -33,6 +33,11 @@ app.controller('PerfilProfesor', function($scope) {
 app.controller('FIS120', function($scope) {
     $scope.message = 'Hola Desde FIS120';
 });
+
+app.controller('FIS1201', function($scope) {
+    $scope.message = 'Hola Desde FIS1201';
+});
+
 app.controller('Perfil1', function($scope) {
     $scope.message = 'Hola Desde Perfil1';
 });

@@ -1,6 +1,23 @@
 var app = angular.module('Controller',['ngRoute']);
 
-
+app.controller('NuevoRegistro', function($scope,$http) {
+    $scope.submit= function(){
+        var data = $.param({
+            nombre: $scope.nombre,
+            mail: $scope.mail,
+            rol: $scope.rol,
+            contrasenia : $scope.contrasenia
+        });
+        $http.post("/api/registrarse", data).success(function(data, status) {
+            if (status=="Ok"){
+                $http.post("/Vista/Paginas/Inicio.html");
+            }else{
+                $http.post("/Vista/Paginas/Perfil.html");
+            }
+            console.log('Data posted successfully');
+        })
+    }
+});
 
 app.controller('Inicio', function($scope) {
     $scope.message = 'Hola Desde Inicio';

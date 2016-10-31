@@ -1,11 +1,3 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'scrapbook'
-});
-
 var express = require('express');
 
 //instanciar
@@ -18,7 +10,16 @@ app.get('/about', function(req, res){
     res.sendfile(__dirname + 'Views/Registrarse.html');
 });
 
+var mysql = require('mysql');
 
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'scrapbook'
+});
+
+connection.connect();
 var http=require('http');
 var url=require('url');
 var fs=require('fs');
@@ -39,32 +40,42 @@ var servidor=http.createServer(function(pedido,respuesta){
     if(camino=='/') {
         camino = 'Vista/Index.html';
     } else if(camino.substring(0, 15)=="/Controlador.js"){
-        camino = 'Controlador/controlador.js';
-    } else if(camino.substring(0,4)=="/Con"){
+        camino = 'Controlador/Controlador.js';
+    } else if(camino.substring(0,5)=="/Cont"){
         camino = "Controlador/Controlador.js";
+    } else if(camino.substring(0,5)=="/Cons"){
+        camino = "Controlador/Consulta.js";
     } else if (camino.substring(0,4)=="/Vis") {
         camino=camino.substring(1);
+    } else if (camino.substring(0,4)=="/ven") {
+        camino=camino.substring(1);
+    } else if (camino.substring(0,8)=="/api/reg") {
+        var info = '';
+        pedido.on('data', function(datosparciales){
+            info += datosparciales;
+        });
+        pedido.on('end', function() {
+            var formulario = querystring.parse(info);
+            //console.log(formulario["mail"]);
+            //console.log(toString(formulario['mail']));
+            connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '"+formulario["nombre"]+"', '"+formulario["rol"]+"', '"+formulario["contrasenia"]+"', '0', '0', '0');",function(err, res) {
+                if (err) {
+                    console.error(err);
+                    status = ("Hubo un error");
+                    res = "Hubo un error";
+                    return res;
+                } else {
+                    status = "Ok";
+                    res = "Ok";
+                    return res;
+                }});
+        });
     }else{
             camino = 'Vista'+camino;
     }
 
     encaminar(pedido,respuesta,camino);
 });
-function ConsultaBDIniciarSesion(mail,contrasenia) {
-    var datos = [["gabriel.arjona.14","gabriel","3"],["jorge.aliste.14","jorge","0"],["a","a","3"],["profesor","profesor","1"]];
-    for (var i=0; i<datos.length; i++){
-        if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)&&(datos[i][2]=="1")){
-            return "#/PerfilProfesor";
-        }
-        else if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)&&(datos[i][2]=="0")){
-            return "#/Perfil1";
-        }
-        else if ((datos[i][0] == mail) && (datos[i][1] == contrasenia)&&(datos[i][2]=="3")){
-            return "#/Perfil";
-        }
-    }
-    return "#/IniciarSesion"
-}
 
 function encaminar (pedido,respuesta,camino) {
     console.log(camino);

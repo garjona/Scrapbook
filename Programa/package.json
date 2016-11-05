@@ -5,6 +5,8 @@
   "dependencies": {
     "express": "3.x",
     "mysql": ">=2.5.0",
-    "http-post": ""
+    "http-post": "",
+    "cookie":"",
+    "cookie-parser":""
   }
 }

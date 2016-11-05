@@ -1,183 +1,190 @@
-var app = angular.module('Controller',['ngRoute']);
+var app = angular.module('Controller', ['ngRoute']);
 
-app.controller('NuevoRegistro', function($scope,$http) {
-    $scope.submit= function(){
+app.controller('NuevoRegistro', function ($scope, $http) {
+    $scope.submit = function () {
         var data = $.param({
             nombre: $scope.nombre,
             mail: $scope.mail,
             rol: $scope.rol,
-            contrasenia : $scope.contrasenia
+            contrasenia: $scope.contrasenia
         });
-        $http.post("/api/registrarse", data).success(function(data, status) {
-            if (status=="Ok"){
-                $http.post("/Vista/Paginas/Inicio.html");
-            }else{
-                $http.post("/Vista/Paginas/Perfil.html");
-            }
-            console.log('Data posted successfully');
-        })
+        $http.post("/api/registrarse", data)
+            .success(function (respuesta) {
+                if (respuesta == 'OK') {
+                    $scope.Registrarse = 'wibbly';
+                    $window.location.href = 'http://www.google.com';
+
+
+                } else {
+                    $scope.Registrarse = 'wobbly';
+                    $routeProvider('/Test');
+
+                }
+
+            })
+
+
     }
 });
 
-app.controller('Inicio', function($scope) {
+app.controller('Inicio', function ($scope) {
     $scope.message = 'Hola Desde Inicio';
 });
 
-app.controller('IniciarSesion', function($scope) {
+app.controller('IniciarSesion', function ($scope) {
     $scope.message = 'Hola Desde Iniciar Sesion';
 });
 
-app.controller('Registrarse', function($scope) {
+app.controller('Registrarse', function ($scope) {
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Test', function($scope) {
+app.controller('Test', function ($scope) {
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Edicion', function($scope) {
+app.controller('Edicion', function ($scope) {
     $scope.message = 'Hola Desde Edición';
 });
 
-app.controller('Perfil', function($scope) {
+app.controller('Perfil', function ($scope) {
     $scope.message = 'Hola Desde Perfil';
 });
 
-app.controller('PerfilProfesor', function($scope) {
+app.controller('PerfilProfesor', function ($scope) {
     $scope.message = 'Hola Desde Perfil Profesor';
 });
 
-app.controller('FIS120', function($scope) {
+app.controller('FIS120', function ($scope) {
     $scope.message = 'Hola Desde FIS120';
 });
 
-app.controller('FIS1201', function($scope) {
+app.controller('FIS1201', function ($scope) {
     $scope.message = 'Hola Desde FIS1201';
 });
 
-app.controller('Perfil1', function($scope) {
+app.controller('Perfil1', function ($scope) {
     $scope.message = 'Hola Desde Perfil1';
 });
 
-app.controller('Mail', function($scope) {
+app.controller('Mail', function ($scope) {
     $scope.message = 'Hola Desde Mail';
 });
 
 
-app.controller('Perfil', function($scope) {
-    $scope.Nombre='Felipe Monsalve';
-    $scope.Cargo='Alumno';
-    $scope.Carrera='Informática';
-    $scope.Campus='San Joaquín';
+app.controller('Perfil', function ($scope) {
+    $scope.Nombre = 'Felipe Monsalve';
+    $scope.Cargo = 'Alumno';
+    $scope.Carrera = 'Informática';
+    $scope.Campus = 'San Joaquín';
 });
 
-app.controller('PerfilProfesor', function($scope) {
-    $scope.Nombre='Dexter';
-    $scope.Cargo='Profesor';
-    $scope.Carrera='FIS 120';
-    $scope.Campus='San Joaquín';
+app.controller('PerfilProfesor', function ($scope) {
+    $scope.Nombre = 'Dexter';
+    $scope.Cargo = 'Profesor';
+    $scope.Carrera = 'FIS 120';
+    $scope.Campus = 'San Joaquín';
 });
 
-app.controller('Jorge', function($scope) {
-    $scope.Nombre='Jorge Aliste';
-    $scope.Cargo='Alumno';
-    $scope.Carrera='Informática';
-    $scope.Campus='San Joaquín';
+app.controller('Jorge', function ($scope) {
+    $scope.Nombre = 'Jorge Aliste';
+    $scope.Cargo = 'Alumno';
+    $scope.Carrera = 'Informática';
+    $scope.Campus = 'San Joaquín';
 });
 
 
 app.controller('Datos', function ($scope) {
-    $scope.Inicio =  'ScrapBooks';
+    $scope.Inicio = 'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
-    $scope.Registrarse = ' Registrarse ';
-    $scope.Mail='Mail Sansano';
-    $scope.Rol= 'Rol (Sin Guión)';
-    $scope.Contraseña= 'Contraseña';
+    //$scope.Registrarse = ' Registrarse ';
+    $scope.Mail = 'Mail Sansano';
+    $scope.Rol = 'Rol (Sin Guión)';
+    $scope.Contraseña = 'Contraseña';
 
 });
 
 
+app.controller('InlineEditorController', function ($scope) {
 
-app.controller('InlineEditorController', function($scope){
-
-    // $scope is a special object that makes
-    // its properties available to the view as
-    // variables. Here we set some default values:
-
-    $scope.showtooltip = false;
-    //$scope.value = document.getElementById('asd').textContent;
-
-    // Some helper functions that will be
-    // available in the angular declarations
-
-    $scope.hideTooltip = function(){
-
-        // When a model is changed, the view will be automatically
-        // updated by by AngularJS. In this case it will hide the tooltip.
+        // $scope is a special object that makes
+        // its properties available to the view as
+        // variables. Here we set some default values:
 
         $scope.showtooltip = false;
-    }
+        //$scope.value = document.getElementById('asd').textContent;
 
-    $scope.toggleTooltip = function(e){
-        e.stopPropagation();
-        $scope.showtooltip = !$scope.showtooltip;
+        // Some helper functions that will be
+        // available in the angular declarations
+
+        $scope.hideTooltip = function () {
+
+            // When a model is changed, the view will be automatically
+            // updated by by AngularJS. In this case it will hide the tooltip.
+
+            $scope.showtooltip = false;
+        }
+
+        $scope.toggleTooltip = function (e) {
+            e.stopPropagation();
+            $scope.showtooltip = !$scope.showtooltip;
+        }
     }
-}
 );
 
-app.config(function($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl : '../Vista/Paginas/Inicio.html',
-            controller  : 'Inicio'
+            templateUrl: '../Vista/Paginas/Inicio.html',
+            controller: 'Inicio'
         })
 
         .when('/IniciarSesion', {
-            templateUrl : '../Vista/Paginas/IniciarSesion.html',
-            controller  : 'IniciarSesion'
+            templateUrl: '../Vista/Paginas/IniciarSesion.html',
+            controller: 'IniciarSesion'
         })
 
         .when('/Registrarse', {
-            templateUrl : '../Vista/Paginas/Registrarse.html',
-            controller  : 'Registrarse'
+            templateUrl: '../Vista/Paginas/Registrarse.html',
+            controller: 'Registrarse'
         })
 
         .when('/Test', {
-            templateUrl : '../Vista/Paginas/Test.html',
-            controller  : 'Test'
+            templateUrl: '../Vista/Paginas/Test.html',
+            controller: 'Test'
         })
         .when('/Perfil', {
-            templateUrl : '../Vista/Paginas/Perfil.html',
-            controller  : 'Perfil'
+            templateUrl: '../Vista/Paginas/Perfil.html',
+            controller: 'Perfil'
         })
         .when('/Edicion', {
-            templateUrl : '../Vista/Paginas/Edición.html',
-            controller  : 'Edicion'
+            templateUrl: '../Vista/Paginas/Edición.html',
+            controller: 'Edicion'
         })
         .when('/FIS120', {
-            templateUrl : '../Vista/Paginas/FIS120.html',
-            controller  : 'FIS120'
+            templateUrl: '../Vista/Paginas/FIS120.html',
+            controller: 'FIS120'
         })
 
         .when('/FIS1201', {
-            templateUrl : '../Vista/Paginas/FIS1201.html',
-            controller  : 'FIS1201'
+            templateUrl: '../Vista/Paginas/FIS1201.html',
+            controller: 'FIS1201'
         })
 
         .when('/PerfilProfesor', {
-            templateUrl : '../Vista/Paginas/PerfilProfesor.html',
-            controller  : 'PerfilProfesor'
+            templateUrl: '../Vista/Paginas/PerfilProfesor.html',
+            controller: 'PerfilProfesor'
         })
 
         .when('/Perfil1', {
-            templateUrl : '../Vista/Paginas/Perfil1.html',
-            controller  : 'Perfil1'
+            templateUrl: '../Vista/Paginas/Perfil1.html',
+            controller: 'Perfil1'
         })
 
         .when('/Mail', {
-            templateUrl : '../Vista/Paginas/Mail.html',
-            controller  : 'Mail'
+            templateUrl: '../Vista/Paginas/Mail.html',
+            controller: 'Mail'
         })
 
         .otherwise({redirectTo: '/'});

@@ -123,6 +123,10 @@ app.controller('PerfilProfesor', function ($scope) {
     $scope.Campus = 'San Joaquín';
 });
 
+app.controller('Admin', function ($scope) {
+    $scope.message = 'Hola Desde Admin';
+});
+
 app.controller('Datos', function ($scope) {
     $scope.Inicio = 'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
@@ -220,6 +224,11 @@ app.config(function ($routeProvider) {
         .when('/Mail', {
             templateUrl: '../Vista/Paginas/Mail.html',
             controller: 'Mail'
+        })
+
+        .when('/Admin', {
+            templateUrl: '../Vista/Paginas/PerfilAdmin.html',
+            controller: 'Admin'
         })
 
         .otherwise({redirectTo: '/'});

@@ -124,6 +124,21 @@ function iniciarSesion(pedido,respuesta){
     });
     pedido.on('end', function () {
         var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM profesor where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"'", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }
+            else {
+                respuesta.end('OK,' + formulario["mail"] + ",Profesor," + json[0].Nombre);
+                //respuesta,mail,cargo,nombre
+            }
+        });
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
         connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"'", function (err, rows) {

@@ -6,724 +6,1041 @@
 <div class="uk-panel-space">
 </div>
 
-<div class="uk-text-center uk-text-large ">
-    Hola! Antes de empezar la diversión, necesitamos que llenes esta pequeña encuesta. No es nada dificil :3 no es FIS 120 ni nada por el estilo.
-    A cada una de las preguntas, debes responder con un número del 1 al 4, cada una de las alternativas con la que más te sientas identificado, siendo 1 poco identificado y 4 muy identificado. No puedes repetir los valores en una pregunta... eso :3
-</div>
-
-<div ng-controller="Datos" class="uk-grid">
+<div class="uk-grid">
     <div class="uk-width-1-10">
     </div>
     <div class="uk-width-8-10">
-        <form id="test" name="test" class="uk-panel-box uk-align-center">
-
-            <div class="uk-width-1-1">
-
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    1) Cuando aprendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p1a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) me gusta vivir sensaciones</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p1b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) me gusta pensar sobre ideas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p1c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) me gusta estar haciendo cosas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p1d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) me gusta obsevar y escuchar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    2) Aprendo mejor cuando...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p2a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) escucho y observo cuidadosamente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p2b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) confío en el pensamiento lógico</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p2c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) confío en mi intuición y sentiemientos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p2d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) trabajo duro para lograr hacer las cosas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    3) Cuando estoy aprendiendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p3a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) tiendo a usar el razonamiento</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p3b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) soy responsable con lo que hago</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p3c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) soy callado y reservado</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p3d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) tengo fuertes sensaciones y reacciones</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    4) Yo aprendo:
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p4a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) Sintiendo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p4b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) haciendo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p4c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) observando</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p4d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) pensando</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    5) Cuando aprendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p5a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) estoy abierto a nuevas experiencias</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p5b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) observo todos los aspectos del asunto</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p5c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) me gusta analizar las cosas, descomponerlas en sus partes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p5d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) me gusta probar e intentar hacer las cosas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    6) Cuando estoy aprendiendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p6a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) soy una persona observadora</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p6b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) soy una persona activa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p6c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) soy una persona intuitiva</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p6d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) soy una persona lógica</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    7) Yo aprendo mejor de...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p7a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) la observación</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p7b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) la relación con otras personas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p7c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) las teorías racionales</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p7d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) la oportunidad de probar y practicar</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    8) Cuando aprendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p8a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) me gusta ver los resultados de mi trabajo</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p8b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) me gustan las ideas y teorias</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p8c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) me tomo mi tiempo antes de actuar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p8d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) me siento personalmente incolucrado en las cosas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    9) Aprendo mejor cuando...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p9a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) confío en mis observaciones</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p9b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) confio en mis sentiemientos</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p9c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) puedo probar por mi cuenta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p9d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) confio en mis ideas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    10) Cuando estoy aprendiendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p10a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) soy una persona reservada</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p10b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) soy una persona receptiva</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p10c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) soy una persona responsable</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p10d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) soy una persona racional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    11) Cuando aprendo...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p11a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) me involucro</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p11b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) me gusta observar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p11c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) evalúo las cosas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p11d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) me gusta ser activo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-width-large-1-1 uk-visible-large">
-                    12) Aprendo mejor cuando...
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p12a">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>a) analizo ideas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p12b">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>b) soy receptivo y abierto</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p12c">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>c) soy cuidadoso</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-grid">
-                            <div class="uk-width-1-2">
-                                <div class="uk-form-small">
-                                    <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
-                                           placeholder="" name="p12d">
-                                </div>
-                            </div>
-                            <div class="uk-width-1-2">
-                                <p>d) soy práctico</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-2">
-                        <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="borrar()"
-                               value="Limpiar">
-                    </div>
-                    <div class="uk-width-1-2">
-                        <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="validar()"
-                               value="Enviar">
-                        <p id="mensaje"></p>
-                        <a id="redirigir" href="#/Mail"></a>
-                    </div>
-                </div>
-
+        <div class="uk-text-center uk-text-large ">
+            Hola! Antes de empezar la diversión, necesitamos que llenes esta pequeña encuesta. No es nada dificil :3 no
+            es FIS
+            120 ni nada por el estilo.
+            A cada una de las preguntas, debes responder con un número del 1 al 4, cada una de las alternativas con la
+            que más
+            te sientas identificado, siendo 1 poco identificado y 4 muy identificado. No puedes repetir los valores en
+            una
+            pregunta... eso :3
+        </div>
+        <div class="uk-panel-space">
+        </div>
+        <div class="informacionDeInicio">
+            <div class="uk-text-center uk-text-large ">
+                NADIE VERÁ TU INFORMACIÓN! (tu tampoco O_O)
             </div>
-        </form>
+            <div class="uk-panel-space">
+            </div>
+            <input  type="button" class="botonInicio uk-width-1-1 uk-button uk-button-primary" onclick="iniciar()"
+                    value="Aceptar e iniciar.">
+        </div>
+
     </div>
     <div class="uk-width-1-10">
     </div>
 </div>
-<div class="uk-panel-space">
+
+
+<div class="Test" id style="display: none">
+    <div ng-controller="Datos" class="uk-grid">
+        <div class="uk-width-1-10">
+        </div>
+
+        <div class="uk-width-8-10" >
+            <p>Pregunta: <a id="pregunta">1</a>/12</p>
+            <form id="test" name="test" class="uk-panel-box uk-align-center">
+
+                <div class="uk-width-1-1 ">
+
+                    <div class="pregunta1">
+                        <div class=" uk-width-large-1-1 uk-visible-large">
+                            Cuando aprendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p1a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) me gusta vivir sensaciones</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p1b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) me gusta pensar sobre ideas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p1c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) me gusta estar haciendo cosas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p1d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) me gusta obsevar y escuchar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta2">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Aprendo mejor cuando...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p2a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) escucho y observo cuidadosamente</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p2b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) confío en el pensamiento lógico</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p2c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) confío en mi intuición y sentiemientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p2d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) trabajo duro para lograr hacer las cosas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta3">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando estoy aprendiendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p3a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) tiendo a usar el razonamiento</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p3b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) soy responsable con lo que hago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p3c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) soy callado y reservado</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p3d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) tengo fuertes sensaciones y reacciones</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta4">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Yo aprendo:
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p4a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) Sintiendo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p4b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) haciendo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p4c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) observando</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p4d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) pensando</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta5">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando aprendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p5a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) estoy abierto a nuevas experiencias</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p5b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) observo todos los aspectos del asunto</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p5c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) me gusta analizar las cosas, descomponerlas en sus partes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p5d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) me gusta probar e intentar hacer las cosas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta6">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando estoy aprendiendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p6a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) soy una persona observadora</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p6b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) soy una persona activa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p6c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) soy una persona intuitiva</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p6d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) soy una persona lógica</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta7">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Yo aprendo mejor de...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p7a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) la observación</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p7b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) la relación con otras personas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p7c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) las teorías racionales</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p7d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) la oportunidad de probar y practicar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta8">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando aprendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p8a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) me gusta ver los resultados de mi trabajo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p8b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) me gustan las ideas y teorias</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p8c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) me tomo mi tiempo antes de actuar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p8d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) me siento personalmente incolucrado en las cosas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta9">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Aprendo mejor cuando...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p9a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) confío en mis observaciones</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p9b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) confio en mis sentiemientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p9c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) puedo probar por mi cuenta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p9d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) confio en mis ideas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta10">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando estoy aprendiendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p10a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) soy una persona reservada</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p10b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) soy una persona receptiva</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p10c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) soy una persona responsable</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p10d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) soy una persona racional</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta11">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Cuando aprendo...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p11a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) me involucro</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p11b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) me gusta observar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p11c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) evalúo las cosas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p11d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) me gusta ser activo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pregunta12">
+                        <div class="uk-width-large-1-1 uk-visible-large">
+                            Aprendo mejor cuando...
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p12a">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>a) analizo ideas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p12b">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>b) soy receptivo y abierto</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p12c">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>c) soy cuidadoso</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-4">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-form-small">
+                                            <input class="uk-width-1-2 uk-form-width-mini uk-align-center" type="Text"
+                                                   placeholder="" name="p12d">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2">
+                                        <p>d) soy práctico</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-grid">
+                        <div class="uk-width-1-4">
+                            <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="anterior()"
+                                   value="<- Anterior">
+                        </div>
+                        <div class="uk-width-1-4">
+                            <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="siguiente()"
+                                   value="Siguiente ->">
+                        </div>
+                        <div class="uk-width-1-4">
+                            <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="borrar()"
+                                   value="Limpiar Todo">
+                        </div>
+                        <div class="uk-width-1-4">
+                            <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="validar()"
+                                   value="Enviar">
+                            <p id="mensaje"></p>
+                            <a id="redirigir" href="#/Mail"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="uk-width-1-10">
+        </div>
+    </div>
+    <div class="uk-panel-space">
+    </div>
 </div>
+
+
+<script>
+    function iniciar(){
+        $('.Test').show();
+        $('.botonInicio').hide();
+        $('.informacionDeInicio').hide();
+        $('.pregunta1').show();
+        $('.pregunta2').hide();
+        $('.pregunta3').hide();
+        $('.pregunta4').hide();
+        $('.pregunta5').hide();
+        $('.pregunta6').hide();
+        $('.pregunta7').hide();
+        $('.pregunta8').hide();
+        $('.pregunta9').hide();
+        $('.pregunta10').hide();
+        $('.pregunta11').hide();
+        $('.pregunta12').hide();
+    }
+
+</script>
+
+<script>
+    var pregunta = 1;
+    function siguiente() {
+        if (pregunta < 12) {
+            pregunta += 1;
+            $('.Siguiente').show();
+            $('.Anterior').show();
+            mostrarPregunta();
+        }
+        else {
+            $('.Siguiente').hide();
+        }
+        document.getElementById("pregunta").innerHTML = pregunta;
+    }
+</script>
+
+<script>
+    function anterior() {
+        if (pregunta > 1) {
+            pregunta -= 1;
+            $('.Anterior').show();
+            $('.Siguiente').show();
+            mostrarPregunta();
+        } else {
+            $('.Anterior').hide();
+        }
+        document.getElementById("pregunta").innerHTML = pregunta;
+    }
+</script>
+
+<script>
+    function mostrarPregunta() {
+        if (pregunta == 1) {
+            $('.pregunta1').show();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+
+        }
+        else if (pregunta == 2) {
+            $('.pregunta1').hide();
+            $('.pregunta2').show();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 3) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').show();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 4) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').show();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 5) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').show();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 6) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').show();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 7) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').show();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 8) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').show();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 9) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').show();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 10) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').show();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 11) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').show();
+            $('.pregunta12').hide();
+
+        }
+        else if (pregunta == 12) {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').show();
+
+        }
+        else {
+            $('.pregunta1').hide();
+            $('.pregunta2').hide();
+            $('.pregunta3').hide();
+            $('.pregunta4').hide();
+            $('.pregunta5').hide();
+            $('.pregunta6').hide();
+            $('.pregunta7').hide();
+            $('.pregunta8').hide();
+            $('.pregunta9').hide();
+            $('.pregunta10').hide();
+            $('.pregunta11').hide();
+            $('.pregunta12').hide();
+        }
+
+    }
+</script>
 
 <script>
     function borrar() {
@@ -944,7 +1261,7 @@
         else {
             CAEC = (p1c + p2c + p3c + p4c + p5c + p6c + p7c + p8c + p9c + p10c + p11c + p12c) - (p1a + p2a + p3a + p4a + p5a + p6a + p7a + p8a + p9a + p10a + p11a + p12a);
             EAOR = (p1d + p2d + p3d + p4d + p5d + p6d + p7d + p8d + p9d + p10d + p11d + p12d) - (p1b + p2b + p3b + p4b + p5b + p6b + p7b + p8b + p9b + p10b + p11b + p12b);
-            redireccion="Siguiente";
+            redireccion = "Siguiente";
             if ((CAEC < 4) && (EAOR > 5 )) {
                 text = "Usted es un Adaptador";
             }

@@ -1,3 +1,10 @@
+var MensajeError='';
+var NombreActivo= '';
+var MailActivo= '';
+var TipoDeAprendizajeActivo = '';
+var CargoActivo = '';
+var CarreraActivo = '';
+var CampusActivo = '';
 var app = angular.module('Controller', ['ngRoute']);
 
 app.controller('NuevoRegistro', function ($scope, $http, $window) {
@@ -6,19 +13,57 @@ app.controller('NuevoRegistro', function ($scope, $http, $window) {
             nombre: $scope.nombre,
             mail: $scope.mail,
             rol: $scope.rol,
-            contrasenia: $scope.contrasenia
+            contrasenia: $scope.contrasenia,
+            carrera: $scope.carrera,
+            campus: $scope.campus
         });
         $http.post("/api/registrarse", data)
             .success(function (respuesta) {
-                if (respuesta == 'OK') {
-                    $scope.Registrarse = 'wibbly';
-                    $window.location.href = 'http://www.google.com';
+                //la respuesta es un string con respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+                if (respuesta.split(",")[0] == 'OK') {
+                    $scope.MensajeError = 'Listo';
+                    //$window.location.href = 'http://www.google.com';
+                    MailActivo = respuesta.split(",")[1];
+                    CargoActivo = respuesta.split(",")[2];
+                    NombreActivo = respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
+                    CarreraActivo = respuesta.split(",")[9];
+                    CampusActivo = respuesta.split(",")[8];
+                    $window.location = "#/Test";
 
 
                 } else {
-                    $scope.Registrarse = 'wobbly';
-                    $routeProvider('/Test');
+                    $scope.MensajeError = 'El mail ya está inscrito';
+                    $window.location = "#/Registrarse"
 
+                }
+
+            })
+
+
+    }
+});
+
+app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
+    $scope.submit = function () {
+        var data = $.param({
+            mail: $scope.mail,
+            contrasenia: $scope.contrasenia
+        });
+        $http.post("/api/iniciarSesion", data)
+            .success(function (respuesta) {
+                //respusta es un string de tipo: respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+                if (respuesta.split(",")[0] == 'OK') {
+                    $scope.MensajeError = 'Listo';
+                    //$window.location.href = 'http://www.google.com';
+                    MailActivo = respuesta.split(",")[1];
+                    CargoActivo = respuesta.split(",")[2];
+                    NombreActivo = respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
+                    CarreraActivo = respuesta.split(",")[9];
+                    CampusActivo = respuesta.split(",")[8];
+                    //NombreActivo = respuesta.split(" ")[2];
+                    $window.location = "#/Perfil";
+                } else {
+                    $window.location = "#/IniciarSesion";
                 }
 
             })
@@ -71,14 +116,6 @@ app.controller('Mail', function ($scope) {
     $scope.message = 'Hola Desde Mail';
 });
 
-
-app.controller('Perfil', function ($scope) {
-    $scope.Nombre = 'Felipe Monsalve';
-    $scope.Cargo = 'Alumno';
-    $scope.Carrera = 'Informática';
-    $scope.Campus = 'San Joaquín';
-});
-
 app.controller('PerfilProfesor', function ($scope) {
     $scope.Nombre = 'Dexter';
     $scope.Cargo = 'Profesor';
@@ -86,24 +123,22 @@ app.controller('PerfilProfesor', function ($scope) {
     $scope.Campus = 'San Joaquín';
 });
 
-app.controller('Jorge', function ($scope) {
-    $scope.Nombre = 'Jorge Aliste';
-    $scope.Cargo = 'Alumno';
-    $scope.Carrera = 'Informática';
-    $scope.Campus = 'San Joaquín';
-});
-
-
 app.controller('Datos', function ($scope) {
     $scope.Inicio = 'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
-    //$scope.Registrarse = ' Registrarse ';
+    $scope.Registrarse = ' Registrarse ';
     $scope.Mail = 'Mail Sansano';
     $scope.Rol = 'Rol (Sin Guión)';
     $scope.Contraseña = 'Contraseña';
+    $scope.MensajeError= MensajeError;
+    $scope.NombreActivo= NombreActivo;
+    $scope.MailActivo= MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
 
 });
-
 
 app.controller('InlineEditorController', function ($scope) {
 
@@ -123,7 +158,7 @@ app.controller('InlineEditorController', function ($scope) {
             // updated by by AngularJS. In this case it will hide the tooltip.
 
             $scope.showtooltip = false;
-        }
+        };
 
         $scope.toggleTooltip = function (e) {
             e.stopPropagation();

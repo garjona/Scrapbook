@@ -36,7 +36,7 @@
         <div class="uk-panel-space">
         </div>
         <div class=" uk-text-center">
-            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="NuevoRegistro">
+            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="NuevoIniciarSesion">
                 <form class="uk-panel uk-panel-box uk-form">
                     <div class="uk-form-row">
                         <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail Sansano" ng-model="mail">
@@ -47,6 +47,7 @@
                     <div class="uk-form-row">
                         <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">{{IniciarSesion}}</a>
                     </div>
+                    {{MensajeError}}
                     <div class="uk-form-row uk-text-small">
                         <label class="uk-float-left"><input type="checkbox"> Recordar mis datos</label>
                         <a class="uk-float-right uk-link uk-link-muted" href="#">¿Olvidaste tu contraseña?</a>
@@ -75,7 +76,24 @@
                         <input class="uk-width-1-1 uk-form-large" type="password" placeholder="Contraseña" ng-model="contrasenia">
                     </div>
                     <div class="uk-form-row">
-                        <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large"  ng-click="submit()">{{Registrarse}}</a>
+                        <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
+                            <option value="">Seleccione Campus</option>
+                            <option value="Casa Central">Casa Central</option>
+                            <option value="San Joaquin">San Joaquín</option>
+                            <option value="Vitacura">Vitacura</option>
+                        </select>
+                    </div>
+                    <div class="uk-form-row">
+                        <select id="carrera" name="carrera" class="uk-width-1-1 uk-form-large" ng-model="carrera">
+                            <option value="">Seleccione Carrera</option>
+                            <option value="Electrica">Eléctica</option>
+                            <option value="Informatica">Informática</option>
+                            <option value="Mecanica">Mecánica</option>
+                        </select>
+                    </div>
+                    <div class="uk-form-row">
+                        {{MensajeError}}
+                        <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">{{Registrarse}} </a>
                     </div>
                 </form>
             </div>

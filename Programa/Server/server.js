@@ -59,20 +59,12 @@ var servidor = http.createServer(function (pedido, respuesta) {
 function encaminar(pedido, respuesta, camino) {
     console.log(camino);
     switch (camino) {
-        case 'Views/recuperardatos': {
-            recuperar(pedido, respuesta);
-            break;
-        }
-        case 'Views/login': {
-            recuperarlogin(pedido, respuesta);
-            break;
-        }
-        case 'Views/test': {
-            recuperarTest(pedido, respuesta);
-            break;
-        }
         case 'Vista/api/registrarse': {
             registro2(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/iniciarSesion': {
+            iniciarSesion(pedido,respuesta);
             break;
         }
 
@@ -110,22 +102,48 @@ function registro2(pedido,respuesta){
     });
     pedido.on('end', function () {
         var formulario = querystring.parse(info);
-        var responce = '';
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0');", function (err) {
+        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0');", function (err) {
             if (err) {
                 respuesta.end('ERROR');
             }
             else{
-                respuesta.end('OK');
+                //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+                respuesta.end('OK,'+formulario["mail"]+ ',Alumno,'+formulario["nombre"]+","+formulario["rol"]+","+formulario["confirmacion_mail"]+","+formulario["confirmacion_administrador"]+","+formulario["tipo_aprendizaje"]+ ","+formulario["campus"]+ ","+formulario["carrera"]);//respuesta,mail,nombre
             }
 
 
         });
     });
 }
+function iniciarSesion(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"'", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }
+            else{
+                respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera);
+                //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+            }
 
+
+        });
+    });
+}
 servidor.listen(9000);
 
 console.log('Servidor web iniciado en http://localhost:9000');

@@ -1,6 +1,6 @@
 var app = angular.module('Controller', ['ngRoute']);
 
-app.controller('NuevoRegistro', function ($scope, $http) {
+app.controller('NuevoRegistro', function ($scope, $http, $window) {
     $scope.submit = function () {
         var data = $.param({
             nombre: $scope.nombre,

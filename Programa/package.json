@@ -6,7 +6,6 @@
     "express": "3.x",
     "mysql": ">=2.5.0",
     "http-post": "",
-    "cookie":"",
-    "cookie-parser":""
+    "private": true
   }
 }

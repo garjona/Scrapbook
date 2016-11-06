@@ -30,7 +30,6 @@ app.controller('NuevoRegistro', function ($scope, $http, $window) {
                     CampusActivo = respuesta.split(",")[8];
                     $window.location = "#/Test";
 
-
                 } else {
                     $scope.MensajeError = 'El mail ya está inscrito';
                     $window.location = "#/Registrarse"
@@ -51,19 +50,30 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
         });
         $http.post("/api/iniciarSesion", data)
             .success(function (respuesta) {
-                //respusta es un string de tipo: respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
-                if (respuesta.split(",")[0] == 'OK') {
-                    $scope.MensajeError = 'Listo';
-                    //$window.location.href = 'http://www.google.com';
-                    MailActivo = respuesta.split(",")[1];
-                    CargoActivo = respuesta.split(",")[2];
-                    NombreActivo = respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
-                    CarreraActivo = respuesta.split(",")[9];
-                    CampusActivo = respuesta.split(",")[8];
-                    //NombreActivo = respuesta.split(" ")[2];
-                    $window.location = "#/Perfil";
-                } else {
-                    $window.location = "#/IniciarSesion";
+                if (respuesta.split(",")[2]=="Profesor"){
+                    if(respuesta.split(",")[0] =="OK"){
+                        MailActivo = respuesta.split(",")[1];
+                        CargoActivo = respuesta.split(",")[2];
+                        NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
+                        $window.location = "#/PerfilProfesor";
+                    } else {
+                        $window.location = "#/IniciarSesion";
+                    }
+                } else if (respuesta.split[2]=="Alumno") {
+                    //respusta es un string de tipo: respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+                    if (respuesta.split(",")[0] == 'OK') {
+                        $scope.MensajeError = 'Listo';
+                        //$window.location.href = 'http://www.google.com';
+                        MailActivo = respuesta.split(",")[1];
+                        CargoActivo = respuesta.split(",")[2];
+                        NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
+                        CarreraActivo = respuesta.split(",")[9];
+                        CampusActivo = respuesta.split(",")[8];
+                        //NombreActivo = respuesta.split(" ")[2];
+                        $window.location = "#/Perfil";
+                    } else {
+                        $window.location = "#/IniciarSesion";
+                    }
                 }
 
             })
@@ -194,7 +204,7 @@ app.config(function ($routeProvider) {
             controller: 'Perfil'
         })
         .when('/Edicion', {
-            templateUrl: '../Vista/Paginas/Edición.html',
+            templateUrl: '../Vista/Paginas/Edicion.html',
             controller: 'Edicion'
         })
         .when('/FIS120', {
@@ -210,11 +220,6 @@ app.config(function ($routeProvider) {
         .when('/PerfilProfesor', {
             templateUrl: '../Vista/Paginas/PerfilProfesor.html',
             controller: 'PerfilProfesor'
-        })
-
-        .when('/Perfil1', {
-            templateUrl: '../Vista/Paginas/Perfil1.html',
-            controller: 'Perfil1'
         })
 
         .when('/Mail', {

@@ -624,7 +624,7 @@
       <workItem from="1478361021439" duration="28817000" />
       <workItem from="1478450997887" duration="14180000" />
       <workItem from="1478470088326" duration="1169000" />
-      <workItem from="1478474301106" duration="12319000" />
+      <workItem from="1478474301106" duration="12416000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -822,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478484970323</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="detalles">
+      <created>1478486859693</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1478486859693</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239576000" />
+    <option name="totallyTimeSpent" value="239673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -891,7 +898,8 @@
     <MESSAGE value="Borrado Test" />
     <MESSAGE value="Bloqueo de paginas" />
     <MESSAGE value="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno" />
+    <MESSAGE value="detalles" />
+    <option name="LAST_COMMIT_MESSAGE" value="detalles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

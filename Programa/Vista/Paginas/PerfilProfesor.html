@@ -1,0 +1,61 @@
+<nav ng-controller="Datos" class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a href="#/">Salir</a></li>
+    </ul>
+</nav>
+<div class="uk-grid">
+    <div class="uk-width-3-4">
+        <div class="uk-flex-right">
+            <div class="uk-panel-space">
+            </div>
+            <div class="uk-align-center" style="width: 800px;">
+                <div class="uk-panel uk-panel-box ">
+                    <div class="uk-text-left-medium uk-align-left">
+                        <h1>Cursos</h1>
+                    </div>
+                    <div class="uk-text-large uk-text-left-medium uk-align-left">
+                        <ul>
+                            <li>Unidad I
+                                <ul>
+                                    <li>Ley de Coulomb</li>
+                                    <li>Campo Eléctrico</li>
+                                    <li>Gauss</li>
+                                    <li>Potencia Eléctrica</li>
+                                    <li>Materiales Dielectricos</li>
+                                </ul>
+                            </li>
+                            <div class="uk-panel-space">
+                            </div>
+                            <li>Unidad II
+                                <ul>
+                                    <li>Condensadores</li>
+                                    <li>Corriente Eléctrica</li>
+                                    <li><a href="#/Edicion"> Corriente y FEM</a></li>
+                                    <li>Circuitos Eléctricos</li>
+                                    <li>Campo Magnéticos</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-4">
+        <div class="uk-panel-space">
+        </div>
+        <div class="uk-align-center" style="width: 300px;">
+            <div ng-controller="PerfilProfesor" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+                <img class="uk-border-circle" width="120" height="120"
+                     src="http://vignette1.wikia.nocookie.net/dexterslab/images/d/d9/Old_man_dexter2.jpg/revision/latest?cb=20130320194304"
+                     alt="">
+                <h5>{{NombreActivo}}</h5>
+                <h5>{{CargoActivo}}</h5>
+                <h5>{{MailActivo}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

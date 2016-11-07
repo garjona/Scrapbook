@@ -1,0 +1,63 @@
+<nav ng-controller="Datos" class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a href="#/">Salir</a></li>
+    </ul>
+</nav>
+<div class="uk-grid">
+    <div class="uk-width-3-4">
+        <div class="uk-flex-right">
+            <div class="uk-panel-space">
+            </div>
+            <div class="uk-align-center" style="width: 800px;">
+                <div class="uk-panel uk-panel-box ">
+                    <div class="uk-text-left-medium uk-align-left">
+                        <h1>Cursos</h1>
+                    </div>
+                    <div class="uk-text-large uk-text-left-medium uk-align-left">
+                        <ul>
+                            <li>Unidad I
+                                <ul>
+                                    <li>Ley de Coulomb</li>
+                                    <li>Campo Eléctrico</li>
+                                    <li>Gauss</li>
+                                    <li>Potencia Eléctrica</li>
+                                    <li>Materiales Dielectricos</li>
+                                </ul>
+                            </li>
+                            <div class="uk-panel-space">
+                            </div>
+                            <li>Unidad II
+                                <ul>
+                                    <li>Condensadores</li>
+                                    <li>Corriente Eléctrica</li>
+                                    <li><a href="#/FIS120"> Corriente y FEM</a></li>
+                                    <li>Circuitos Eléctricos</li>
+                                    <li>Campo Magnéticos</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-4">
+        <div class="uk-panel-space">
+        </div>
+        <div class="uk-align-center" style="width: 300px;">
+            <div ng-controller="Datos" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+                <img class="uk-border-circle" width="120" height="120"
+                     src="http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png"
+                     alt="Pronto podras modificar esta foto!!!">
+                <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
+                           value="{{NombreActivo}}">
+                <h5>{{CargoActivo}}</h5>
+                <h5>{{CarreraActivo}}</h5>
+                <h5>{{CampusActivo}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

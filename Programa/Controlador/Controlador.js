@@ -7,6 +7,27 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var app = angular.module('Controller', ['ngRoute']);
 
+app.controller('EliminarProfesor', function ($scope, $http, $window) {
+    $scope.submit = function () {
+        var data = $.param({
+            mail: $scope.mail
+        });
+        $http.post("/api/eliminarProfesor", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al profesor de mail '+respuesta.split(",")[1];
+
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+                $window.location = "#/PerfilAdministrador";
+
+            })
+
+
+    }
+});
 app.controller('EliminarAlumno', function ($scope, $http, $window) {
     $scope.submit = function () {
         var data = $.param({
@@ -17,12 +38,12 @@ app.controller('EliminarAlumno', function ($scope, $http, $window) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
                     MensajeError = 'Se ha eliminado exitosamente al alumno de mail '+respuesta.split(",")[1];
-                    $window.location = "#/PerfilAdmin";
 
                 } else {
-                    $scope.MensajeError = 'El mail no se encuentra en la base de datos';
+                    MensajeError = 'El mail no se encuentra en la base de datos';
 
                 }
+                $window.location = "#/PerfilAdministrador";
 
             })
 
@@ -42,12 +63,12 @@ app.controller('NuevoProfesor', function ($scope, $http, $window) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
                     MensajeError = 'Se ha registrado exitosamente al profesor '+respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
-                    $window.location = "#/PerfilAdmin";
 
                 } else {
-                    $scope.MensajeError = 'El mail ya está inscrito';
+                    MensajeError = 'El mail ya está inscrito';
 
                 }
+                $window.location = "#/PerfilAdministrador";
 
             })
 
@@ -318,11 +339,15 @@ app.config(function ($routeProvider) {
         })
         .when('/AgregarProfesor', {
             templateUrl: '../Vista/Paginas/AgregarProfesor.html',
-            controller: 'Admin'
+            controller: 'PerfilAdministrador'
         })
         .when('/EliminarAlumno', {
             templateUrl: '../Vista/Paginas/EliminarAlumno.html',
-            controller: 'Admin'
+            controller: 'PerfilAdministrador'
+        })
+        .when('/EliminarProfesor', {
+            templateUrl: '../Vista/Paginas/EliminarProfesor.html',
+            controller: 'PerfilAdministrador'
         })
         .otherwise({redirectTo: '/'});
 });

@@ -75,6 +75,10 @@ function encaminar(pedido, respuesta, camino) {
             eliminarAlumno(pedido,respuesta);
             break;
         }
+        case 'Vista/api/eliminarProfesor':{
+            eliminarProfesor(pedido,respuesta);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -186,7 +190,7 @@ function nuevoProfesor(pedido,respuesta){
         var formulario = querystring.parse(info);
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("INSERT INTO profesor Values ('" + formulario["mail"] + "', '" + formulario["nombre"] +"', '"+formulario["contrasenia"]+"');", function (err) {
+        connection.query("INSERT INTO profesor Values ('" + formulario["mail"] + "', '" + formulario["nombre"] +"', '"+formulario["contrasenia"]+"');", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -208,7 +212,47 @@ function eliminarAlumno(pedido,respuesta){
         var formulario = querystring.parse(info);
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("DELETE FROM alumno WHERE Mail='"+formulario["mail"]+"';", function (err) {
+        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }
+        });
+        connection.query("DELETE FROM alumno WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else{
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,'+formulario["mail"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
+function eliminarProfesor(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM profesor where Mail='"+formulario["mail"]+"';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }
+        });
+        connection.query("DELETE FROM profesor WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }

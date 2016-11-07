@@ -67,6 +67,14 @@ function encaminar(pedido, respuesta, camino) {
             iniciarSesion(pedido,respuesta);
             break;
         }
+        case 'Vista/api/nuevoProfesor':{
+            nuevoProfesor(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/eliminarAlumno':{
+            eliminarAlumno(pedido,respuesta);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -165,6 +173,49 @@ function iniciarSesion(pedido,respuesta){
             }
 
 
+        });
+    });
+}
+
+function nuevoProfesor(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("INSERT INTO profesor Values ('" + formulario["mail"] + "', '" + formulario["nombre"] +"', '"+formulario["contrasenia"]+"');", function (err) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else{
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,'+formulario["mail"]+ ',Administrador,'+formulario["nombre"]);//respuesta,mail,nombre
+            }
+
+
+        });
+    });
+}
+function eliminarAlumno(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("DELETE FROM alumno WHERE Mail='"+formulario["mail"]+"';", function (err) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else{
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,'+formulario["mail"]);//respuesta,mail,nombre
+            }
         });
     });
 }

@@ -7,6 +7,54 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var app = angular.module('Controller', ['ngRoute']);
 
+app.controller('EliminarAlumno', function ($scope, $http, $window) {
+    $scope.submit = function () {
+        var data = $.param({
+            mail: $scope.mail
+        });
+        $http.post("/api/eliminarAlumno", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail '+respuesta.split(",")[1];
+                    $window.location = "#/PerfilAdmin";
+
+                } else {
+                    $scope.MensajeError = 'El mail no se encuentra en la base de datos';
+
+                }
+
+            })
+
+
+    }
+});
+
+app.controller('NuevoProfesor', function ($scope, $http, $window) {
+    $scope.submit = function () {
+        var data = $.param({
+            nombre: $scope.nombre,
+            mail: $scope.mail,
+            contrasenia: $scope.contrasenia,
+        });
+        $http.post("/api/nuevoProfesor", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha registrado exitosamente al profesor '+respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
+                    $window.location = "#/PerfilAdmin";
+
+                } else {
+                    $scope.MensajeError = 'El mail ya está inscrito';
+
+                }
+
+            })
+
+
+    }
+});
+
 app.controller('NuevoRegistro', function ($scope, $http, $window) {
     $scope.submit = function () {
         var data = $.param({
@@ -71,7 +119,7 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
                         MailActivo = respuesta.split(",")[1];
                         CargoActivo = respuesta.split(",")[2];
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
-                        $window.location = "#/PerfilAdmin";
+                        $window.location = "#/PerfilAdministrador";
                     }
                 } else {
                     $window.location = "#/IniciarSesion";
@@ -84,6 +132,20 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
+    MensajeError='';
+    NombreActivo= '';
+    MailActivo= '';
+    TipoDeAprendizajeActivo = '';
+    CargoActivo = '';
+    CarreraActivo = '';
+    CampusActivo = '';
+    $scope.MensajeError= MensajeError;
+    $scope.NombreActivo= NombreActivo;
+    $scope.MailActivo= MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
     $scope.message = 'Hola Desde Inicio';
 });
 
@@ -95,23 +157,38 @@ app.controller('Registrarse', function ($scope) {
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Test', function ($scope) {
+app.controller('Test', function ($scope,$window) {
+    if(CargoActivo!="Alumno"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Edicion', function ($scope) {
+app.controller('Edicion', function ($scope,$window) {
+    if(CargoActivo!="Profesor" || CargoActivo!="Administrador"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde Edición';
 });
 
-app.controller('Perfil', function ($scope) {
+app.controller('Perfil', function ($scope,$window) {
+    if(CargoActivo!="Alumno"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde Perfil';
 });
 
-app.controller('PerfilProfesor', function ($scope) {
+app.controller('PerfilProfesor', function ($scope,$window) {
+    if(CargoActivo!="Profesor"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde Perfil Profesor';
 });
 
-app.controller('FIS120', function ($scope) {
+app.controller('FIS120', function ($scope,$window) {
+    if(CargoActivo!="Alumno"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde FIS120';
 });
 
@@ -119,22 +196,25 @@ app.controller('FIS1201', function ($scope) {
     $scope.message = 'Hola Desde FIS1201';
 });
 
-app.controller('Perfil1', function ($scope) {
-    $scope.message = 'Hola Desde Perfil1';
-});
 
-app.controller('Mail', function ($scope) {
+app.controller('Mail', function ($scope,$window) {
+    if(CargoActivo!="Alumno"){
+        $window.location = "#/Inicio";
+    }
     $scope.message = 'Hola Desde Mail';
 });
 
-app.controller('PerfilProfesor', function ($scope) {
-    $scope.Nombre = 'Dexter';
-    $scope.Cargo = 'Profesor';
-    $scope.Carrera = 'FIS 120';
-    $scope.Campus = 'San Joaquín';
-});
-
-app.controller('Admin', function ($scope) {
+app.controller('PerfilAdministrador', function ($scope,$window) {
+    if(CargoActivo!="Administrador"){
+        $window.location = "#/Inicio";
+    }
+    $scope.MensajeError= MensajeError;
+    $scope.NombreActivo= NombreActivo;
+    $scope.MailActivo= MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
     $scope.message = 'Hola Desde Admin';
 });
 
@@ -232,11 +312,18 @@ app.config(function ($routeProvider) {
             controller: 'Mail'
         })
 
-        .when('/PerfilAdmin', {
+        .when('/PerfilAdministrador', {
             templateUrl: '../Vista/Paginas/PerfilAdmin.html',
+            controller: 'PerfilAdministrador'
+        })
+        .when('/AgregarProfesor', {
+            templateUrl: '../Vista/Paginas/AgregarProfesor.html',
             controller: 'Admin'
         })
-
+        .when('/EliminarAlumno', {
+            templateUrl: '../Vista/Paginas/EliminarAlumno.html',
+            controller: 'Admin'
+        })
         .otherwise({redirectTo: '/'});
 });
 

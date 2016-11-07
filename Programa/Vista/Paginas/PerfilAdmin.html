@@ -47,14 +47,16 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-align-center" style="width: 300px;">
-            <div ng-controller="PerfilProfesor" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+            <div ng-controller="PerfilAdministrador" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
                      src="https://pbs.twimg.com/profile_images/539102307867451392/Xn_fE20q.jpeg"
                      alt="">
                 <h5>Administrador</h5>
                 <div class="uk-form-row">
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Añadir Profesores</a>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#AgregarProfesor">Añadir Profesores</a>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarAlumno">Eliminar Alumno</a>
                 </div>
+                {{MensajeError}}
             </div>
         </div>
     </div>

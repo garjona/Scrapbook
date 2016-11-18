@@ -79,6 +79,10 @@ function encaminar(pedido, respuesta, camino) {
             eliminarProfesor(pedido,respuesta);
             break;
         }
+        case 'Vista/api/mostrarAlumnos':{
+            mostrarAlumnos(pedido,respuesta);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -129,6 +133,7 @@ function registro2(pedido,respuesta){
         });
     });
 }
+
 function iniciarSesion(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -172,11 +177,40 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('ERROR');
             }
             else{
+
                 respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
             }
 
 
+        });
+    });
+}
+
+function mostrarAlumnos(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM alumno;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
         });
     });
 }
@@ -203,6 +237,7 @@ function nuevoProfesor(pedido,respuesta){
         });
     });
 }
+
 function eliminarAlumno(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -223,6 +258,7 @@ function eliminarAlumno(pedido,respuesta){
             }
         });
         connection.query("DELETE FROM alumno WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            console.log(formulario["mail"]);
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -233,6 +269,7 @@ function eliminarAlumno(pedido,respuesta){
         });
     });
 }
+
 function eliminarProfesor(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {

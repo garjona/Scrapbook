@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'scrapbook'
 });
 
@@ -207,7 +207,7 @@ function mostrarAlumnos(pedido,respuesta){
             }else{
                 lista=[];
                 for (i=0;i<rows.length;i++){
-                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail});
+                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail,Rol:json[i].Rol});
                 }
                 respuesta.end('OK$'+JSON.stringify(lista));
             }

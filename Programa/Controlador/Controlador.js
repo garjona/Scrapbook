@@ -186,7 +186,7 @@ app.controller('Test', function ($scope,$window) {
 });
 
 app.controller('Edicion', function ($scope,$window) {
-    if(CargoActivo!="Profesor" || CargoActivo!="Administrador"){
+    if(CargoActivo=="Alumno"){
         $window.location = "#/Inicio";
     }
     $scope.message = 'Hola Desde Edición';
@@ -204,6 +204,13 @@ app.controller('PerfilProfesor', function ($scope,$window) {
         $window.location = "#/Inicio";
     }
     $scope.message = 'Hola Desde Perfil Profesor';
+    $scope.MensajeError= MensajeError;
+    $scope.NombreActivo= NombreActivo;
+    $scope.MailActivo= MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
 });
 
 app.controller('FIS120', function ($scope,$window) {

@@ -196,7 +196,7 @@ function nuevoProfesor(pedido,respuesta){
             }
             else{
                 //respuesta,mail,cargo,nombre
-                respuesta.end('OK,'+formulario["mail"]+ ',Administrador,'+formulario["nombre"]);//respuesta,mail,nombre
+                respuesta.end('OK,'+formulario["mail"]+ ',Profesor,'+formulario["nombre"]);//respuesta,mail,cargo,nombre
             }
 
 

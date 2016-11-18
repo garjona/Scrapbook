@@ -179,20 +179,29 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
-    MensajeError='';
-    NombreActivo= '';
-    MailActivo= '';
-    TipoDeAprendizajeActivo = '';
-    CargoActivo = '';
-    CarreraActivo = '';
-    CampusActivo = '';
-    $scope.MensajeError= MensajeError;
-    $scope.NombreActivo= NombreActivo;
-    $scope.MailActivo= MailActivo;
-    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
-    $scope.CargoActivo = CargoActivo;
-    $scope.CarreraActivo = CarreraActivo;
-    $scope.CampusActivo = CampusActivo;
+    if(CargoActivo=="Alumno"){
+        $window.location = "#/Perfil";
+    } else if(CargoActivo=="Profesor"){
+        $window.location = "#/PerfilProfesor";
+    } else if(CargoActivo=="Administrador"){
+        $window.location = "#/PerfilAdministrador";
+    } else{
+        MensajeError='';
+        NombreActivo= '';
+        MailActivo= '';
+        TipoDeAprendizajeActivo = '';
+        CargoActivo = '';
+        CarreraActivo = '';
+        CampusActivo = '';
+        ListasActivo = [];
+        $scope.MensajeError= MensajeError;
+        $scope.NombreActivo= NombreActivo;
+        $scope.MailActivo= MailActivo;
+        $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+        $scope.CargoActivo = CargoActivo;
+        $scope.CarreraActivo = CarreraActivo;
+        $scope.CampusActivo = CampusActivo;
+    }
     $scope.message = 'Hola Desde Inicio';
 });
 
@@ -249,7 +258,6 @@ app.controller('FIS120', function ($scope,$window) {
 app.controller('FIS1201', function ($scope) {
     $scope.message = 'Hola Desde FIS1201';
 });
-
 
 app.controller('Mail', function ($scope,$window) {
     if(CargoActivo!="Alumno"){

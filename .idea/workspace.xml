@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -492,7 +488,7 @@
       <workItem from="1479142806739" duration="547000" />
       <workItem from="1479447334087" duration="1897000" />
       <workItem from="1479451149586" duration="18402000" />
-      <workItem from="1479498800262" duration="9946000" />
+      <workItem from="1479498800262" duration="10117000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -711,11 +707,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479504239644</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Actualizacion perfiles">
+      <created>1479512769355</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1479512769355</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271561000" />
+    <option name="totallyTimeSpent" value="271732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="46" width="2472" height="1571" extended-state="0" />

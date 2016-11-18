@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2016 a las 17:54:53
--- Versión del servidor: 5.7.9
--- Versión de PHP: 5.6.15
+-- Tiempo de generación: 19-11-2016 a las 00:46:49
+-- Versión del servidor: 10.1.19-MariaDB
+-- Versión de PHP: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,13 +26,18 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `administrador`
 --
 
-DROP TABLE IF EXISTS `administrador`;
-CREATE TABLE IF NOT EXISTS `administrador` (
+CREATE TABLE `administrador` (
   `Mail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Contrasenia` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`Mail`)
+  `Contrasenia` varchar(20) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `administrador`
+--
+
+INSERT INTO `administrador` (`Mail`, `Nombre`, `Contrasenia`) VALUES
+('admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -40,8 +45,7 @@ CREATE TABLE IF NOT EXISTS `administrador` (
 -- Estructura de tabla para la tabla `alumno`
 --
 
-DROP TABLE IF EXISTS `alumno`;
-CREATE TABLE IF NOT EXISTS `alumno` (
+CREATE TABLE `alumno` (
   `Mail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Rol` varchar(11) COLLATE utf8_spanish_ci NOT NULL,
@@ -49,8 +53,17 @@ CREATE TABLE IF NOT EXISTS `alumno` (
   `Confirmacion_mail` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Confirmacion_administrador` varchar(2) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'NO',
   `Tipo_aprendizaje` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
-  PRIMARY KEY (`Mail`)
+  `campus` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  `carrera` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `acepta_encuesta?` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `alumno`
+--
+
+INSERT INTO `alumno` (`Mail`, `Nombre`, `Rol`, `Contrasenia`, `Confirmacion_mail`, `Confirmacion_administrador`, `Tipo_aprendizaje`, `campus`, `carrera`, `acepta_encuesta?`) VALUES
+('a', 'a', '12', '12', '0', '0', '0', 'San Joaquin', 'Electrica', 0);
 
 -- --------------------------------------------------------
 
@@ -58,14 +71,39 @@ CREATE TABLE IF NOT EXISTS `alumno` (
 -- Estructura de tabla para la tabla `bloque`
 --
 
-DROP TABLE IF EXISTS `bloque`;
-CREATE TABLE IF NOT EXISTS `bloque` (
+CREATE TABLE `bloque` (
   `Id` int(5) NOT NULL,
   `TipoBloque` varchar(255) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Representa el tipo de bloque: ejemplo, demostracion, teoria, ejercicio, video, ecuacion',
   `Titulo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `CodigoHtml` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Se usa para: ejemplos',
-  PRIMARY KEY (`Id`)
+  `CodigoHtml` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'Se usa para: ejemplos'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contenido`
+--
+
+CREATE TABLE `contenido` (
+  `Codigo` int(11) NOT NULL,
+  `Unidad` int(11) NOT NULL,
+  `SubUnidad` int(11) NOT NULL,
+  `1` int(11) NOT NULL,
+  `2` int(11) NOT NULL,
+  `3` int(11) NOT NULL,
+  `4` int(11) NOT NULL,
+  `Tipo` int(11) NOT NULL COMMENT 'Texto=0 Imagen o video=1',
+  `Titulo` varchar(100) DEFAULT NULL,
+  `Contenido` varchar(10000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `contenido`
+--
+
+INSERT INTO `contenido` (`Codigo`, `Unidad`, `SubUnidad`, `1`, `2`, `3`, `4`, `Tipo`, `Titulo`, `Contenido`) VALUES
+(1, 1, 1, 1, 0, 1, 0, 0, NULL, 'Scrubba Scrubba'),
+(2, 1, 1, 0, 1, 0, 0, 0, 'Rada', 'Rada');
 
 -- --------------------------------------------------------
 
@@ -73,13 +111,10 @@ CREATE TABLE IF NOT EXISTS `bloque` (
 -- Estructura de tabla para la tabla `contenidoguardado`
 --
 
-DROP TABLE IF EXISTS `contenidoguardado`;
-CREATE TABLE IF NOT EXISTS `contenidoguardado` (
+CREATE TABLE `contenidoguardado` (
   `Id` int(5) NOT NULL,
   `nombreArchivo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `TipoContenidoGuardado` varchar(20) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Puede ser: imagen, ilustracion',
-  PRIMARY KEY (`Id`),
-  UNIQUE KEY `nombreArchivo` (`nombreArchivo`)
+  `TipoContenidoGuardado` varchar(20) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Puede ser: imagen, ilustracion'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -88,13 +123,9 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado` (
 -- Estructura de tabla para la tabla `contenidoguardado_bloque`
 --
 
-DROP TABLE IF EXISTS `contenidoguardado_bloque`;
-CREATE TABLE IF NOT EXISTS `contenidoguardado_bloque` (
+CREATE TABLE `contenidoguardado_bloque` (
   `ContenidoGuardadoId` int(5) NOT NULL,
-  `BloqueId` int(5) NOT NULL,
-  PRIMARY KEY (`ContenidoGuardadoId`,`BloqueId`),
-  KEY `FKContenidoG687510` (`ContenidoGuardadoId`),
-  KEY `FKContenidoG848128` (`BloqueId`)
+  `BloqueId` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -103,16 +134,12 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado_bloque` (
 -- Estructura de tabla para la tabla `feedbackpagina`
 --
 
-DROP TABLE IF EXISTS `feedbackpagina`;
-CREATE TABLE IF NOT EXISTS `feedbackpagina` (
+CREATE TABLE `feedbackpagina` (
   `Fecha` datetime NOT NULL,
   `AlumnoMail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `PaginaUrl` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Puntaje` int(10) DEFAULT NULL,
-  `Comentario` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
-  PRIMARY KEY (`Fecha`),
-  KEY `FKFeedbackPa730089` (`AlumnoMail`),
-  KEY `FKFeedbackPa134246` (`PaginaUrl`)
+  `Comentario` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -121,13 +148,10 @@ CREATE TABLE IF NOT EXISTS `feedbackpagina` (
 -- Estructura de tabla para la tabla `pagina`
 --
 
-DROP TABLE IF EXISTS `pagina`;
-CREATE TABLE IF NOT EXISTS `pagina` (
+CREATE TABLE `pagina` (
   `Url` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Titulo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `ProfesorMail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`Url`),
-  KEY `FKPagina56403` (`ProfesorMail`)
+  `ProfesorMail` varchar(60) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -136,16 +160,14 @@ CREATE TABLE IF NOT EXISTS `pagina` (
 -- Estructura de tabla para la tabla `pregunta`
 --
 
-DROP TABLE IF EXISTS `pregunta`;
-CREATE TABLE IF NOT EXISTS `pregunta` (
-  `Id` int(5) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `pregunta` (
+  `Id` int(5) NOT NULL,
   `Enunciado` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Alternativa1` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Alternativa2` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `Alternativa3` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `Alternativa4` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  `Alternativa4` varchar(255) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `pregunta`
@@ -171,17 +193,13 @@ INSERT INTO `pregunta` (`Id`, `Enunciado`, `Alternativa1`, `Alternativa2`, `Alte
 -- Estructura de tabla para la tabla `pregunta_alumno`
 --
 
-DROP TABLE IF EXISTS `pregunta_alumno`;
-CREATE TABLE IF NOT EXISTS `pregunta_alumno` (
+CREATE TABLE `pregunta_alumno` (
   `PreguntaId` int(5) NOT NULL,
   `AlumnoMail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Respuesta_alt1` int(1) NOT NULL,
   `Respuesta_alt2` int(1) NOT NULL,
   `Respuesta_alt3` int(1) NOT NULL,
-  `Respuesta_alt4` int(1) NOT NULL,
-  PRIMARY KEY (`PreguntaId`,`AlumnoMail`),
-  KEY `FKPregunta_A98795` (`AlumnoMail`),
-  KEY `PreguntaId` (`PreguntaId`)
+  `Respuesta_alt4` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -190,12 +208,10 @@ CREATE TABLE IF NOT EXISTS `pregunta_alumno` (
 -- Estructura de tabla para la tabla `profesor`
 --
 
-DROP TABLE IF EXISTS `profesor`;
-CREATE TABLE IF NOT EXISTS `profesor` (
+CREATE TABLE `profesor` (
   `Mail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `Contrasenia` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`Mail`)
+  `Contrasenia` varchar(20) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -204,16 +220,145 @@ CREATE TABLE IF NOT EXISTS `profesor` (
 -- Estructura de tabla para la tabla `ubicacion`
 --
 
-DROP TABLE IF EXISTS `ubicacion`;
-CREATE TABLE IF NOT EXISTS `ubicacion` (
+CREATE TABLE `ubicacion` (
   `PaginaUrl` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `BloqueId` int(5) NOT NULL,
-  `Ubicacion` int(3) NOT NULL,
-  PRIMARY KEY (`PaginaUrl`,`BloqueId`),
-  KEY `FKUbicacion691986` (`PaginaUrl`),
-  KEY `FKUbicacion547860` (`BloqueId`)
+  `Ubicacion` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `unidades`
+--
+
+CREATE TABLE `unidades` (
+  `Codigo` int(11) NOT NULL,
+  `Unidad` int(11) NOT NULL,
+  `SubUnidad` int(11) NOT NULL,
+  `Titulo` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `unidades`
+--
+
+INSERT INTO `unidades` (`Codigo`, `Unidad`, `SubUnidad`, `Titulo`) VALUES
+(1, 1, 0, 'Your Momma'),
+(2, 1, 1, 'Ley de Coulomb'),
+(3, 1, 2, 'Campo Eléctrico');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`Mail`);
+
+--
+-- Indices de la tabla `alumno`
+--
+ALTER TABLE `alumno`
+  ADD PRIMARY KEY (`Mail`);
+
+--
+-- Indices de la tabla `bloque`
+--
+ALTER TABLE `bloque`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indices de la tabla `contenido`
+--
+ALTER TABLE `contenido`
+  ADD KEY `Codigo` (`Codigo`) USING BTREE;
+
+--
+-- Indices de la tabla `contenidoguardado`
+--
+ALTER TABLE `contenidoguardado`
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `nombreArchivo` (`nombreArchivo`);
+
+--
+-- Indices de la tabla `contenidoguardado_bloque`
+--
+ALTER TABLE `contenidoguardado_bloque`
+  ADD PRIMARY KEY (`ContenidoGuardadoId`,`BloqueId`),
+  ADD KEY `FKContenidoG687510` (`ContenidoGuardadoId`),
+  ADD KEY `FKContenidoG848128` (`BloqueId`);
+
+--
+-- Indices de la tabla `feedbackpagina`
+--
+ALTER TABLE `feedbackpagina`
+  ADD PRIMARY KEY (`Fecha`),
+  ADD KEY `FKFeedbackPa730089` (`AlumnoMail`),
+  ADD KEY `FKFeedbackPa134246` (`PaginaUrl`);
+
+--
+-- Indices de la tabla `pagina`
+--
+ALTER TABLE `pagina`
+  ADD PRIMARY KEY (`Url`),
+  ADD KEY `FKPagina56403` (`ProfesorMail`);
+
+--
+-- Indices de la tabla `pregunta`
+--
+ALTER TABLE `pregunta`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indices de la tabla `pregunta_alumno`
+--
+ALTER TABLE `pregunta_alumno`
+  ADD PRIMARY KEY (`PreguntaId`,`AlumnoMail`),
+  ADD KEY `FKPregunta_A98795` (`AlumnoMail`),
+  ADD KEY `PreguntaId` (`PreguntaId`);
+
+--
+-- Indices de la tabla `profesor`
+--
+ALTER TABLE `profesor`
+  ADD PRIMARY KEY (`Mail`);
+
+--
+-- Indices de la tabla `ubicacion`
+--
+ALTER TABLE `ubicacion`
+  ADD PRIMARY KEY (`PaginaUrl`,`BloqueId`),
+  ADD KEY `FKUbicacion691986` (`PaginaUrl`),
+  ADD KEY `FKUbicacion547860` (`BloqueId`);
+
+--
+-- Indices de la tabla `unidades`
+--
+ALTER TABLE `unidades`
+  ADD PRIMARY KEY (`Codigo`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `contenido`
+--
+ALTER TABLE `contenido`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de la tabla `pregunta`
+--
+ALTER TABLE `pregunta`
+  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT de la tabla `unidades`
+--
+ALTER TABLE `unidades`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Restricciones para tablas volcadas
 --

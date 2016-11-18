@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2016 a las 17:54:53
--- Versión del servidor: 5.7.9
--- Versión de PHP: 5.6.15
+-- Host: 127.0.0.1
+-- Generation Time: Nov 06, 2016 at 08:51 PM
+-- Server version: 5.7.9
+-- PHP Version: 5.6.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `scrapbook`
+-- Database: `scrapbook`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administrador`
+-- Table structure for table `administrador`
 --
 
 DROP TABLE IF EXISTS `administrador`;
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `administrador` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumno`
+-- Table structure for table `alumno`
 --
 
 DROP TABLE IF EXISTS `alumno`;
@@ -49,13 +49,16 @@ CREATE TABLE IF NOT EXISTS `alumno` (
   `Confirmacion_mail` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Confirmacion_administrador` varchar(2) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'NO',
   `Tipo_aprendizaje` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `campus` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  `carrera` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `acepta_encuesta?` tinyint(1) NOT NULL,
   PRIMARY KEY (`Mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `bloque`
+-- Table structure for table `bloque`
 --
 
 DROP TABLE IF EXISTS `bloque`;
@@ -70,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `bloque` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `contenidoguardado`
+-- Table structure for table `contenidoguardado`
 --
 
 DROP TABLE IF EXISTS `contenidoguardado`;
@@ -85,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `contenidoguardado_bloque`
+-- Table structure for table `contenidoguardado_bloque`
 --
 
 DROP TABLE IF EXISTS `contenidoguardado_bloque`;
@@ -100,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado_bloque` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `feedbackpagina`
+-- Table structure for table `feedbackpagina`
 --
 
 DROP TABLE IF EXISTS `feedbackpagina`;
@@ -118,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `feedbackpagina` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pagina`
+-- Table structure for table `pagina`
 --
 
 DROP TABLE IF EXISTS `pagina`;
@@ -133,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `pagina` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pregunta`
+-- Table structure for table `pregunta`
 --
 
 DROP TABLE IF EXISTS `pregunta`;
@@ -148,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `pregunta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `pregunta`
+-- Dumping data for table `pregunta`
 --
 
 INSERT INTO `pregunta` (`Id`, `Enunciado`, `Alternativa1`, `Alternativa2`, `Alternativa3`, `Alternativa4`) VALUES
@@ -168,7 +171,7 @@ INSERT INTO `pregunta` (`Id`, `Enunciado`, `Alternativa1`, `Alternativa2`, `Alte
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pregunta_alumno`
+-- Table structure for table `pregunta_alumno`
 --
 
 DROP TABLE IF EXISTS `pregunta_alumno`;
@@ -187,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `pregunta_alumno` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `profesor`
+-- Table structure for table `profesor`
 --
 
 DROP TABLE IF EXISTS `profesor`;
@@ -201,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `profesor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ubicacion`
+-- Table structure for table `ubicacion`
 --
 
 DROP TABLE IF EXISTS `ubicacion`;
@@ -215,38 +218,38 @@ CREATE TABLE IF NOT EXISTS `ubicacion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `contenidoguardado_bloque`
+-- Constraints for table `contenidoguardado_bloque`
 --
 ALTER TABLE `contenidoguardado_bloque`
   ADD CONSTRAINT `FKContenidoG687510` FOREIGN KEY (`ContenidoGuardadoId`) REFERENCES `contenidoguardado` (`Id`),
   ADD CONSTRAINT `FKContenidoG848128` FOREIGN KEY (`BloqueId`) REFERENCES `bloque` (`Id`);
 
 --
--- Filtros para la tabla `feedbackpagina`
+-- Constraints for table `feedbackpagina`
 --
 ALTER TABLE `feedbackpagina`
   ADD CONSTRAINT `FKFeedbackPa134246` FOREIGN KEY (`PaginaUrl`) REFERENCES `pagina` (`Url`),
   ADD CONSTRAINT `FKFeedbackPa730089` FOREIGN KEY (`AlumnoMail`) REFERENCES `alumno` (`Mail`);
 
 --
--- Filtros para la tabla `pagina`
+-- Constraints for table `pagina`
 --
 ALTER TABLE `pagina`
   ADD CONSTRAINT `FKPagina56403` FOREIGN KEY (`ProfesorMail`) REFERENCES `profesor` (`Mail`);
 
 --
--- Filtros para la tabla `pregunta_alumno`
+-- Constraints for table `pregunta_alumno`
 --
 ALTER TABLE `pregunta_alumno`
   ADD CONSTRAINT `FKPregunta_A24191` FOREIGN KEY (`PreguntaId`) REFERENCES `pregunta` (`Id`),
   ADD CONSTRAINT `FKPregunta_A98795` FOREIGN KEY (`AlumnoMail`) REFERENCES `alumno` (`Mail`);
 
 --
--- Filtros para la tabla `ubicacion`
+-- Constraints for table `ubicacion`
 --
 ALTER TABLE `ubicacion`
   ADD CONSTRAINT `FKUbicacion547860` FOREIGN KEY (`BloqueId`) REFERENCES `bloque` (`Id`),

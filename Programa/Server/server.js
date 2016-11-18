@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'scrapbook'
 });
 
@@ -119,6 +119,7 @@ function registro2(pedido,respuesta){
         connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0');", function (err) {
             if (err) {
                 respuesta.end('ERROR');
+                console.log(err);
             }
             else{
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera

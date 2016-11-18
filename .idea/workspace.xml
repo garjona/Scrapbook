@@ -4,8 +4,6 @@
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +32,8 @@
       <file leaf-file-name="Inicio.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="2" column="86" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
+            <state relative-caret-position="40">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -64,8 +62,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="248" column="52" selection-start-line="248" selection-start-column="52" selection-end-line="248" selection-end-column="52" />
+            <state relative-caret-position="425">
+              <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
               <folding>
                 <element signature="e#103#157#0" expanded="false" />
                 <element signature="e#198#257#0" expanded="false" />
@@ -87,27 +85,31 @@
       <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+            <state relative-caret-position="-326">
+              <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding>
                 <element signature="e#312#967#0" expanded="false" />
-                <element signature="e#2758#3527#0" expanded="false" />
-                <element signature="e#3597#4898#0" expanded="false" />
-                <element signature="e#4973#7049#0" expanded="false" />
-                <element signature="e#7096#7602#0" expanded="false" />
-                <element signature="e#7656#7709#0" expanded="false" />
-                <element signature="e#7761#7811#0" expanded="false" />
-                <element signature="e#7864#7990#0" expanded="false" />
-                <element signature="e#8046#8168#0" expanded="false" />
-                <element signature="e#8223#8344#0" expanded="false" />
-                <element signature="e#8254#8300#0" expanded="false" />
-                <element signature="e#8407#8834#0" expanded="false" />
-                <element signature="e#8889#9010#0" expanded="false" />
-                <element signature="e#9058#9104#0" expanded="false" />
-                <element signature="e#9158#9277#0" expanded="false" />
-                <element signature="e#9345#9767#0" expanded="false" />
-                <element signature="e#9813#10343#0" expanded="false" />
-                <element signature="e#10406#11162#0" expanded="false" />
+                <element signature="e#1037#2688#0" expanded="false" />
+                <element signature="e#2758#3526#0" expanded="false" />
+                <element signature="e#3596#4897#0" expanded="false" />
+                <element signature="e#4972#7048#0" expanded="false" />
+                <element signature="e#7095#8208#0" expanded="false" />
+                <element signature="e#8262#8315#0" expanded="false" />
+                <element signature="e#8367#8417#0" expanded="false" />
+                <element signature="e#8470#8590#0" expanded="false" />
+                <element signature="e#8646#8762#0" expanded="false" />
+                <element signature="e#8677#8717#0" expanded="false" />
+                <element signature="e#8817#8932#0" expanded="false" />
+                <element signature="e#8848#8888#0" expanded="false" />
+                <element signature="e#8995#9416#0" expanded="false" />
+                <element signature="e#9471#9586#0" expanded="false" />
+                <element signature="e#9634#9680#0" expanded="false" />
+                <element signature="e#9733#9847#0" expanded="false" />
+                <element signature="e#9915#10331#0" expanded="false" />
+                <element signature="e#9953#9993#0" expanded="false" />
+                <element signature="e#10377#10907#0" expanded="false" />
+                <element signature="e#10970#11726#0" expanded="false" />
+                <element signature="e#11768#13801#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -170,13 +172,13 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
         <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
       </list>
     </option>
@@ -269,65 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Vista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Programa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Paginas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Programa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Programa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controlador" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -500,7 +444,7 @@
       <workItem from="1478995597265" duration="1096000" />
       <workItem from="1479142806739" duration="547000" />
       <workItem from="1479447334087" duration="1897000" />
-      <workItem from="1479451149586" duration="18402000" />
+      <workItem from="1479451149586" duration="21490000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -712,22 +656,36 @@
       <option name="project" value="LOCAL" />
       <updated>1479473172022</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Actualizacion perfiles mas actualizados">
+      <created>1479495693104</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1479495693104</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Actualizacion redireccion paginas a perfiles">
+      <created>1479497425786</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1479497425786</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261615000" />
+    <option name="totallyTimeSpent" value="264703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16299559" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -783,11 +741,13 @@
     <MESSAGE value="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno" />
     <MESSAGE value="detalles" />
     <MESSAGE value="Actualizacion perfiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion perfiles" />
+    <MESSAGE value="Actualizacion perfiles mas actualizados" />
+    <MESSAGE value="Actualizacion redireccion paginas a perfiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion redireccion paginas a perfiles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -920,14 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="2" column="86" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -985,10 +937,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="248" column="52" selection-start-line="248" selection-start-column="52" selection-end-line="248" selection-end-column="52" />
+        <state relative-caret-position="425">
+          <caret line="134" column="1" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
           <folding>
             <element signature="e#103#157#0" expanded="false" />
             <element signature="e#198#257#0" expanded="false" />
@@ -1008,27 +968,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        <state relative-caret-position="-326">
+          <caret line="79" column="22" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
           <folding>
             <element signature="e#312#967#0" expanded="false" />
-            <element signature="e#2758#3527#0" expanded="false" />
-            <element signature="e#3597#4898#0" expanded="false" />
-            <element signature="e#4973#7049#0" expanded="false" />
-            <element signature="e#7096#7602#0" expanded="false" />
-            <element signature="e#7656#7709#0" expanded="false" />
-            <element signature="e#7761#7811#0" expanded="false" />
-            <element signature="e#7864#7990#0" expanded="false" />
-            <element signature="e#8046#8168#0" expanded="false" />
-            <element signature="e#8223#8344#0" expanded="false" />
-            <element signature="e#8254#8300#0" expanded="false" />
-            <element signature="e#8407#8834#0" expanded="false" />
-            <element signature="e#8889#9010#0" expanded="false" />
-            <element signature="e#9058#9104#0" expanded="false" />
-            <element signature="e#9158#9277#0" expanded="false" />
-            <element signature="e#9345#9767#0" expanded="false" />
-            <element signature="e#9813#10343#0" expanded="false" />
-            <element signature="e#10406#11162#0" expanded="false" />
+            <element signature="e#1037#2688#0" expanded="false" />
+            <element signature="e#2758#3526#0" expanded="false" />
+            <element signature="e#3596#4897#0" expanded="false" />
+            <element signature="e#4972#7048#0" expanded="false" />
+            <element signature="e#7095#8208#0" expanded="false" />
+            <element signature="e#8262#8315#0" expanded="false" />
+            <element signature="e#8367#8417#0" expanded="false" />
+            <element signature="e#8470#8590#0" expanded="false" />
+            <element signature="e#8646#8762#0" expanded="false" />
+            <element signature="e#8677#8717#0" expanded="false" />
+            <element signature="e#8817#8932#0" expanded="false" />
+            <element signature="e#8848#8888#0" expanded="false" />
+            <element signature="e#8995#9416#0" expanded="false" />
+            <element signature="e#9471#9586#0" expanded="false" />
+            <element signature="e#9634#9680#0" expanded="false" />
+            <element signature="e#9733#9847#0" expanded="false" />
+            <element signature="e#9915#10331#0" expanded="false" />
+            <element signature="e#9953#9993#0" expanded="false" />
+            <element signature="e#10377#10907#0" expanded="false" />
+            <element signature="e#10970#11726#0" expanded="false" />
+            <element signature="e#11768#13801#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -82,7 +82,7 @@ app.controller('NuevoProfesor', function ($scope, $http, $window) {
         var data = $.param({
             nombre: $scope.nombre,
             mail: $scope.mail,
-            contrasenia: $scope.contrasenia,
+            contrasenia: $scope.contrasenia
         });
         $http.post("/api/nuevoProfesor", data)
             .success(function (respuesta) {
@@ -179,6 +179,13 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
+    MensajeError=$scope.MensajeError;
+    NombreActivo= $scope.NombreActivo;
+    MailActivo= $scope.MailActivo;
+    TipoDeAprendizajeActivo = $scope.TipoDeAprendizajeActivo;
+    CargoActivo = $scope.CargoActivo;
+    CarreraActivo = $scope.CarreraActivo;
+    CampusActivo = $scope.CampusActivo;
     if(CargoActivo=="Alumno"){
         $window.location = "#/Perfil";
     } else if(CargoActivo=="Profesor"){
@@ -202,7 +209,6 @@ app.controller('Inicio', function ($scope) {
         $scope.CarreraActivo = CarreraActivo;
         $scope.CampusActivo = CampusActivo;
     }
-    $scope.message = 'Hola Desde Inicio';
 });
 
 app.controller('IniciarSesion', function ($scope) {
@@ -215,28 +221,28 @@ app.controller('Registrarse', function ($scope) {
 
 app.controller('Test', function ($scope,$window) {
     if(CargoActivo!="Alumno"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde Registrarse';
 });
 
 app.controller('Edicion', function ($scope,$window) {
     if(CargoActivo=="Alumno"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde Edición';
 });
 
 app.controller('Perfil', function ($scope,$window) {
     if(CargoActivo!="Alumno"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde Perfil';
 });
 
 app.controller('PerfilProfesor', function ($scope,$window) {
     if(CargoActivo!="Profesor"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde Perfil Profesor';
     $scope.MensajeError= MensajeError;
@@ -250,7 +256,7 @@ app.controller('PerfilProfesor', function ($scope,$window) {
 
 app.controller('FIS120', function ($scope,$window) {
     if(CargoActivo!="Alumno"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde FIS120';
 });
@@ -260,15 +266,15 @@ app.controller('FIS1201', function ($scope) {
 });
 
 app.controller('Mail', function ($scope,$window) {
-    if(CargoActivo!="Alumno"){
-        $window.location = "#/Inicio";
+    if(CargoActivo!="Alumno") {
+        $window.location = "#/";
     }
     $scope.message = 'Hola Desde Mail';
 });
 
 app.controller('PerfilAdministrador', function ($scope,$window) {
     if(CargoActivo!="Administrador"){
-        $window.location = "#/Inicio";
+        $window.location = "#/";
     }
     $scope.MensajeError= MensajeError;
     $scope.NombreActivo= NombreActivo;

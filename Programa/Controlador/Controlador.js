@@ -1,12 +1,34 @@
-var MensajeError='';
-var NombreActivo= '';
-var MailActivo= '';
+var MensajeError = '';
+var NombreActivo = '';
+var MailActivo = '';
 var TipoDeAprendizajeActivo = '';
 var CargoActivo = '';
 var CarreraActivo = '';
 var CampusActivo = '';
 var ListasActivo = [];
+var UnidadActivo = '';
+var SubUnidadActivo = '';
+var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
+
+app.controller('MostrarUnidades', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/Edicion";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
+});
+
 
 app.controller('EliminarProfesor', function ($scope, $http, $window) {
     $scope.submit = function () {
@@ -17,7 +39,7 @@ app.controller('EliminarProfesor', function ($scope, $http, $window) {
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al profesor de mail '+respuesta.split(",")[1];
+                    MensajeError = 'Se ha eliminado exitosamente al profesor de mail ' + respuesta.split(",")[1];
 
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
@@ -31,25 +53,25 @@ app.controller('EliminarProfesor', function ($scope, $http, $window) {
 });
 app.controller('EliminarAlumno', function ($scope, $http, $window) {
     $http.get("/api/mostrarAlumnos")
-        .then(function (respuesta){
-            if (respuesta.data.split("$")[0] == 'OK'){
-                $scope.listas=JSON.parse(respuesta.data.split("$")[1]);
-                ListasActivo=$scope.listas;
-            } else{
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
                 MensajeError = 'Hubo un error';
             }
         });
-    $scope.del = function(i){
-        $scope.listas.splice(i,1);
+    $scope.del = function (i) {
+        $scope.listas.splice(i, 1);
         var data = $.param({
             mail: ListasActivo[i].Mail
         });
-        listasActivo=$scope.listas;
+        listasActivo = $scope.listas;
         $http.post("/api/eliminarAlumno", data)
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail '+respuesta.split(",")[1];
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
                 }
@@ -63,7 +85,7 @@ app.controller('EliminarAlumno', function ($scope, $http, $window) {
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail '+respuesta.split(",")[1];
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
 
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
@@ -88,7 +110,7 @@ app.controller('NuevoProfesor', function ($scope, $http, $window) {
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha registrado exitosamente al profesor '+respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
+                    MensajeError = 'Se ha registrado exitosamente al profesor ' + respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
 
                 } else {
                     MensajeError = 'El mail ya está inscrito';
@@ -120,7 +142,7 @@ app.controller('NuevoRegistro', function ($scope, $http, $window) {
                     //$window.location.href = 'http://www.google.com';
                     MailActivo = respuesta.split(",")[1];
                     CargoActivo = respuesta.split(",")[2];
-                    NombreActivo = respuesta.split(",")[3].substr(0,1).toUpperCase()+ respuesta.split(",")[3].substr(1);
+                    NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                     CarreraActivo = respuesta.split(",")[9];
                     CampusActivo = respuesta.split(",")[8];
                     $window.location = "#/Test";
@@ -145,7 +167,7 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
         });
         $http.post("/api/iniciarSesion", data)
             .success(function (respuesta) {
-                if(respuesta.split(",")[0] =="OK") {
+                if (respuesta.split(",")[0] == "OK") {
                     if (respuesta.split(",")[2] == "Profesor") {
                         MailActivo = respuesta.split(",")[1];
                         CargoActivo = respuesta.split(",")[2];
@@ -179,31 +201,31 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
-    MensajeError=$scope.MensajeError;
-    NombreActivo= $scope.NombreActivo;
-    MailActivo= $scope.MailActivo;
+    MensajeError = $scope.MensajeError;
+    NombreActivo = $scope.NombreActivo;
+    MailActivo = $scope.MailActivo;
     TipoDeAprendizajeActivo = $scope.TipoDeAprendizajeActivo;
     CargoActivo = $scope.CargoActivo;
     CarreraActivo = $scope.CarreraActivo;
     CampusActivo = $scope.CampusActivo;
-    if(CargoActivo=="Alumno"){
+    if (CargoActivo == "Alumno") {
         $window.location = "#/Perfil";
-    } else if(CargoActivo=="Profesor"){
+    } else if (CargoActivo == "Profesor") {
         $window.location = "#/PerfilProfesor";
-    } else if(CargoActivo=="Administrador"){
+    } else if (CargoActivo == "Administrador") {
         $window.location = "#/PerfilAdministrador";
-    } else{
-        MensajeError='';
-        NombreActivo= '';
-        MailActivo= '';
+    } else {
+        MensajeError = '';
+        NombreActivo = '';
+        MailActivo = '';
         TipoDeAprendizajeActivo = '';
         CargoActivo = '';
         CarreraActivo = '';
         CampusActivo = '';
         ListasActivo = [];
-        $scope.MensajeError= MensajeError;
-        $scope.NombreActivo= NombreActivo;
-        $scope.MailActivo= MailActivo;
+        $scope.MensajeError = MensajeError;
+        $scope.NombreActivo = NombreActivo;
+        $scope.MailActivo = MailActivo;
         $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
         $scope.CargoActivo = CargoActivo;
         $scope.CarreraActivo = CarreraActivo;
@@ -219,43 +241,43 @@ app.controller('Registrarse', function ($scope) {
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Test', function ($scope,$window) {
-    if(CargoActivo!="Alumno"){
+app.controller('Test', function ($scope, $window) {
+    if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde Registrarse';
 });
 
-app.controller('Edicion', function ($scope,$window) {
-    if(CargoActivo=="Alumno"){
+app.controller('Edicion', function ($scope, $window) {
+    if (CargoActivo == "Alumno") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde Edición';
 });
 
-app.controller('Perfil', function ($scope,$window) {
-    if(CargoActivo!="Alumno"){
+app.controller('Perfil', function ($scope, $window) {
+    if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde Perfil';
 });
 
-app.controller('PerfilProfesor', function ($scope,$window) {
-    if(CargoActivo!="Profesor"){
+app.controller('PerfilProfesor', function ($scope, $window) {
+    if (CargoActivo != "Profesor") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde Perfil Profesor';
-    $scope.MensajeError= MensajeError;
-    $scope.NombreActivo= NombreActivo;
-    $scope.MailActivo= MailActivo;
+    $scope.MensajeError = MensajeError;
+    $scope.NombreActivo = NombreActivo;
+    $scope.MailActivo = MailActivo;
     $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
     $scope.CampusActivo = CampusActivo;
 });
 
-app.controller('FIS120', function ($scope,$window) {
-    if(CargoActivo!="Alumno"){
+app.controller('FIS120', function ($scope, $window) {
+    if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde FIS120';
@@ -265,20 +287,20 @@ app.controller('FIS1201', function ($scope) {
     $scope.message = 'Hola Desde FIS1201';
 });
 
-app.controller('Mail', function ($scope,$window) {
-    if(CargoActivo!="Alumno") {
+app.controller('Mail', function ($scope, $window) {
+    if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
     $scope.message = 'Hola Desde Mail';
 });
 
-app.controller('PerfilAdministrador', function ($scope,$window) {
-    if(CargoActivo!="Administrador"){
+app.controller('PerfilAdministrador', function ($scope, $window) {
+    if (CargoActivo != "Administrador") {
         $window.location = "#/";
     }
-    $scope.MensajeError= MensajeError;
-    $scope.NombreActivo= NombreActivo;
-    $scope.MailActivo= MailActivo;
+    $scope.MensajeError = MensajeError;
+    $scope.NombreActivo = NombreActivo;
+    $scope.MailActivo = MailActivo;
     $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
@@ -293,9 +315,9 @@ app.controller('Datos', function ($scope) {
     $scope.Mail = 'Mail Sansano';
     $scope.Rol = 'Rol (Sin Guión)';
     $scope.Contraseña = 'Contraseña';
-    $scope.MensajeError= MensajeError;
-    $scope.NombreActivo= NombreActivo;
-    $scope.MailActivo= MailActivo;
+    $scope.MensajeError = MensajeError;
+    $scope.NombreActivo = NombreActivo;
+    $scope.MailActivo = MailActivo;
     $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
@@ -304,6 +326,10 @@ app.controller('Datos', function ($scope) {
 });
 
 app.controller('InlineEditorController', function ($scope) {
+
+
+
+
 
         // $scope is a special object that makes
         // its properties available to the view as
@@ -326,7 +352,23 @@ app.controller('InlineEditorController', function ($scope) {
         $scope.toggleTooltip = function (e) {
             e.stopPropagation();
             $scope.showtooltip = !$scope.showtooltip;
-        }
+        };
+
+        var data = $.param({
+            unidad: UnidadActivo,
+            subunidad: SubUnidadActivo,
+            tipo: TipoActivo
+        });
+        $http.post("/api/mostrarColumnas", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al profesor de mail ' + respuesta.split(",")[1];
+
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            });
     }
 );
 

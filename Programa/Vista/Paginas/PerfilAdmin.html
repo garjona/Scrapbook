@@ -14,15 +14,12 @@
                     <div class="uk-text-left-medium uk-align-left">
                         <h1>Cursos</h1>
                     </div>
-                    <div class="uk-text-large uk-text-left-medium uk-align-left">
+                    <div ng-controller="MostrarUnidades" class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
                             <li>Unidad I
-                                <ul>
-                                    <li>Ley de Coulomb</li>
-                                    <li>Campo Eléctrico</li>
-                                    <li>Gauss</li>
-                                    <li>Potencia Eléctrica</li>
-                                    <li>Materiales Dielectricos</li>
+                                <ul
+                                     ng-repeat="lista in listas">
+                                    <u1><a ng-click='mostrar(1,$index)'>{{lista.Titulo}}</a></u1>
                                 </ul>
                             </li>
                             <div class="uk-panel-space">

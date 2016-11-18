@@ -56,6 +56,7 @@ var servidor = http.createServer(function (pedido, respuesta) {
     encaminar(pedido, respuesta, camino);
 });
 
+
 function encaminar(pedido, respuesta, camino) {
     console.log(camino);
     switch (camino) {
@@ -81,6 +82,15 @@ function encaminar(pedido, respuesta, camino) {
         }
         case 'Vista/api/mostrarAlumnos':{
             mostrarAlumnos(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidades':{
+            mostrarUnidades(pedido,respuesta);
+            break;
+        }
+
+        case 'Vista/api/mostrarColumnas':{
+            mostrarColumnas(pedido,respuesta);
             break;
         }
 
@@ -110,6 +120,63 @@ function encaminar(pedido, respuesta, camino) {
         }
     }
 }
+
+function mostrarUnidades(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '1' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+function mostrarColumnas(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM Contenido WHERE Unidad = formulario['unidad'] and SubUnidad=formulario['subunidad'] ORDER by codigo ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
 
 function registro2(pedido,respuesta){
     var info = '';

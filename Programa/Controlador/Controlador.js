@@ -9,6 +9,9 @@ var ListasActivo = [];
 var UnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
+var Lista1 = [];
+var Lista2 = [];
+var Lista3 = [];
 var app = angular.module('Controller', ['ngRoute']);
 
 app.controller('MostrarUnidad1', function ($scope, $http, $window) {
@@ -257,8 +260,22 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
         .success(function (respuesta) {
             //la respuesta es un string con respuesta,mail,cargo,nombre
             if (respuesta.split("$")[0] == 'OK') {
-                $scope.listas = JSON.parse(respuesta.split("$")[1]);
-                ListasActivo = $scope.listas;
+                $scope.listaTemp = JSON.parse(respuesta.split("$")[1]);
+                $scope.listas1 =[];
+                $scope.listas2 =[];
+                $scope.listas3 =[];
+                for(i=0;i<$scope.listaTemp.length;i++){
+                    if (i%3==0){
+                        $scope.listas1.push($scope.listaTemp[i])
+                    }else if (i%3==1){
+                        $scope.listas2.push($scope.listaTemp[i])
+                    }else if (i%3==2){
+                        $scope.listas3.push($scope.listaTemp[i])
+                    }
+                }
+                Lista1=$scope.lista1;
+                Lista2=$scope.lista2;
+                Lista3=$scope.lista3;
             } else {
                 MensajeError = 'El mail ya está inscrito';
 

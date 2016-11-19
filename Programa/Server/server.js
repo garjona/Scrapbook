@@ -290,7 +290,6 @@ function mostrarColumnas(pedido,respuesta){
                 for (i=0;i<rows.length;i++){
                     lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido});
                 }
-                console.log(lista);
                 respuesta.end('OK$'+JSON.stringify(lista));
             }
         });

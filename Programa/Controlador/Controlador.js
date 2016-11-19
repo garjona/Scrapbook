@@ -9,9 +9,6 @@ var ListasActivo = [];
 var UnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
-var Lista1 = [];
-var Lista2 = [];
-var Lista3 = [];
 var app = angular.module('Controller', ['ngRoute']);
 
 app.controller('MostrarUnidad1', function ($scope, $http, $window) {
@@ -266,11 +263,11 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
                 $scope.lis3 =[];
                 for(i=0;i<listaTemp.length;i++){
                     if (i % 3 == 0){
-                        $scope.lis1.push(listaTemp[i])
+                        $scope.lis1.push(listaTemp[i]);
                     }else if (i % 3 == 1){
-                        $scope.lis2.push(listaTemp[i])
+                        $scope.lis2.push(listaTemp[i]);
                     }else if (i % 3 == 2){
-                        $scope.lis3.push(listaTemp[i])
+                        $scope.lis3.push(listaTemp[i]);
                     }
                 }
             } else {

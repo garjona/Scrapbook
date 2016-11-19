@@ -11,8 +11,8 @@ var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
 
-app.controller('MostrarUnidades', function ($scope, $http, $window) {
-    $http.get("/api/mostrarUnidades")
+app.controller('MostrarUnidad1', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad1")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
                 $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
@@ -21,6 +21,7 @@ app.controller('MostrarUnidades', function ($scope, $http, $window) {
                 MensajeError = 'Hubo un error';
             }
         });
+
     $scope.mostrar = function (unidad, i) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
@@ -29,6 +30,53 @@ app.controller('MostrarUnidades', function ($scope, $http, $window) {
     };
 });
 
+app.controller('MostrarUnidad2', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad2")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad3', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad3")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad4', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad4")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad5', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad5")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
 
 app.controller('EliminarProfesor', function ($scope, $http, $window) {
     $scope.submit = function () {

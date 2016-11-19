@@ -14,26 +14,56 @@
                     <div class="uk-text-left-medium uk-align-left">
                         <h1>Cursos</h1>
                     </div>
-                    <div ng-controller="MostrarUnidades" class="uk-text-large uk-text-left-medium uk-align-left">
+                    <div class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
-                            <li>Unidad I
-                                <ul
-                                     ng-repeat="lista in listas">
-                                    <u1><a ng-click='mostrar(1,$index)'>{{lista.Titulo}}</a></u1>
-                                </ul>
-                            </li>
+                            <div ng-controller="MostrarUnidad1">
+                                <li>Unidad I
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(1,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
                             <div class="uk-panel-space">
                             </div>
-                            <li>Unidad II
-                                <ul>
-                                    <li>Condensadores</li>
-                                    <li>Corriente Eléctrica</li>
-                                    <li><a href="#/Edicion"> Corriente y FEM</a></li>
-                                    <li>Circuitos Eléctricos</li>
-                                    <li>Campo Magnéticos</li>
-                                </ul>
-                            </li>
-
+                            <div ng-controller="MostrarUnidad2">
+                                <li>Unidad II
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(2,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad3">
+                                <li>Unidad III
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(3,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad4">
+                                <li>Unidad IV
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(4,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad5">
+                                <li>Unidad V
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(5,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -44,15 +74,23 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-align-center" style="width: 300px;">
-            <div ng-controller="PerfilAdministrador" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+            <div ng-controller="PerfilAdministrador"
+                 class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
                      src="https://pbs.twimg.com/profile_images/539102307867451392/Xn_fE20q.jpeg"
                      alt="">
                 <h5>Administrador</h5>
                 <div class="uk-form-row">
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#AgregarProfesor">Añadir Profesores</a>
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarProfesor">Eliminar Profesor</a>
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarAlumno">Eliminar Alumno</a>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#AgregarProfesor">Añadir
+                        Profesores</a>
+                    <div class="uk-panel-space">
+                    </div>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarProfesor">Eliminar
+                        Profesor</a>
+                    <div class="uk-panel-space">
+                    </div>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarAlumno">Eliminar
+                        Alumno</a>
                 </div>
                 {{MensajeError}}
             </div>

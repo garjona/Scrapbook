@@ -84,8 +84,24 @@ function encaminar(pedido, respuesta, camino) {
             mostrarAlumnos(pedido,respuesta);
             break;
         }
-        case 'Vista/api/mostrarUnidades':{
-            mostrarUnidades(pedido,respuesta);
+        case 'Vista/api/mostrarUnidad1':{
+            mostrarUnidad1(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad2':{
+            mostrarUnidad2(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad3':{
+            mostrarUnidad3(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad4':{
+            mostrarUnidad4(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad5':{
+            mostrarUnidad5(pedido,respuesta);
             break;
         }
 
@@ -121,16 +137,123 @@ function encaminar(pedido, respuesta, camino) {
     }
 }
 
-function mostrarUnidades(pedido,respuesta){
+function mostrarUnidad1(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
         info += datosparciales;
     });
     pedido.on('end', function () {
         var formulario = querystring.parse(info);
-        //console.log(formulario["mail"]);
-        //console.log(toString(formulario['mail']));
+
         connection.query("SELECT * FROM Unidades WHERE Unidad = '1' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+function mostrarUnidad2(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '2' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+function mostrarUnidad3(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '3' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+function mostrarUnidad4(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '4' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+function mostrarUnidad5(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '5' ORDER by subunidad ASC ;", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }

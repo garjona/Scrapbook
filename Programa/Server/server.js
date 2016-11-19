@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -163,7 +163,6 @@ function mostrarUnidad1(pedido,respuesta){
         });
     });
 }
-
 function mostrarUnidad2(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -190,7 +189,6 @@ function mostrarUnidad2(pedido,respuesta){
         });
     });
 }
-
 function mostrarUnidad3(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -217,7 +215,6 @@ function mostrarUnidad3(pedido,respuesta){
         });
     });
 }
-
 function mostrarUnidad4(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -244,7 +241,6 @@ function mostrarUnidad4(pedido,respuesta){
         });
     });
 }
-
 function mostrarUnidad5(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -281,7 +277,7 @@ function mostrarColumnas(pedido,respuesta){
         var formulario = querystring.parse(info);
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("SELECT * FROM Contenido WHERE Unidad = formulario['unidad'] and SubUnidad=formulario['subunidad'] ORDER by codigo ASC ;", function (err, rows) {
+        connection.query("SELECT * FROM Contenido WHERE Unidad ='"+ formulario["unidad"]+"' and SubUnidad='"+formulario["subUnidad"]+ "'ORDER by codigo ASC ;", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -490,6 +486,7 @@ function eliminarProfesor(pedido,respuesta){
         });
     });
 }
+
 servidor.listen(9000);
 
 console.log('Servidor web iniciado en http://localhost:9000');

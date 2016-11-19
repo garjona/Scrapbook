@@ -248,6 +248,24 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
     }
 });
 
+app.controller('MostrarEdicion', function ($scope, $http, $window) {
+    var data = $.param({
+        unidad: UnidadActivo,
+        subUnidad: SubUnidadActivo
+    });
+    $http.post("/api/mostrarColumnas", data)
+        .success(function (respuesta) {
+            //la respuesta es un string con respuesta,mail,cargo,nombre
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'El mail ya está inscrito';
+
+            }
+        })
+});
+
 app.controller('Inicio', function ($scope) {
     MensajeError = $scope.MensajeError;
     NombreActivo = $scope.NombreActivo;

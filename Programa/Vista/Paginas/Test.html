@@ -775,7 +775,10 @@
                             <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="validar()"
                                    value="Enviar">
                             <p id="mensaje"></p>
-                            <a id="redirigir" href="#/Mail"></a>
+                            <div ng-controller="ModificarTipo">
+                                <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit(4)"
+                                   id="redirigir"></a>
+                            </div>
                         </div>
                     </div>
 
@@ -1264,15 +1267,19 @@
             redireccion = "Siguiente";
             if ((CAEC < 4) && (EAOR > 5 )) {
                 text = "Usted es un Adaptador";
+                tipoAprendizaje = 1;
             }
             else if ((CAEC < 4) && (EAOR < 6 )) {
                 text = "Usted es un Divergente";
+                tipoAprendizaje = 2;
             }
             else if ((CAEC > 3) && (EAOR > 5 )) {
                 text = "Ustes es un Convergente";
+                tipoAprendizaje = 3;
             }
             else if ((CAEC > 3) && (EAOR < 6 )) {
                 text = "Ustes es un Asimilador";
+                tipoAprendizaje = 4;
             }
             else {
                 text = "Error";

@@ -207,6 +207,11 @@ app.controller('NuevoRegistro', function ($scope, $http, $window) {
     }
 });
 
+
+app.controller('EditarUnidades', function ($scope) {
+    $scope.message = 'Hola Desde EditarUnidades';
+});
+
 app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
     $scope.submit = function () {
         var data = $.param({
@@ -567,6 +572,10 @@ app.config(function ($routeProvider) {
         .when('/EliminarProfesor', {
             templateUrl: '../Vista/Paginas/EliminarProfesor.html',
             controller: 'PerfilAdministrador'
+        })
+        .when('/EditarUnidades', {
+            templateUrl: '../Vista/Paginas/EditarUnidades.html',
+            controller: 'EditarUnidades'
         })
         .otherwise({redirectTo: '/'});
 });

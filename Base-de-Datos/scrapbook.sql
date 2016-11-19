@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2016 a las 00:46:49
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.24
+-- Tiempo de generación: 19-11-2016 a las 15:52:34
+-- Versión del servidor: 5.7.16-log
+-- Versión de PHP: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -58,13 +58,6 @@ CREATE TABLE `alumno` (
   `acepta_encuesta?` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `alumno`
---
-
-INSERT INTO `alumno` (`Mail`, `Nombre`, `Rol`, `Contrasenia`, `Confirmacion_mail`, `Confirmacion_administrador`, `Tipo_aprendizaje`, `campus`, `carrera`, `acepta_encuesta?`) VALUES
-('a', 'a', '12', '12', '0', '0', '0', 'San Joaquin', 'Electrica', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -88,10 +81,10 @@ CREATE TABLE `contenido` (
   `Codigo` int(11) NOT NULL,
   `Unidad` int(11) NOT NULL,
   `SubUnidad` int(11) NOT NULL,
-  `1` int(11) NOT NULL,
-  `2` int(11) NOT NULL,
-  `3` int(11) NOT NULL,
-  `4` int(11) NOT NULL,
+  `Uno` int(11) NOT NULL,
+  `Dos` int(11) NOT NULL,
+  `Tres` int(11) NOT NULL,
+  `Cuatro` int(11) NOT NULL,
   `Tipo` int(11) NOT NULL COMMENT 'Texto=0 Imagen o video=1',
   `Titulo` varchar(100) DEFAULT NULL,
   `Contenido` varchar(10000) NOT NULL
@@ -101,9 +94,12 @@ CREATE TABLE `contenido` (
 -- Volcado de datos para la tabla `contenido`
 --
 
-INSERT INTO `contenido` (`Codigo`, `Unidad`, `SubUnidad`, `1`, `2`, `3`, `4`, `Tipo`, `Titulo`, `Contenido`) VALUES
-(1, 1, 1, 1, 0, 1, 0, 0, NULL, 'Scrubba Scrubba'),
-(2, 1, 1, 0, 1, 0, 0, 0, 'Rada', 'Rada');
+INSERT INTO `contenido` (`Codigo`, `Unidad`, `SubUnidad`, `Uno`, `Dos`, `Tres`, `Cuatro`, `Tipo`, `Titulo`, `Contenido`) VALUES
+(1, 1, 1, 1, 0, 1, 0, 0, 'a', 'aaa'),
+(2, 1, 1, 0, 1, 0, 0, 0, 'b', '<iframe width="560" height="315" src="https://www.youtube.com/embed/L8bfysXDH7Y" frameborder="0" allowfullscreen></iframe>'),
+(3, 1, 1, 1, 0, 1, 0, 0, 'c', 'ccc'),
+(4, 1, 1, 1, 0, 1, 1, 0, 'd', 'ddd'),
+(5, 1, 1, 1, 0, 0, 0, 0, 'e', 'eee');
 
 -- --------------------------------------------------------
 
@@ -246,7 +242,12 @@ CREATE TABLE `unidades` (
 INSERT INTO `unidades` (`Codigo`, `Unidad`, `SubUnidad`, `Titulo`) VALUES
 (1, 1, 0, 'Your Momma'),
 (2, 1, 1, 'Ley de Coulomb'),
-(3, 1, 2, 'Campo Eléctrico');
+(3, 1, 2, 'Campo Eléctrico'),
+(4, 2, 0, 'adsf'),
+(5, 2, 1, 'www'),
+(6, 3, 0, '41'),
+(7, 4, 0, 'dsf'),
+(8, 5, 0, 'ywy');
 
 --
 -- Índices para tablas volcadas
@@ -348,7 +349,7 @@ ALTER TABLE `unidades`
 -- AUTO_INCREMENT de la tabla `contenido`
 --
 ALTER TABLE `contenido`
-  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `pregunta`
 --
@@ -358,7 +359,7 @@ ALTER TABLE `pregunta`
 -- AUTO_INCREMENT de la tabla `unidades`
 --
 ALTER TABLE `unidades`
-  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Restricciones para tablas volcadas
 --

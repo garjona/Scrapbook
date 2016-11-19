@@ -260,22 +260,19 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
         .success(function (respuesta) {
             //la respuesta es un string con respuesta,mail,cargo,nombre
             if (respuesta.split("$")[0] == 'OK') {
-                $scope.listaTemp = JSON.parse(respuesta.split("$")[1]);
-                $scope.listas1 =[];
-                $scope.listas2 =[];
-                $scope.listas3 =[];
-                for(i=0;i<$scope.listaTemp.length;i++){
-                    if (i%3==0){
-                        $scope.listas1.push($scope.listaTemp[i])
-                    }else if (i%3==1){
-                        $scope.listas2.push($scope.listaTemp[i])
-                    }else if (i%3==2){
-                        $scope.listas3.push($scope.listaTemp[i])
+                listaTemp = JSON.parse(respuesta.split("$")[1]);
+                $scope.lis1 =[];
+                $scope.lis2 =[];
+                $scope.lis3 =[];
+                for(i=0;i<listaTemp.length;i++){
+                    if (i % 3 == 0){
+                        $scope.lis1.push(listaTemp[i])
+                    }else if (i % 3 == 1){
+                        $scope.lis2.push(listaTemp[i])
+                    }else if (i % 3 == 2){
+                        $scope.lis3.push(listaTemp[i])
                     }
                 }
-                Lista1=$scope.lista1;
-                Lista2=$scope.lista2;
-                Lista3=$scope.lista3;
             } else {
                 MensajeError = 'El mail ya está inscrito';
 

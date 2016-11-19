@@ -41,33 +41,37 @@
     </div>
 </div>
 
-<div class="uk-grid " ng-controller="MostrarEdicion">
-    <div class="uk-width-1-3 " ng-repeat="lista1 in listas1">
+<div class="uk-grid ">
+    <div class="uk-width-1-3 " ng-controller="MostrarEdicion">
+        <div ng-repeat="lista1 in lis1">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista1.Titulo}}</h4>
             <p>{{lista1.Contenido}}</p>
         </form>
         <div class="uk-panel-space">
         </div>
+        </div>
     </div>
 
-    <div class="uk-width-1-3 " ng-repeat="lista2 in listas2">
+    <div class="uk-width-1-3 " ng-controller="MostrarEdicion">
+        <div ng-repeat="lista2 in lis2">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista2.Titulo}}</h4>
             <p>{{lista2.Contenido}}</p>
         </form>
         <div class="uk-panel-space">
         </div>
+        </div>
     </div>
 
-    <div class="uk-width-1-3 " ng-repeat="lista3 in listas3">
+    <div class="uk-width-1-3 " ng-controller="MostrarEdicion">
+        <div ng-repeat="lista3 in lis3">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista3.Titulo}}</h4>
             <p>{{lista3.Contenido}}</p>
         </form>
         <div class="uk-panel-space">
         </div>
+        </div>
     </div>
-
-
 </div>

@@ -16,27 +16,54 @@
                     </div>
                     <div class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
-                            <li>Unidad I
-                                <ul>
-                                    <li>Ley de Coulomb</li>
-                                    <li>Campo Eléctrico</li>
-                                    <li>Gauss</li>
-                                    <li>Potencia Eléctrica</li>
-                                    <li>Materiales Dielectricos</li>
-                                </ul>
-                            </li>
+                            <div ng-controller="MostrarUnidad1">
+                                <li>Unidad I
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(1,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
                             <div class="uk-panel-space">
                             </div>
-                            <li>Unidad II
-                                <ul>
-                                    <li>Condensadores</li>
-                                    <li>Corriente Eléctrica</li>
-                                    <li><a href="#/FIS120"> Corriente y FEM</a></li>
-                                    <li>Circuitos Eléctricos</li>
-                                    <li>Campo Magnéticos</li>
-                                </ul>
-                            </li>
-
+                            <div ng-controller="MostrarUnidad2">
+                                <li>Unidad II
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(2,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad3">
+                                <li>Unidad III
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(3,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad4">
+                                <li>Unidad IV
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(4,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div class="uk-panel-space">
+                            </div>
+                            <div ng-controller="MostrarUnidad5">
+                                <li>Unidad V
+                                    <ul
+                                            ng-repeat="lista in listas">
+                                        <u1><a ng-click='mostrar(5,$index)'>{{lista.Titulo}}</a></u1>
+                                    </ul>
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>

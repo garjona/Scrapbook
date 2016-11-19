@@ -257,24 +257,77 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
         .success(function (respuesta) {
             //la respuesta es un string con respuesta,mail,cargo,nombre
             if (respuesta.split("$")[0] == 'OK') {
-                listaTemp = JSON.parse(respuesta.split("$")[1]);
+                $scope.listaTemp = JSON.parse(respuesta.split("$")[1]);
                 $scope.lis1 =[];
                 $scope.lis2 =[];
                 $scope.lis3 =[];
-                for(i=0;i<listaTemp.length;i++){
+                for(i=0;i<$scope.listaTemp.length;i++){
                     if (i % 3 == 0){
-                        $scope.lis1.push(listaTemp[i]);
+                        $scope.lis1.push($scope.listaTemp[i]);
                     }else if (i % 3 == 1){
-                        $scope.lis2.push(listaTemp[i]);
+                        $scope.lis2.push($scope.listaTemp[i]);
                     }else if (i % 3 == 2){
-                        $scope.lis3.push(listaTemp[i]);
+                        $scope.lis3.push($scope.listaTemp[i]);
                     }
                 }
             } else {
                 MensajeError = 'El mail ya está inscrito';
 
             }
-        })
+        });
+    $scope.refrescarEdicion = function (j) {
+        contador=0;
+        $scope.lis1 =[];
+        $scope.lis2 =[];
+        $scope.lis3 =[];
+        for(i=0;i<$scope.listaTemp.length;i++){
+            if(j==0){
+                if (i % 3 == 0){
+                    $scope.lis1.push($scope.listaTemp[i]);
+                }else if (i % 3 == 1){
+                    $scope.lis2.push($scope.listaTemp[i]);
+                }else if (i % 3 == 2){
+                    $scope.lis3.push($scope.listaTemp[i]);
+                }
+            } else if(j==1 && String($scope.listaTemp[i].Uno)=='1'){
+                if (contador % 3 == 0){
+                    $scope.lis1.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 1){
+                    $scope.lis2.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 2){
+                    $scope.lis3.push($scope.listaTemp[i]);
+                }
+                contador++;
+            } else if(j==2 && String($scope.listaTemp[i].Dos)=='1'){
+                if (contador % 3 == 0){
+                    $scope.lis1.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 1){
+                    $scope.lis2.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 2){
+                    $scope.lis3.push($scope.listaTemp[i]);
+                }
+                contador++;
+            } else if(j==3 && String($scope.listaTemp[i].Tres)=='1'){
+                if (contador % 3 == 0){
+                    $scope.lis1.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 1){
+                    $scope.lis2.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 2){
+                    $scope.lis3.push($scope.listaTemp[i]);
+                }
+                contador++;
+            } else if(j==4 && String($scope.listaTemp[i].Cuatro)=='1'){
+                if (contador % 3 == 0){
+                    $scope.lis1.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 1){
+                    $scope.lis2.push($scope.listaTemp[i]);
+                }else if (contador % 3 == 2){
+                    $scope.lis3.push($scope.listaTemp[i]);
+                }
+                contador++;
+            }
+        }
+    }
 });
 
 app.controller('Inicio', function ($scope) {

@@ -288,7 +288,7 @@ function mostrarColumnas(pedido,respuesta){
             }else{
                 lista=[];
                 for (i=0;i<rows.length;i++){
-                    lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido});
+                    lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido, Uno:json[i].Uno, Dos:json[i].Dos, Tres:json[i].Tres, Cuatro:json[i].Cuatro });
                 }
                 respuesta.end('OK$'+JSON.stringify(lista));
             }

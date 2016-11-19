@@ -47,7 +47,7 @@
         <div ng-repeat="lista1 in lis1">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista1.Titulo}}</h4>
-            <p>{{lista1.Contenido}}</p>
+            <div ng-bind-html="lista1.Contenido"></div>
         </form>
         <div class="uk-panel-space">
         </div>
@@ -58,7 +58,7 @@
         <div ng-repeat="lista2 in lis2">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista2.Titulo}}</h4>
-            <p>{{lista2.Contenido}}</p>
+            <div ng-bind-html="lista2.Contenido"></div>
         </form>
         <div class="uk-panel-space">
         </div>
@@ -69,7 +69,7 @@
         <div ng-repeat="lista3 in lis3">
         <form class="uk-panel uk-panel-box uk-form">
             <h4>{{lista3.Titulo}}</h4>
-            <p>{{lista3.Contenido}}</p>
+            <div ng-bind-html="lista3.Contenido"></div>
         </form>
         <div class="uk-panel-space">
         </div>

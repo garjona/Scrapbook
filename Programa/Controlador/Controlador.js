@@ -253,7 +253,7 @@ app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
     }
 });
 
-app.controller('MostrarEdicion', function ($scope, $http, $window) {
+app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -267,6 +267,7 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
                 $scope.lis2 =[];
                 $scope.lis3 =[];
                 for(i=0;i<$scope.listaTemp.length;i++){
+                    $scope.listaTemp[i].Contenido=$sce.trustAsHtml($scope.listaTemp[i].Contenido);
                     if (i % 3 == 0){
                         $scope.lis1.push($scope.listaTemp[i]);
                     }else if (i % 3 == 1){
@@ -332,7 +333,7 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
                 contador++;
             }
         }
-    }
+    };
 });
 
 app.controller('Inicio', function ($scope) {

@@ -256,8 +256,8 @@ app.controller('MostrarEdicion', function ($scope, $http, $window) {
     $http.post("/api/mostrarColumnas", data)
         .success(function (respuesta) {
             //la respuesta es un string con respuesta,mail,cargo,nombre
-            if (respuesta.data.split("$")[0] == 'OK') {
-                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+            if (respuesta.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.split("$")[1]);
                 ListasActivo = $scope.listas;
             } else {
                 MensajeError = 'El mail ya está inscrito';

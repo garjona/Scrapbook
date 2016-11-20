@@ -72,6 +72,75 @@ app.controller('EditarProfesor', function ($scope, $http) {
             })
     }
 });
+app.controller('MostrarUnidad1', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad1")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/Edicion";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
+
+
+});
+
+app.controller('MostrarUnidad2', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad2")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad3', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad3")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad4', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad4")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
+app.controller('MostrarUnidad5', function ($scope, $http, $window) {
+    $http.get("/api/mostrarUnidad5")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+});
+
 
 app.controller('EliminarAlumno', function ($scope, $http) {
     $http.get("/api/mostrarAlumnos")

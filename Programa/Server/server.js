@@ -535,8 +535,7 @@ function enviarMail(pedido,respuesta){
     });
     pedido.on('end', function () {
         var formulario = querystring.parse(info);
-        console.log(formulario["mail"]);
-        console.log(formulario["nombre"]);
+
         // Message object
         var message = {
 
@@ -564,7 +563,7 @@ function enviarMail(pedido,respuesta){
                 console.log(error.message);
                 return;
             }
-            console.log('Message sent successfully!');
+            console.log('El correo se mando al mail'+ formulario["mail"]);
 
             // if you don't want to use this transport object anymore, uncomment following line
             //transport.close(); // close the connection pool

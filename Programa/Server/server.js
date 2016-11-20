@@ -126,6 +126,10 @@ function encaminar(pedido, respuesta, camino) {
             enviarMail(pedido,respuesta);
             break;
         }
+        case 'Vista/api/mostrarUnidades':{
+            mostrarUnidades(pedido,respuesta);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -154,6 +158,42 @@ function encaminar(pedido, respuesta, camino) {
     }
 }
 
+function mostrarUnidades(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                diccionarioTemp={};
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    if (json[i].Unidad in diccionarioTemp){
+                        diccionarioTemp[json[i].Unidad].SubUnidad.push({Titulo:json[i].Titulo, Numero:json[i].SubUnidad});
+                    } else{
+                        diccionarioTemp[json[i].Unidad]={Numero:json[i].Unidad , SubUnidad:[]};
+                        diccionarioTemp[json[i].Unidad].SubUnidad.push({Titulo:json[i].Titulo, Numero:json[i].SubUnidad});
+                    }
+                }
+                console.log(diccionarioTemp);
+                for (i=0;i<Object.keys(diccionarioTemp).length;i++){
+                    lista.push(diccionarioTemp[String(i)]);
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
 function mostrarUnidad1(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {

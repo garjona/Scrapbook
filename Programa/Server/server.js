@@ -33,7 +33,6 @@ var mime = {
     'mp3': 'audio/mpeg3',
     'mp4': 'video/mp4'
 };
-
 var servidor = http.createServer(function (pedido, respuesta) {
     var objetourl = url.parse(pedido.url);
     var camino = objetourl.pathname;
@@ -53,6 +52,19 @@ var servidor = http.createServer(function (pedido, respuesta) {
     }
     encaminar(pedido, respuesta, camino);
 });
+
+var nodemailer = require('nodemailer');
+
+// Create a SMTP transport object
+var transport = nodemailer.createTransport("SMTP", {
+    service: 'Gmail',
+    auth: {
+        user: "scrapbook.contacto@gmail.com",
+        pass: "voteporevelyn"
+    }
+});
+
+console.log('SMTP Configured');
 
 
 function encaminar(pedido, respuesta, camino) {
@@ -106,9 +118,12 @@ function encaminar(pedido, respuesta, camino) {
             mostrarUnidad5(pedido,respuesta);
             break;
         }
-
         case 'Vista/api/mostrarColumnas':{
             mostrarColumnas(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/enviarMail':{
+            enviarMail(pedido,respuesta);
             break;
         }
 
@@ -513,6 +528,50 @@ function eliminarProfesor(pedido,respuesta){
     });
 }
 
+function enviarMail(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        console.log(formulario["mail"]);
+        console.log(formulario["nombre"]);
+        // Message object
+        var message = {
+
+            // sender info
+            from: 'Sckrapbook <scrapbook.contacto@gmail.com>',
+
+            // Comma separated list of recipients
+            to: '"'+formulario["nombre"]+'" <'+formulario["mail"]+'>',
+
+            // Subject of the message
+            subject: 'Confirmacion mail',
+
+            // plaintext body
+            text: 'Hola!!',
+
+            // HTML body
+            html: '<p><b>Hola</b> </p>' +
+            '<p>Tu codigo de confirmacion es 132341<br/></p>'
+        };
+
+        console.log('Sending Mail');
+        transport.sendMail(message, function (error) {
+            if (error) {
+                console.log('Error occured');
+                console.log(error.message);
+                return;
+            }
+            console.log('Message sent successfully!');
+
+            // if you don't want to use this transport object anymore, uncomment following line
+            //transport.close(); // close the connection pool
+        });
+        respuesta.end("OK");
+    });
+}
 servidor.listen(9000);
 
 console.log('Servidor web iniciado en http://localhost:9000');

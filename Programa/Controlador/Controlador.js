@@ -360,63 +360,21 @@ app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
-    MensajeError = $scope.MensajeError;
-    NombreActivo = $scope.NombreActivo;
-    MailActivo = $scope.MailActivo;
-    TipoDeAprendizajeActivo = $scope.TipoDeAprendizajeActivo;
-    CargoActivo = $scope.CargoActivo;
-    CarreraActivo = $scope.CarreraActivo;
-    CampusActivo = $scope.CampusActivo;
-    if (CargoActivo == "Alumno") {
-        $window.location = "#/Perfil";
-    } else if (CargoActivo == "Profesor") {
-        $window.location = "#/PerfilProfesor";
-    } else if (CargoActivo == "Administrador") {
-        $window.location = "#/PerfilAdministrador";
-    } else {
-        MensajeError = '';
-        NombreActivo = '';
-        MailActivo = '';
-        TipoDeAprendizajeActivo = '';
-        CargoActivo = '';
-        CarreraActivo = '';
-        CampusActivo = '';
-        ListasActivo = [];
-        $scope.MensajeError = MensajeError;
-        $scope.NombreActivo = NombreActivo;
-        $scope.MailActivo = MailActivo;
-        $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
-        $scope.CargoActivo = CargoActivo;
-        $scope.CarreraActivo = CarreraActivo;
-        $scope.CampusActivo = CampusActivo;
-    }
 });
 
 app.controller('Test', function ($scope, $window) {
-    if (CargoActivo != "Alumno") {
-        $window.location = "#/";
-    }
     $scope.message = 'Hola Desde Registrarse';
 });
 
 app.controller('Edicion', function ($scope, $window) {
-    if (CargoActivo == "Alumno") {
-        $window.location = "#/";
-    }
     $scope.message = 'Hola Desde Edición';
 });
 
 app.controller('Perfil', function ($scope, $window) {
-    if (CargoActivo != "Alumno") {
-        $window.location = "#/";
-    }
     $scope.message = 'Hola Desde Perfil';
 });
 
 app.controller('PerfilProfesor', function ($scope, $window) {
-    if (CargoActivo != "Profesor") {
-        $window.location = "#/";
-    }
     $scope.message = 'Hola Desde Perfil Profesor';
     $scope.MensajeError = MensajeError;
     $scope.NombreActivo = NombreActivo;
@@ -438,11 +396,19 @@ app.controller('FIS1201', function ($scope) {
     $scope.message = 'Hola Desde FIS1201';
 });
 
-app.controller('Mail', function ($scope, $window) {
-    if (CargoActivo != "Alumno") {
-        $window.location = "#/";
-    }
-    $scope.message = 'Hola Desde Mail';
+app.controller('Mail', function ($scope, $http) {
+    var data = $.param({
+        mail: MailActivo,
+        nombre: NombreActivo
+    });
+    $http.post("/api/enviarMail", data)
+        .success(function (respuesta) {
+            if (respuesta.split(",")[0] == 'OK') {
+                MensajeError = 'Se ha enviado un mail ';
+            } else {
+                MensajeError = 'Error al conectarse a la base de datos';
+            }
+        });
 });
 
 app.controller('AgregarContenido', function ($scope, $window) {
@@ -450,9 +416,6 @@ app.controller('AgregarContenido', function ($scope, $window) {
 });
 
 app.controller('PerfilAdministrador', function ($scope, $window) {
-    if (CargoActivo != "Administrador") {
-        $window.location = "#/";
-    }
     $scope.MensajeError = MensajeError;
     $scope.NombreActivo = NombreActivo;
     $scope.MailActivo = MailActivo;

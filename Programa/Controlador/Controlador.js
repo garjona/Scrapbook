@@ -80,7 +80,7 @@ app.controller('MostrarUnidad5', function ($scope, $http, $window) {
         });
 });
 
-app.controller('EliminarProfesor', function ($scope, $http) {
+app.controller('EditarProfesor', function ($scope, $http) {
     $http.get("/api/mostrarProfesor")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
@@ -104,7 +104,7 @@ app.controller('EliminarProfesor', function ($scope, $http) {
                 }
             })
     };
-    $scope.submit = function () {
+    $scope.submitEliminar = function () {
         var data = $.param({
             mail: $scope.mail
         });
@@ -121,6 +121,23 @@ app.controller('EliminarProfesor', function ($scope, $http) {
 
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            })
+    };
+    $scope.submitNuevo = function () {
+        var data = $.param({
+            nombre: $scope.nombre,
+            mail: $scope.mail,
+            contrasenia: $scope.contrasenia
+        });
+        $http.post("/api/nuevoProfesor", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha registrado exitosamente al profesor ' + respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
+                    $scope.listas.push({Mail: $scope.mail, Nombre: $scope.nombre});
+                } else {
+                    MensajeError = 'El mail ya está inscrito';
                 }
             })
     }
@@ -169,31 +186,6 @@ app.controller('EliminarAlumno', function ($scope, $http) {
                     MensajeError = 'El mail no se encuentra en la base de datos';
                 }
             })
-    }
-});
-
-app.controller('NuevoProfesor', function ($scope, $http, $window) {
-    $scope.submit = function () {
-        var data = $.param({
-            nombre: $scope.nombre,
-            mail: $scope.mail,
-            contrasenia: $scope.contrasenia
-        });
-        $http.post("/api/nuevoProfesor", data)
-            .success(function (respuesta) {
-                //la respuesta es un string con respuesta,mail,cargo,nombre
-                if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha registrado exitosamente al profesor ' + respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
-
-                } else {
-                    MensajeError = 'El mail ya está inscrito';
-
-                }
-                $window.location = "#/PerfilAdministrador";
-
-            })
-
-
     }
 });
 
@@ -591,17 +583,13 @@ app.config(function ($routeProvider) {
             templateUrl: '../Vista/Paginas/PerfilAdmin.html',
             controller: 'PerfilAdministrador'
         })
-        .when('/AgregarProfesor', {
-            templateUrl: '../Vista/Paginas/AgregarProfesor.html',
-            controller: 'PerfilAdministrador'
-        })
         .when('/EliminarAlumno', {
             templateUrl: '../Vista/Paginas/EliminarAlumno.html',
             controller: 'EliminarAlumno'
         })
-        .when('/EliminarProfesor', {
-            templateUrl: '../Vista/Paginas/EliminarProfesor.html',
-            controller: 'EliminarProfesor'
+        .when('/EditarProfesor', {
+            templateUrl: '../Vista/Paginas/EditarProfesor.html',
+            controller: 'EditarProfesor'
         })
         .when('/EditarUnidades', {
             templateUrl: '../Vista/Paginas/EditarUnidades.html',

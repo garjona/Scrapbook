@@ -41,7 +41,7 @@
         </div>
         <div class="uk-width-2-10">
             <div class="uk-text-center uk-height-1-1">
-                <div class="uk-vertical-align-middle" style="width: 100%;" ng-controller="NuevoProfesor">
+                <div class="uk-vertical-align-middle" style="width: 100%;" >
                     <form class="uk-panel uk-panel-box uk-form">
                         <div class="uk-text-left">
                             <h2>Agregar Profesor</h2>
@@ -56,7 +56,7 @@
                             <input class="uk-width-1-1 uk-form-large" type="password" placeholder="Contraseña" ng-model="contrasenia">
                         </div>
                         <div class="uk-form-row">
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">{{Registrarse}} </a>
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submitNuevo()">{{Registrarse}} </a>
                         </div>
                     </form>
                 </div>
@@ -72,7 +72,7 @@
                                    ng-model="mail">
                         </div>
                         <div class="uk-form-row">
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Eliminar</a>
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submitEliminar()">Eliminar</a>
                         </div>
                     </form>
                 </div>

@@ -478,7 +478,16 @@ app.controller('PerfilAdministrador', function ($scope, $http, $window) {
     $scope.message = 'Hola Desde Admin';
 });
 
-app.controller('Datos', function ($scope) {
+app.controller('Datos', function ($scope, $window) {
+    $scope.reedirigirAPerfilSegunCargo = function () {
+        if (CargoActivo == "Alumno") {
+            $window.location = "#/Perfil";
+        } else if (CargoActivo == "Administrador") {
+            $window.location = "#/PerfilAdministrador";
+        } else if (CargoActivo == "Profesor") {
+            $window.location = "#/PerfilProfesor";
+        }
+    };
     $scope.Inicio = 'ScrapBooks';
     $scope.IniciarSesion = ' Iniciar Sesión ';
     $scope.Registrarse = ' Registrarse ';

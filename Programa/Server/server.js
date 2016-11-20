@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'scrapbook'
 });
 
@@ -461,6 +461,6 @@ function enviarMail(pedido,respuesta){
         respuesta.end("OK");
     });
 }
-servidor.listen(9000);
+servidor.listen(8000);
 
-console.log('Servidor web iniciado en http://localhost:9000');
+console.log('Servidor web iniciado en http://localhost:8000');

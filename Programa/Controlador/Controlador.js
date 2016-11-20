@@ -189,37 +189,43 @@ app.controller('EliminarAlumno', function ($scope, $http) {
     }
 });
 
-app.controller('NuevoRegistro', function ($scope, $http, $window) {
+app.controller('Registrarse', function ($scope, $http, $window) {
+    $scope.nombre="";
+    $scope.mail="";
+    $scope.rol="";
+    $scope.contrasenia="";
+    $scope.carrera="";
+    $scope.campus="";
     $scope.submit = function () {
-        var data = $.param({
-            nombre: $scope.nombre,
-            mail: $scope.mail,
-            rol: $scope.rol,
-            contrasenia: $scope.contrasenia,
-            carrera: $scope.carrera,
-            campus: $scope.campus
-        });
-        $http.post("/api/registrarse", data)
-            .success(function (respuesta) {
-                //la respuesta es un string con respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
-                if (respuesta.split(",")[0] == 'OK') {
-                    $scope.MensajeError = 'Listo';
-                    //$window.location.href = 'http://www.google.com';
-                    MailActivo = respuesta.split(",")[1];
-                    CargoActivo = respuesta.split(",")[2];
-                    NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
-                    CarreraActivo = respuesta.split(",")[9];
-                    CampusActivo = respuesta.split(",")[8];
-                    $window.location = "#/Test";
+        if($scope.nombre!="" && $scope.mail!="" && $scope.rol!="" && $scope.contrasenia!="" && $scope.carrera!=""  && $scope.campus!="" ) {
+            var data = $.param({
+                nombre: $scope.nombre,
+                mail: $scope.mail,
+                rol: $scope.rol,
+                contrasenia: $scope.contrasenia,
+                carrera: $scope.carrera,
+                campus: $scope.campus
+            });
+            $http.post("/api/registrarse", data)
+                .success(function (respuesta) {
+                    //la respuesta es un string con respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
+                    if (respuesta.split(",")[0] == 'OK') {
+                        $scope.MensajeError = 'Listo';
+                        //$window.location.href = 'http://www.google.com';
+                        MailActivo = respuesta.split(",")[1];
+                        CargoActivo = respuesta.split(",")[2];
+                        NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
+                        CarreraActivo = respuesta.split(",")[9];
+                        CampusActivo = respuesta.split(",")[8];
+                        $window.location = "#/Test";
 
-                } else {
-                    $scope.MensajeError = 'El mail ya está inscrito';
-                    $window.location = "#/Registrarse"
-
-                }
-
-            })
-
+                    } else {
+                        $window.location = "#/Registrarse"
+                    }
+                })
+        } else{
+            $scope.MensajeError= "Faltan datos por rellenar"
+        }
 
     }
 });
@@ -229,7 +235,7 @@ app.controller('EditarUnidades', function ($scope) {
     $scope.message = 'Hola Desde EditarUnidades';
 });
 
-app.controller('NuevoIniciarSesion', function ($scope, $http, $window) {
+app.controller('IniciarSesion', function ($scope, $http, $window) {
     $scope.submit = function () {
         var data = $.param({
             mail: $scope.mail,
@@ -384,14 +390,6 @@ app.controller('Inicio', function ($scope) {
         $scope.CarreraActivo = CarreraActivo;
         $scope.CampusActivo = CampusActivo;
     }
-});
-
-app.controller('IniciarSesion', function ($scope) {
-    $scope.message = 'Hola Desde Iniciar Sesion';
-});
-
-app.controller('Registrarse', function ($scope) {
-    $scope.message = 'Hola Desde Registrarse';
 });
 
 app.controller('Test', function ($scope, $window) {

@@ -30,16 +30,16 @@
                            onclick="elegirUnidad()">Seleccionar</a>
                     </div>
 
-                    <div ng-controller="MostrarUnidad1">
+                    <div ng-controller="MostrarUnidad1" class="hide1" style="display: none">
                         <select id="subUnidad1" name="subUnidad1" class="subUnidad1 uk-width-1-1 uk-form-large">
-                            <option value="">Seleccione SubUnidad</option>
+                            <option value="0">Seleccione SubUnidad</option>
                             <option ng-repeat="lista in listas" value="{{lista.Titulo}}">
                                 {{lista.Titulo}}
                             </option>
                         </select>
                     </div>
 
-                    <div ng-controller="MostrarUnidad2">
+                    <div ng-controller="MostrarUnidad2" class="hide2" style="display: none">
                         <select id="subUnidad2" name="subUnidad2" class=" subUnidad2 uk-width-1-1 uk-form-large">
                             <option value="">Seleccione SubUnidad</option>
                             <option ng-repeat="lista in listas" value="{{lista.Titulo}}">
@@ -48,7 +48,7 @@
                         </select>
                     </div>
 
-                    <div ng-controller="MostrarUnidad3">
+                    <div ng-controller="MostrarUnidad3" class="hide3" style="display: none">
                         <select id="subUnidad3" name="subUnidad3" class="subUnidad3 uk-width-1-1 uk-form-large">
                             <option value="">Seleccione SubUnidad</option>
                             <option ng-repeat="lista in listas" value="{{lista.Titulo}}">
@@ -57,7 +57,7 @@
                         </select>
                     </div>
 
-                    <div ng-controller="MostrarUnidad4">
+                    <div ng-controller="MostrarUnidad4" class="hide4" style="display: none">
                         <select id="subUnidad4" name="subUnidad4" class="subUnidad4 uk-width-1-1 uk-form-large">
                             <option value="">Seleccione SubUnidad</option>
                             <option ng-repeat="lista in listas" value="{{lista.Titulo}}">
@@ -66,7 +66,7 @@
                         </select>
                     </div>
 
-                    <div ng-controller="MostrarUnidad5">
+                    <div ng-controller="MostrarUnidad5" class="hide5" style="display: none">
                         <select id="subUnidad5" name="subUnidad5" class="subUnidad5 uk-width-1-1 uk-form-large">
                             <option value="">Seleccione SubUnidad</option>
                             <option ng-repeat="lista in listas" value="{{lista.Titulo}}">
@@ -78,7 +78,7 @@
                     <div class="uk-panel-space">
                     </div>
 
-                    <div class=" uk-align-center">
+                    <div class="hide6 uk-align-center"  style="display: none">
                         <a class="TipoDatos uk-width-1-10 uk-button uk-button-primary uk-button-large"
                            onclick="mostrarContenidoEspecifico(1)">Texto</a>
                         <a class="TipoDatos uk-width-1-10 uk-button uk-button-primary uk-button-large"
@@ -89,7 +89,7 @@
                            onclick="mostrarContenidoEspecifico(4)">GIF</a>
                     </div>
 
-                    <div class="uk-form-row">
+                    <div class="hide6 uk-form-row"  style="display: none">
                         <input class="Titulo uk-width-1-1 uk-form-large" type="text" placeholder="Titulo"
                                ng-model="nombre">
                         <h3></h3>
@@ -107,15 +107,16 @@
                     </div>
                     <div class="uk-panel-space">
                     </div>
-                    <div class="TipoPersona uk-form uk-align-center">
+                    <div class="hide6 TipoPersona uk-form uk-align-center"  style="display: none">
                         <fieldset data-uk-margin>
-                            <input type="checkbox" name="action" id="track" value="track"/><label
-                                for="track">Adaptador</label>
-                            <input type="checkbox" name="action" id="event" value="event"/><label
-                                for="event">Divergente</label>
-                            <input type="checkbox" name="action" id="message" value="message"/><label for="message">Convergente</label>
-                            <input type="checkbox" name="action" id="event" value="event"/><label
-                                for="event">Asimilador</label>
+                            <input type="checkbox" name="action" id="Adaptador" value="1"/><label
+                                for="Adaptador">Adaptador</label>
+                            <input type="checkbox" name="action" id="Divergente" value="1"/><label
+                                for="Divergente">Divergente</label>
+                            <input type="checkbox" name="action" id="Convergente" value="1"/><label
+                                for="Convergente">Convergente</label>
+                            <input type="checkbox" name="action" id="Asimilador" value="1"/><label
+                                for="Asimilador">Asimilador</label>
                         </fieldset>
                     </div>
                     <div class="uk-panel-space">
@@ -124,7 +125,7 @@
                         <div class="uk-width-7-10">
                         </div>
                         <a class="uk-width-3-10 uk-align-center uk-button uk-button-primary uk-button-large"
-                           onclick="">Seleccionar</a>
+                           onclick="enviarInfo()">Seleccionar</a>
                     </div>
 
                 </div>
@@ -134,7 +135,24 @@
         </div>
     </div>
 </div>
-
+<p>Unidad</p><br>
+<p id="mensajeUnidad"></p><br>
+<p>SubUnidad</p><br>
+<p id="mensajeSubUnidad"></p><br>
+<p>Uno</p><br>
+<p id="mensajeUno"></p><br>
+<p>Dos</p><br>
+<p id="mensajeDos"></p><br>
+<p>Tres</p><br>
+<p id="mensajeTres"></p><br>
+<p>Cuatro</p><br>
+<p id="mensajeCuatro"></p><br>
+<p>Tipo</p><br>
+<p id="mensajeTipo"></p><br>
+<p>Titulo</p><br>
+<p id="mensajeTitulo"></p><br>
+<p>Contenido</p><br>
+<p id="mensajeContenido"></p><br>
 
 <div class="uk-panel-space">
 </div>
@@ -158,7 +176,12 @@
             $('.subUnidad3').hide();
             $('.subUnidad4').hide();
             $('.subUnidad5').hide();
-
+            $('.hide1').show();
+            $('.hide6').show();
+            document.getElementById("subUnidad2").selectedIndex = 0;
+            document.getElementById("subUnidad3").selectedIndex = 0;
+            document.getElementById("subUnidad4").selectedIndex = 0;
+            document.getElementById("subUnidad5").selectedIndex = 0;
 
         }
         else if (selected == 'Unidad2') {
@@ -174,6 +197,12 @@
             $('.subUnidad3').hide();
             $('.subUnidad4').hide();
             $('.subUnidad5').hide();
+            $('.hide2').show();
+            $('.hide6').show();
+            document.getElementById("subUnidad1").selectedIndex = 0;
+            document.getElementById("subUnidad3").selectedIndex = 0;
+            document.getElementById("subUnidad4").selectedIndex = 0;
+            document.getElementById("subUnidad5").selectedIndex = 0;
 
         }
         else if (selected == 'Unidad3') {
@@ -189,6 +218,12 @@
             $('.subUnidad3').show();
             $('.subUnidad4').hide();
             $('.subUnidad5').hide();
+            $('.hide3').show();
+            $('.hide6').show();
+            document.getElementById("subUnidad1").selectedIndex = 0;
+            document.getElementById("subUnidad2").selectedIndex = 0;
+            document.getElementById("subUnidad4").selectedIndex = 0;
+            document.getElementById("subUnidad5").selectedIndex = 0;
 
         }
         else if (selected == 'Unidad4') {
@@ -204,6 +239,12 @@
             $('.subUnidad3').hide();
             $('.subUnidad4').show();
             $('.subUnidad5').hide();
+            $('.hide4').show();
+            $('.hide6').show();
+            document.getElementById("subUnidad1").selectedIndex = 0;
+            document.getElementById("subUnidad2").selectedIndex = 0;
+            document.getElementById("subUnidad3").selectedIndex = 0;
+            document.getElementById("subUnidad5").selectedIndex = 0;
 
         }
         else if (selected == 'Unidad5') {
@@ -219,6 +260,12 @@
             $('.subUnidad3').hide();
             $('.subUnidad4').hide();
             $('.subUnidad5').show();
+            $('.hide5').show();
+            $('.hide6').show();
+            document.getElementById("subUnidad1").selectedIndex = 0;
+            document.getElementById("subUnidad2").selectedIndex = 0;
+            document.getElementById("subUnidad3").selectedIndex = 0;
+            document.getElementById("subUnidad4").selectedIndex = 0;
 
         }
         else {
@@ -234,13 +281,17 @@
             $('.subUnidad3').hide();
             $('.subUnidad4').hide();
             $('.subUnidad5').hide();
-
-
+            document.getElementById("subUnidad1").selectedIndex = 0;
+            document.getElementById("subUnidad2").selectedIndex = 0;
+            document.getElementById("subUnidad3").selectedIndex = 0;
+            document.getElementById("subUnidad4").selectedIndex = 0;
+            document.getElementById("subUnidad5").selectedIndex = 0;
         }
     }
 </script>
 
 <script>
+    var contenido;
     function mostrarContenidoEspecifico(i) {
         if (i == 1) {
             $('.Titulo').show();
@@ -248,6 +299,8 @@
             $('.Imagen').hide();
             $('.Video').hide();
             $('.GIF').hide();
+            contenido=1;
+            document.getElementById("mensaje").innerHTML = contenido;
         }
         else if (i == 2) {
             $('.Titulo').show();
@@ -255,6 +308,8 @@
             $('.Imagen').show();
             $('.Video').hide();
             $('.GIF').hide();
+            contenido=2;
+            document.getElementById("mensaje").innerHTML = contenido;
         }
         else if (i == 3) {
             $('.Titulo').show();
@@ -262,6 +317,8 @@
             $('.Imagen').hide();
             $('.Video').show();
             $('.GIF').hide();
+            contenido=3;
+            document.getElementById("mensaje").innerHTML = contenido;
         }
         else if (i == 4) {
             $('.Titulo').show();
@@ -269,6 +326,54 @@
             $('.Imagen').hide();
             $('.Video').hide();
             $('.GIF').show();
+            contenido=4;
+            document.getElementById("mensaje").innerHTML = contenido;
         }
+    }
+</script>
+
+<script>
+    function enviarInfo() {
+        var subUnidad1;
+        var selectUnidad = document.getElementById("unidad");
+        var selectedUnidad = selectUnidad.options[selectUnidad.selectedIndex].index;
+        document.getElementById("mensajeUnidad").innerHTML = selectedUnidad;
+        subUnidad1=selectedUnidad;
+
+        if (subUnidad1==0){
+            document.getElementById("mensajeSubUnidad").innerHTML = subUnidad1;
+        }
+        else{
+            if(subUnidad1==1){
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                document.getElementById("mensajeSubUnidad").innerHTML = selectedSubUnidad;
+            }
+            if(subUnidad1==2){
+                var selectSubUnidad = document.getElementById("subUnidad2");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                document.getElementById("mensajeSubUnidad").innerHTML = selectedSubUnidad;
+            }
+            if(subUnidad1==3){
+                var selectSubUnidad = document.getElementById("subUnidad3");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                document.getElementById("mensajeSubUnidad").innerHTML = selectedSubUnidad;
+            }
+            if(subUnidad1==4){
+                var selectSubUnidad = document.getElementById("subUnidad4");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                document.getElementById("mensajeSubUnidad").innerHTML = selectedSubUnidad;
+            }
+            if(subUnidad1==5){
+                var selectSubUnidad = document.getElementById("subUnidad5");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                document.getElementById("mensajeSubUnidad").innerHTML = selectedSubUnidad;
+            }
+        }
+
+        var selectUno = document.getElementById("Adaptador");
+        var selectedUno = selectUno.options[selectUno.selectedIndex].checked;
+        document.getElementById("mensajeSubUnidad").innerHTML = selectedUno;
+
     }
 </script>

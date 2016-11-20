@@ -80,7 +80,30 @@ app.controller('MostrarUnidad5', function ($scope, $http, $window) {
         });
 });
 
-app.controller('EliminarProfesor', function ($scope, $http, $window) {
+app.controller('EliminarProfesor', function ($scope, $http) {
+    $http.get("/api/mostrarProfesor")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+    $scope.del = function (i) {
+        var data = $.param({
+            mail: $scope.listas[i].Mail
+        });
+        $scope.listas.splice(i, 1);
+        $http.post("/api/eliminarProfesor", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente el profesor de mail ' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            })
+    };
     $scope.submit = function () {
         var data = $.param({
             mail: $scope.mail
@@ -89,18 +112,20 @@ app.controller('EliminarProfesor', function ($scope, $http, $window) {
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al profesor de mail ' + respuesta.split(",")[1];
+                    MensajeError = 'Se ha eliminado exitosamente el profesor de mail ' + respuesta.split(",")[1];
+                    for (i=0;i<$scope.listas.length;i++){
+                        if ($scope.listas[i].Mail == $scope.mail){
+                            $scope.listas.splice(i, 1);
+                        }
+                    }
 
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
                 }
-                $window.location = "#/PerfilAdministrador";
-
             })
-
-
     }
 });
+
 app.controller('EliminarAlumno', function ($scope, $http) {
     $http.get("/api/mostrarAlumnos")
         .then(function (respuesta) {

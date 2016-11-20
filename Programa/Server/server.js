@@ -82,6 +82,10 @@ function encaminar(pedido, respuesta, camino) {
             mostrarAlumnos(pedido,respuesta);
             break;
         }
+        case 'Vista/api/mostrarProfesor':{
+            mostrarProfesor(pedido,respuesta);
+            break;
+        }
         case 'Vista/api/mostrarUnidad1':{
             mostrarUnidad1(pedido,respuesta);
             break;
@@ -398,6 +402,33 @@ function mostrarAlumnos(pedido,respuesta){
         });
     });
 }
+function mostrarProfesor(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM profesor;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
 
 function nuevoProfesor(pedido,respuesta){
     var info = '';
@@ -435,8 +466,6 @@ function eliminarAlumno(pedido,respuesta){
             if (err) {
                 respuesta.end('ERROR');
             }
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
             if (rows.length == 0) {
                 respuesta.end('ERROR');
             }
@@ -467,13 +496,12 @@ function eliminarProfesor(pedido,respuesta){
             if (err) {
                 respuesta.end('ERROR');
             }
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
             if (rows.length == 0) {
                 respuesta.end('ERROR');
             }
         });
         connection.query("DELETE FROM profesor WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            console.log(formulario["mail"]);
             if (err) {
                 respuesta.end('ERROR');
             }

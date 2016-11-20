@@ -5,7 +5,6 @@ var TipoDeAprendizajeActivo = '';
 var CargoActivo = '';
 var CarreraActivo = '';
 var CampusActivo = '';
-var ListasActivo = [];
 var UnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
@@ -301,12 +300,7 @@ app.controller('Edicion', function ($scope, $window) {
     $scope.message = 'Hola Desde Edición';
 });
 
-app.controller('Perfil', function ($scope, $window) {
-    $scope.message = 'Hola Desde Perfil';
-});
-
-app.controller('PerfilProfesor', function ($scope, $window) {
-    $scope.message = 'Hola Desde Perfil Profesor';
+app.controller('Perfil', function ($scope, $http, $window) {
     $scope.MensajeError = MensajeError;
     $scope.NombreActivo = NombreActivo;
     $scope.MailActivo = MailActivo;
@@ -314,6 +308,48 @@ app.controller('PerfilProfesor', function ($scope, $window) {
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
     $scope.CampusActivo = CampusActivo;
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListaActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/FIS120";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
+});
+
+app.controller('PerfilProfesor', function ($scope, $http, $window) {
+    $scope.MensajeError = MensajeError;
+    $scope.NombreActivo = NombreActivo;
+    $scope.MailActivo = MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListaActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/Edicion";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
 });
 
 app.controller('FIS120', function ($scope, $window) {
@@ -347,6 +383,13 @@ app.controller('AgregarContenido', function ($scope, $window) {
 });
 
 app.controller('PerfilAdministrador', function ($scope, $http, $window) {
+    $scope.MensajeError = MensajeError;
+    $scope.NombreActivo = NombreActivo;
+    $scope.MailActivo = MailActivo;
+    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
+    $scope.CargoActivo = CargoActivo;
+    $scope.CarreraActivo = CarreraActivo;
+    $scope.CampusActivo = CampusActivo;
     $http.get("/api/mostrarUnidades")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
@@ -363,14 +406,6 @@ app.controller('PerfilAdministrador', function ($scope, $http, $window) {
         SubUnidadActivo = i;
         TipoActivo = '0';
     };
-    $scope.MensajeError = MensajeError;
-    $scope.NombreActivo = NombreActivo;
-    $scope.MailActivo = MailActivo;
-    $scope.TipoDeAprendizajeActivo = TipoDeAprendizajeActivo;
-    $scope.CargoActivo = CargoActivo;
-    $scope.CarreraActivo = CarreraActivo;
-    $scope.CampusActivo = CampusActivo;
-    $scope.listas
     $scope.message = 'Hola Desde Admin';
 });
 
@@ -388,7 +423,6 @@ app.controller('Datos', function ($scope) {
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
     $scope.CampusActivo = CampusActivo;
-
 });
 
 app.controller('InlineEditorController', function ($scope) {

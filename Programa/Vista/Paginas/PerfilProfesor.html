@@ -4,7 +4,7 @@
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
-<div class="uk-grid">
+<div class="uk-grid" >
     <div class="uk-width-3-4">
         <div class="uk-flex-right">
             <div class="uk-panel-space">
@@ -16,53 +16,19 @@
                     </div>
                     <div class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
-                            <div ng-controller="MostrarUnidad1">
-                                <li>Unidad I
-                                    <ul
-                                            ng-repeat="lista in listas">
-                                        <u1><a ng-click='mostrar(1,$index)'>{{lista.Titulo}}</a></u1>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="uk-panel-space">
-                            </div>
-                            <div ng-controller="MostrarUnidad2">
-                                <li>Unidad II
-                                    <ul
-                                            ng-repeat="lista in listas">
-                                        <u1><a ng-click='mostrar(2,$index)'>{{lista.Titulo}}</a></u1>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="uk-panel-space">
-                            </div>
-                            <div ng-controller="MostrarUnidad3">
-                                <li>Unidad III
-                                    <ul
-                                            ng-repeat="lista in listas">
-                                        <u1><a ng-click='mostrar(3,$index)'>{{lista.Titulo}}</a></u1>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="uk-panel-space">
-                            </div>
-                            <div ng-controller="MostrarUnidad4">
-                                <li>Unidad IV
-                                    <ul
-                                            ng-repeat="lista in listas">
-                                        <u1><a ng-click='mostrar(4,$index)'>{{lista.Titulo}}</a></u1>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="uk-panel-space">
-                            </div>
-                            <div ng-controller="MostrarUnidad5">
-                                <li>Unidad V
-                                    <ul
-                                            ng-repeat="lista in listas">
-                                        <u1><a ng-click='mostrar(5,$index)'>{{lista.Titulo}}</a></u1>
-                                    </ul>
-                                </li>
+                            <div ng-repeat="unidad in listas">
+                                <div>
+                                    <li>Unidad {{unidad.Numero}}
+                                        <ul
+                                                ng-repeat="subLista in unidad.SubUnidad">
+                                            <u1>
+                                                <a ng-click='mostrar(unidad.Numero,subLista.Numero)'>{{subLista.Titulo}}</a>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
                             </div>
                         </ul>
                     </div>
@@ -74,7 +40,7 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-align-center" style="width: 100%;">
-            <div ng-controller="PerfilProfesor" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+            <div class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
                      src="http://vignette1.wikia.nocookie.net/dexterslab/images/d/d9/Old_man_dexter2.jpg/revision/latest?cb=20130320194304"
                      alt="">
@@ -82,12 +48,10 @@
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{MailActivo}}</h5>
                 <div class="uk-form-row">
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EditarUnidades">Editar Unidades</a>
-
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EditarUnidades">Editar
+                        Unidades</a>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
 </div>

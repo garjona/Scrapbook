@@ -43,8 +43,6 @@ var servidor = http.createServer(function (pedido, respuesta) {
         camino = 'Controlador/Controlador.js';
     } else if (camino.substring(0, 5) == "/Cont") {
         camino = "Controlador/Controlador.js";
-    } else if (camino.substring(0, 5) == "/Cons") {
-        camino = "Controlador/Consulta.js";
     } else if (camino.substring(0, 4) == "/Vis") {
         camino = camino.substring(1);
     } else if (camino.substring(0, 4) == "/ven") {

@@ -101,22 +101,20 @@ app.controller('EliminarProfesor', function ($scope, $http, $window) {
 
     }
 });
-app.controller('EliminarAlumno', function ($scope, $http, $window) {
+app.controller('EliminarAlumno', function ($scope, $http) {
     $http.get("/api/mostrarAlumnos")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
                 $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
-                ListasActivo = $scope.listas;
             } else {
                 MensajeError = 'Hubo un error';
             }
         });
     $scope.del = function (i) {
-        $scope.listas.splice(i, 1);
         var data = $.param({
-            mail: ListasActivo[i].Mail
+            mail: $scope.listas[i].Mail
         });
-        listasActivo = $scope.listas;
+        $scope.listas.splice(i, 1);
         $http.post("/api/eliminarAlumno", data)
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
@@ -136,64 +134,16 @@ app.controller('EliminarAlumno', function ($scope, $http, $window) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
                     MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+                    for (i=0;i<$scope.listas.length;i++){
+                        if ($scope.listas[i].Mail == $scope.mail){
+                            $scope.listas.splice(i, 1);
+                        }
+                    }
 
-                } else {
-                    MensajeError = 'El mail no se encuentra en la base de datos';
-
-                }
-                $window.location = "#/PerfilAdministrador";
-
-            })
-
-
-    }
-});
-
-app.controller('EliminarAlumno', function ($scope, $http, $window) {
-    $http.get("/api/mostrarAlumnos")
-        .then(function (respuesta) {
-            if (respuesta.data.split("$")[0] == 'OK') {
-                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
-                ListasActivo = $scope.listas;
-            } else {
-                MensajeError = 'Hubo un error';
-            }
-        });
-    $scope.del = function (i) {
-        $scope.listas.splice(i, 1);
-        var data = $.param({
-            mail: ListasActivo[i].Mail
-        });
-        listasActivo = $scope.listas;
-        $http.post("/api/eliminarAlumno", data)
-            .success(function (respuesta) {
-                //la respuesta es un string con respuesta,mail,cargo,nombre
-                if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
                 } else {
                     MensajeError = 'El mail no se encuentra en la base de datos';
                 }
             })
-    };
-    $scope.submit = function () {
-        var data = $.param({
-            mail: $scope.mail
-        });
-        $http.post("/api/eliminarAlumno", data)
-            .success(function (respuesta) {
-                //la respuesta es un string con respuesta,mail,cargo,nombre
-                if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
-
-                } else {
-                    MensajeError = 'El mail no se encuentra en la base de datos';
-
-                }
-                $window.location = "#/PerfilAdministrador";
-
-            })
-
-
     }
 });
 
@@ -618,11 +568,11 @@ app.config(function ($routeProvider) {
         })
         .when('/EliminarAlumno', {
             templateUrl: '../Vista/Paginas/EliminarAlumno.html',
-            controller: 'PerfilAdministrador'
+            controller: 'EliminarAlumno'
         })
         .when('/EliminarProfesor', {
             templateUrl: '../Vista/Paginas/EliminarProfesor.html',
-            controller: 'PerfilAdministrador'
+            controller: 'EliminarProfesor'
         })
         .when('/EditarUnidades', {
             templateUrl: '../Vista/Paginas/EditarUnidades.html',

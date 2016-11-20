@@ -73,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+              <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -82,26 +82,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="530" column="37" selection-start-line="530" selection-start-column="37" selection-end-line="530" selection-end-column="37" />
+            <state relative-caret-position="147">
+              <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
               <folding>
                 <element signature="e#103#157#0" expanded="false" />
                 <element signature="e#198#257#0" expanded="false" />
                 <element signature="e#797#1430#0" expanded="false" />
-                <element signature="n#!!block;n#encaminar#0" expanded="false" />
-                <element signature="n#!!block;n#mostrarUnidad1#0" expanded="false" />
-                <element signature="n#!!block;n#mostrarUnidad2#0" expanded="false" />
-                <element signature="n#!!block;n#mostrarUnidad3#0" expanded="false" />
-                <element signature="n#!!block;n#mostrarUnidad4#0" expanded="false" />
-                <element signature="n#!!block;n#mostrarUnidad5#0" expanded="false" />
+                <element signature="n#!!block;n#mostrarUnidades#0" expanded="false" />
                 <element signature="n#!!block;n#mostrarColumnas#0" expanded="false" />
                 <element signature="n#!!block;n#registro2#0" expanded="false" />
                 <element signature="n#!!block;n#iniciarSesion#0" expanded="false" />
                 <element signature="n#!!block;n#mostrarAlumnos#0" expanded="false" />
                 <element signature="n#!!block;n#mostrarProfesor#0" expanded="false" />
+                <element signature="n#!!block;n#nuevoProfesor#0" expanded="false" />
                 <element signature="n#!!block;n#eliminarAlumno#0" expanded="false" />
                 <element signature="n#!!block;n#eliminarProfesor#0" expanded="false" />
                 <element signature="n#!!block;n#enviarMail#0" expanded="false" />
@@ -110,35 +106,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <marker date="1479623674974" expanded="true" signature="0:247" ph="{&quot;name&quot;: &quot;miWebServer&quot;...}" />
-                <marker date="1479623674974" expanded="true" signature="110:245" ph="{&quot;express&quot;: &quot;3.x&quot;...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="453" column="22" selection-start-line="453" selection-start-column="22" selection-end-line="453" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registrarse.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-              <folding />
+            <state relative-caret-position="-740">
+              <caret line="292" column="44" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
+              <folding>
+                <element signature="e#409#2971#0" expanded="false" />
+                <element signature="e#3033#4782#0" expanded="false" />
+                <element signature="e#4850#6536#0" expanded="false" />
+                <element signature="e#6592#6645#0" expanded="false" />
+                <element signature="e#6715#8793#0" expanded="false" />
+                <element signature="e#8870#12211#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,13 +192,13 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" />
         <option value="$PROJECT_DIR$/Programa/Controlador/mailCtrl.js" />
         <option value="$PROJECT_DIR$/Programa/package.json" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
         <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
       </list>
@@ -646,7 +626,7 @@
       <workItem from="1479573527635" duration="3401000" />
       <workItem from="1479603927060" duration="3004000" />
       <workItem from="1479611257868" duration="1380000" />
-      <workItem from="1479612901336" duration="14298000" />
+      <workItem from="1479612901336" duration="20186000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -970,11 +950,25 @@
       <option name="project" value="LOCAL" />
       <updated>1479627535277</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Cambios en package, instalacion para enviar mail">
+      <created>1479627627312</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1479627627312</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Mejorado mostrar unidades">
+      <created>1479654578358</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1479654578358</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315170000" />
+    <option name="totallyTimeSpent" value="321058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1051,11 +1045,12 @@
     <MESSAGE value="actualizado perfil administrador" />
     <MESSAGE value="Actualizado Registrarse e iniciar sesion" />
     <MESSAGE value="Cambios en package, instalacion para enviar mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en package, instalacion para enviar mail" />
+    <MESSAGE value="Mejorado mostrar unidades" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejorado mostrar unidades" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1193,17 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1233,17 +1217,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1479623674974" expanded="true" signature="0:247" ph="{&quot;name&quot;: &quot;miWebServer&quot;...}" />
-            <marker date="1479623674974" expanded="true" signature="110:245" ph="{&quot;express&quot;: &quot;3.x&quot;...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1279,36 +1252,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+    <entry file="file://$PROJECT_DIR$/Programa/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="453" column="22" selection-start-line="453" selection-start-column="22" selection-end-line="453" selection-end-column="22" />
+        <state relative-caret-position="160">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="530" column="37" selection-start-line="530" selection-start-column="37" selection-end-line="530" selection-end-column="37" />
+        <state relative-caret-position="147">
+          <caret line="96" column="42" selection-start-line="96" selection-start-column="42" selection-end-line="96" selection-end-column="42" />
           <folding>
             <element signature="e#103#157#0" expanded="false" />
             <element signature="e#198#257#0" expanded="false" />
             <element signature="e#797#1430#0" expanded="false" />
-            <element signature="n#!!block;n#encaminar#0" expanded="false" />
-            <element signature="n#!!block;n#mostrarUnidad1#0" expanded="false" />
-            <element signature="n#!!block;n#mostrarUnidad2#0" expanded="false" />
-            <element signature="n#!!block;n#mostrarUnidad3#0" expanded="false" />
-            <element signature="n#!!block;n#mostrarUnidad4#0" expanded="false" />
-            <element signature="n#!!block;n#mostrarUnidad5#0" expanded="false" />
+            <element signature="n#!!block;n#mostrarUnidades#0" expanded="false" />
             <element signature="n#!!block;n#mostrarColumnas#0" expanded="false" />
             <element signature="n#!!block;n#registro2#0" expanded="false" />
             <element signature="n#!!block;n#iniciarSesion#0" expanded="false" />
             <element signature="n#!!block;n#mostrarAlumnos#0" expanded="false" />
             <element signature="n#!!block;n#mostrarProfesor#0" expanded="false" />
+            <element signature="n#!!block;n#nuevoProfesor#0" expanded="false" />
             <element signature="n#!!block;n#eliminarAlumno#0" expanded="false" />
             <element signature="n#!!block;n#eliminarProfesor#0" expanded="false" />
             <element signature="n#!!block;n#enviarMail#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-740">
+          <caret line="292" column="44" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
+          <folding>
+            <element signature="e#409#2971#0" expanded="false" />
+            <element signature="e#3033#4782#0" expanded="false" />
+            <element signature="e#4850#6536#0" expanded="false" />
+            <element signature="e#6592#6645#0" expanded="false" />
+            <element signature="e#6715#8793#0" expanded="false" />
+            <element signature="e#8870#12211#0" expanded="false" />
           </folding>
         </state>
       </provider>

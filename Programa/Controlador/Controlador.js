@@ -106,7 +106,7 @@ app.controller('EditarProfesor', function ($scope, $http) {
     };
     $scope.submitEliminar = function () {
         var data = $.param({
-            mail: $scope.mail
+            mail: $scope.mail2
         });
         $http.post("/api/eliminarProfesor", data)
             .success(function (respuesta) {
@@ -114,7 +114,7 @@ app.controller('EditarProfesor', function ($scope, $http) {
                 if (respuesta.split(",")[0] == 'OK') {
                     MensajeError = 'Se ha eliminado exitosamente el profesor de mail ' + respuesta.split(",")[1];
                     for (i=0;i<$scope.listas.length;i++){
-                        if ($scope.listas[i].Mail == $scope.mail){
+                        if ($scope.listas[i].Mail == $scope.mail2){
                             $scope.listas.splice(i, 1);
                         }
                     }

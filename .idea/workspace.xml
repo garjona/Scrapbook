@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,8 +137,8 @@
       <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="299" column="35" selection-start-line="299" selection-start-column="35" selection-end-line="299" selection-end-column="35" />
+            <state relative-caret-position="78">
+              <caret line="291" column="44" selection-start-line="291" selection-start-column="44" selection-end-line="291" selection-end-column="44" />
               <folding>
                 <element signature="e#386#2948#0" expanded="false" />
                 <element signature="e#3010#4759#0" expanded="false" />
@@ -548,7 +544,7 @@
       <workItem from="1479603927060" duration="3004000" />
       <workItem from="1479611257868" duration="1380000" />
       <workItem from="1479612901336" duration="20186000" />
-      <workItem from="1479657780156" duration="4917000" />
+      <workItem from="1479657780156" duration="4949000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -886,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479654578358</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor">
+      <created>1479665436783</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1479665436799</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325975000" />
+    <option name="totallyTimeSpent" value="326007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -968,7 +971,8 @@
     <MESSAGE value="Actualizado Registrarse e iniciar sesion" />
     <MESSAGE value="Cambios en package, instalacion para enviar mail" />
     <MESSAGE value="Mejorado mostrar unidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejorado mostrar unidades" />
+    <MESSAGE value="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1193,8 +1197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="299" column="35" selection-start-line="299" selection-start-column="35" selection-end-line="299" selection-end-column="35" />
+        <state relative-caret-position="78">
+          <caret line="291" column="44" selection-start-line="291" selection-start-column="44" selection-end-line="291" selection-end-column="44" />
           <folding>
             <element signature="e#386#2948#0" expanded="false" />
             <element signature="e#3010#4759#0" expanded="false" />

@@ -455,6 +455,10 @@ app.controller('Mail', function ($scope, $window) {
     $scope.message = 'Hola Desde Mail';
 });
 
+app.controller('AgregarContenido', function ($scope, $window) {
+    $scope.message = 'Hola Desde Mail';
+});
+
 app.controller('PerfilAdministrador', function ($scope, $window) {
     if (CargoActivo != "Administrador") {
         $window.location = "#/";
@@ -602,6 +606,10 @@ app.config(function ($routeProvider) {
         .when('/EditarUnidades', {
             templateUrl: '../Vista/Paginas/EditarUnidades.html',
             controller: 'EditarUnidades'
+        })
+        .when('/AgregarContenido', {
+            templateUrl: '../Vista/Paginas/AgregarContenido.html',
+            controller: 'AgregarContenido'
         })
         .otherwise({redirectTo: '/'});
 });

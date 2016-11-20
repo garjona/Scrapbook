@@ -4,49 +4,126 @@
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
-<div class="uk-panel-space">
-</div>
+<h1>Editar Unidades</h1>
 <div ng-controller="Datos">
     <div class="uk-grid">
         <div class="uk-width-1-10">
         </div>
         <div class="uk-width-6-10">
-            <div class="uk-vertical-align uk-text-center uk-height-1-1">
-                <div class="uk-vertical-align-middle" style="width: 100%" ng-controller="EliminarAlumno">
-                    <form class="uk-panel uk-panel-box uk-form">
-                        <div class="uk-text-center">
-                            <h2>Eliminar Alumno</h2>
+            <div class="uk-flex-right">
+                <div class="uk-align-center" style="width: 800px;">
+                    <div class="uk-panel uk-panel-box ">
+                        <div class="uk-text-left-medium uk-align-left">
+                            <h1>FIS 120</h1>
                         </div>
-                        <table width="100%">
-                            <div class="uk-vertical-align uk-text-center uk-height-1-1">
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Mail</th>
-                                    <th>Rol</th>
-                                    <th></th>
-                                </tr>
-                                <tr ng-repeat="lista in listas">
-                                    <td>{{lista.Nombre}}</td>
-                                    <td>{{lista.Mail}}</td>
-                                    <td>{{lista.Rol}}</td>
-                                    <td>
-                                        <button class="uk-width-1-2 uk-button uk-button-primary uk-button-large"
-                                                ng-click='del($index)'>Eliminar
-                                        </button>
-                                    </td>
-                                </tr>
-                            </div>
-                        </table>
-                    </form>
+                        <div class="uk-text-large uk-text-left-medium uk-align-left">
+                            <ul>
+                                <div ng-controller="MostrarUnidad1">
+                                    <li>Unidad I
+                                        <ul ng-repeat="lista in listas">
+                                            <u1><p ng-click='mostrar(1,$index)'>{{lista.Titulo}}
+                                                <div class="uk-align-right">
+                                                    <button class=" uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Editar
+                                                    </button>
+                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Eliminar
+                                                    </button>
+                                                </div>
+                                                </p>
+                                            </u1>
+
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
+                                <div ng-controller="MostrarUnidad2">
+                                    <li>Unidad II
+                                        <ul ng-repeat="lista in listas">
+                                            <u1><p ng-click='mostrar(2,$index)'>{{lista.Titulo}}
+                                                <div class="uk-align-right">
+                                                    <button class=" uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Editar
+                                                    </button>
+                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Eliminar
+                                                    </button>
+                                                </div>
+                                                </p>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
+                                <div ng-controller="MostrarUnidad3">
+                                    <li>Unidad III
+                                        <ul ng-repeat="lista in listas">
+                                            <u1><p ng-click='mostrar(3,$index)'>{{lista.Titulo}}
+                                                <div class="uk-align-right">
+                                                    <button class=" uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Editar
+                                                    </button>
+                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Eliminar
+                                                    </button>
+                                                </div>
+                                                </p>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
+                                <div ng-controller="MostrarUnidad4">
+                                    <li>Unidad IV
+                                        <ul ng-repeat="lista in listas">
+                                            <u1><p ng-click='mostrar(4,$index)'>{{lista.Titulo}}
+                                                <div class="uk-align-right">
+                                                    <button class=" uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Editar
+                                                    </button>
+                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Eliminar
+                                                    </button>
+                                                </div>
+                                                </p>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
+                                <div ng-controller="MostrarUnidad5">
+                                    <li>Unidad V
+                                        <ul ng-repeat="lista in listas">
+                                            <u1><p ng-click='mostrar(5,$index)'>{{lista.Titulo}}
+                                                <div class="uk-align-right">
+                                                    <button class=" uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Editar
+                                                    </button>
+                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                            ng-click='del($index)'>Eliminar
+                                                    </button>
+                                                </div>
+                                                </p>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="uk-width-2-10">
-            <div class="uk-vertical-align uk-text-center uk-height-1-1">
+            <div class=" uk-text-center uk-height-1-1">
                 <div class="uk-vertical-align-middle" style="width: 100%" ng-controller="EliminarAlumno">
                     <form class="uk-panel uk-panel-box uk-form">
                         <div class="uk-text-center">
-                            <h2>Eliminar SubUnidad</h2>
+                            <h2>Agregar SubUnidad</h2>
                         </div>
                         <div class="uk-form-row">
                             <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
@@ -58,11 +135,48 @@
                             </select>
                         </div>
                         <div class="uk-form-row">
-                            <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail"
+                            <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Título"
                                    ng-model="mail">
                         </div>
                         <div class="uk-form-row">
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Eliminar</a>
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Agregar</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="uk-vertical-align-middle" style="width: 100%" ng-controller="EliminarAlumno">
+                    <form class="uk-panel uk-panel-box uk-form">
+                        <div class="uk-text-center">
+                            <h2>Cambiar SubUnidad</h2>
+                        </div>
+                        <div class="uk-form-row">
+                            <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
+                                <option value="">Unidad I</option>
+                                <option value="Casa Central">Unidad II</option>
+                                <option value="San Joaquin">Unidad III</option>
+                                <option value="Vitacura">Unidad IV</option>
+                                <option value="Vitacura">Unidad V</option>
+                            </select>
+                        </div>
+                        <div class="uk-form-row">
+                            <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Titulo"
+                                   ng-model="mail">
+                        </div>
+                        <h3></h3>
+                        <div class="uk-form-row">
+                            <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
+                                <option value="">Unidad I</option>
+                                <option value="Casa Central">Unidad II</option>
+                                <option value="San Joaquin">Unidad III</option>
+                                <option value="Vitacura">Unidad IV</option>
+                                <option value="Vitacura">Unidad V</option>
+                            </select>
+                        </div>
+                        <div class="uk-form-row">
+                            <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Titulo"
+                                   ng-model="mail">
+                        </div>
+                        <div class="uk-form-row">
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Cambiar</a>
                         </div>
                     </form>
                 </div>

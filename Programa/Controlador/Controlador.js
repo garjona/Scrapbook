@@ -28,6 +28,8 @@ app.controller('MostrarUnidad1', function ($scope, $http, $window) {
         SubUnidadActivo = i;
         TipoActivo = '0';
     };
+
+
 });
 
 app.controller('MostrarUnidad2', function ($scope, $http, $window) {
@@ -99,6 +101,54 @@ app.controller('EliminarProfesor', function ($scope, $http, $window) {
 
     }
 });
+app.controller('EliminarAlumno', function ($scope, $http, $window) {
+    $http.get("/api/mostrarAlumnos")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListasActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+    $scope.del = function (i) {
+        $scope.listas.splice(i, 1);
+        var data = $.param({
+            mail: ListasActivo[i].Mail
+        });
+        listasActivo = $scope.listas;
+        $http.post("/api/eliminarAlumno", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            })
+    };
+    $scope.submit = function () {
+        var data = $.param({
+            mail: $scope.mail
+        });
+        $http.post("/api/eliminarAlumno", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+
+                }
+                $window.location = "#/PerfilAdministrador";
+
+            })
+
+
+    }
+});
+
 app.controller('EliminarAlumno', function ($scope, $http, $window) {
     $http.get("/api/mostrarAlumnos")
         .then(function (respuesta) {

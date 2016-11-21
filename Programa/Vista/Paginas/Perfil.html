@@ -1,7 +1,7 @@
-<nav class="uk-navbar">
+<nav class="uk-navbar" ng-controller="Datos">
     <ul class="uk-navbar-nav">
         <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
-        <li><a href="#/Perfil">Perfil</a></li>
+        <li><a href="#/Perfil"><i class="uk-icon-small uk-icon-book"></i>{{NombreActivo}}</a></li>
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
@@ -43,14 +43,33 @@
         <div class="uk-align-center" style="width: 300px;">
             <div class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
-                     src="http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png"
-                     alt="Pronto podras modificar esta foto!!!">
+                     ng-src="{{ImgActiva}}"
+                     alt="Foto de perfil">
                 <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
-                       value="{{NombreActivo}}">
+                       value="{{NombreActivo}}" data-uk-modal="{target:'#my-id'}">
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{CarreraActivo}}</h5>
                 <h5>{{CampusActivo}}</h5>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="my-id" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+
+        <form class="uk-form">
+
+            <fieldset data-uk-margin>
+                <legend>Si quieres cambiar tu foto de perfil, ingresa la url de la imagen:</legend>
+                <input type="text" placeholder="Url" ng-model = "imagen">
+
+                <button class="uk-button uk-modal-close" ng-click="cambiar()">Aceptar</button>
+
+            </fieldset>
+
+        </form>
     </div>
 </div>

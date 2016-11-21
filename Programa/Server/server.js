@@ -135,6 +135,10 @@ function encaminar(pedido, respuesta, camino) {
             mostrarUnidad5(pedido,respuesta);
             break;
         }
+        case "/api/mostrarData":{
+            mostrarData(pedido);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -648,6 +652,19 @@ function enviarMail(pedido,respuesta){
                 respuesta.end("OK");
             }
         });
+    });
+}
+
+function mostrarData(pedido){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        console.log(formulario);
     });
 }
 servidor.listen(9000);

@@ -249,6 +249,32 @@ app.controller('EditarUnidades', function ($scope, $http) {
         SubUnidadActivo = i;
         TipoActivo = '0';
     };
+    $scope.del = function (numeroU,numeroSub) {
+        posicion1=0;
+        posicion2=0;
+        for (i=0;i<$scope.listas.length;i++){
+            for (j=0;j<$scope.listas[i].SubUnidad.length;j++){
+                if (String($scope.listas[i]['Numero'])==numeroU && String($scope.listas[i]['SubUnidad'][j]==numeroSub)){
+                    posicion1=i;
+                    posicion2=j;
+                }
+            }
+        }
+        var data = $.param({
+            unidad: numeroU,
+            subUnidad : numeroSub
+        });
+        $scope.listas[posicion1].SubUnidad.splice(posicion2, 1);
+        $http.post("/api/eliminarAlumno", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            })
+    };
 });
 
 app.controller('IniciarSesion', function ($scope, $http, $window) {

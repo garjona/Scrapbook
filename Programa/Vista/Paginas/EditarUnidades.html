@@ -21,14 +21,15 @@
                             <ul>
                                 <div ng-repeat="unidad in listas">
                                     <li>Unidad {{unidad.Numero}}
-                                        <ul ng-repeat="subUnidad in unidad">
-                                            <u1><p ng-click='mostrar(unidad.Numero,subUnidad.Numero)'>{{subUnidad.Titulo}}
+                                        <ul ng-repeat="subLista in unidad.SubUnidad">
+                                            <u1><p> <a ng-click='mostrar(unidad.Numero,subLista.Numero)'>{{subLista.Titulo}}</a>
                                                 <div class="uk-align-right">
                                                     <button class=" uk-button uk-button-primary uk-button-small"
                                                             >Editar
                                                     </button>
-                                                    <button class="uk-align-right uk-button uk-button-primary uk-button-small"
-                                                            >Eliminar
+                                                <button class="uk-align-right uk-button uk-button-primary uk-button-small"
+                                                        ng-click="del(unidad.Numero,subLista.Numero)"
+                                                >Eliminar
                                                     </button>
                                                 </div>
                                                 </p>
@@ -50,20 +51,16 @@
                             <h2>Agregar SubUnidad</h2>
                         </div>
                         <div class="uk-form-row">
-                            <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
-                                <option value="">Unidad I</option>
-                                <option value="Casa Central">Unidad II</option>
-                                <option value="San Joaquin">Unidad III</option>
-                                <option value="Vitacura">Unidad IV</option>
-                                <option value="Vitacura">Unidad V</option>
+                            <select name="campus" class="uk-width-1-1 uk-form-large">
+                                <option ng-repeat='unidad in listas' value="unidad.TextoParche">Unidad {{unidad.Numero}}</option>
                             </select>
                         </div>
                         <div class="uk-form-row">
                             <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Título"
-                                   ng-model="mail">
+                                   >
                         </div>
                         <div class="uk-form-row">
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Agregar</a>
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" >Agregar</a>
                         </div>
                     </form>
                 </div>
@@ -73,34 +70,26 @@
                             <h2>Cambiar SubUnidad</h2>
                         </div>
                         <div class="uk-form-row">
-                            <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
-                                <option value="">Unidad I</option>
-                                <option value="Casa Central">Unidad II</option>
-                                <option value="San Joaquin">Unidad III</option>
-                                <option value="Vitacura">Unidad IV</option>
-                                <option value="Vitacura">Unidad V</option>
+                            <select name="campus" class="uk-width-1-1 uk-form-large">
+                                <option ng-repeat="unidad in listas" value="unidad.TextoParche">Unidad {{unidad.Numero}}</option>
                             </select>
                         </div>
                         <div class="uk-form-row">
                             <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Titulo"
-                                   ng-model="mail">
+                                   >
                         </div>
                         <h3></h3>
                         <div class="uk-form-row">
-                            <select id="campus" name="campus" class="uk-width-1-1 uk-form-large" ng-model="campus">
-                                <option value="">Unidad I</option>
-                                <option value="Casa Central">Unidad II</option>
-                                <option value="San Joaquin">Unidad III</option>
-                                <option value="Vitacura">Unidad IV</option>
-                                <option value="Vitacura">Unidad V</option>
+                            <select name="campus" class="uk-width-1-1 uk-form-large">
+                                <option ng-repeat="unidad in listas" value="unidad.TextoParche">Unidad {{unidad.Numero}}</option>
                             </select>
                         </div>
                         <div class="uk-form-row">
                             <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Titulo"
-                                   ng-model="mail">
+                                   >
                         </div>
                         <div class="uk-form-row">
-                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="submit()">Cambiar</a>
+                            <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large">Cambiar</a>
                         </div>
                     </form>
                 </div>

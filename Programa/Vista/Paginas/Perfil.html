@@ -43,14 +43,33 @@
         <div class="uk-align-center" style="width: 300px;">
             <div class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
-                     src="http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png"
-                     alt="Pronto podras modificar esta foto!!!">
+                     ng-src="{{ImgActiva}}"
+                     alt="Si ves esto... tu url no contiene una imagen compatible!">
                 <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
-                       value="{{NombreActivo}}">
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{CarreraActivo}}</h5>
                 <h5>{{CampusActivo}}</h5>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- This is the modal -->
+<div id="my-id" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+
+        <form class="uk-form">
+
+            <fieldset data-uk-margin>
+                <legend>Si quieres cambiar tu foto de perfil, ingresa la url de la imagen:</legend>
+                <input type="text" placeholder="Url" ng-model = "imagen">
+
+                <button class="uk-button uk-modal-close" ng-click="cambiar()">Aceptar</button>
+
+            </fieldset>
+
+        </form>
     </div>
 </div>

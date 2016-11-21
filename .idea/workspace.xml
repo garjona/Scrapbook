@@ -1,8 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
+    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Mail.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Mail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/accordion.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/autocomplete.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/datepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/dotnav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-advanced.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-file.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-password.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/form-select.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/htmleditor.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/nestable.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/notify.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/notify.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/placeholder.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/progress.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/progress.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/search.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/search.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slidenav.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slider.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/slideshow.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sortable.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/tooltip.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/components/upload.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/components/upload.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/style.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.almost-flat.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.almost-flat.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.almost-flat.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.almost-flat.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.gradient.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.gradient.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.gradient.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.gradient.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikit.min.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikit.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/css/uikitAzul.css" afterPath="$PROJECT_DIR$/Programa/Vista/css/uikitAzul.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/index.html" afterPath="$PROJECT_DIR$/Programa/Vista/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/accordion.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/accordion.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/autocomplete.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/autocomplete.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/autocomplete.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/datepicker.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/datepicker.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/form-password.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/form-password.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/form-password.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/form-password.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/form-select.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/form-select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/form-select.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/form-select.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/grid-parallax.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/grid-parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/grid-parallax.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/grid-parallax.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/grid.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/grid.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/grid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/htmleditor.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/htmleditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/htmleditor.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/htmleditor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/lightbox.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/lightbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/lightbox.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/lightbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/nestable.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/nestable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/nestable.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/nestable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/notify.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/notify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/notify.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/notify.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/pagination.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/pagination.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/pagination.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/pagination.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/parallax.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/parallax.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/parallax.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/search.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/search.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/search.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slider.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slider.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideset.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideset.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideset.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow-fx.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow-fx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow-fx.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow-fx.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/slideshow.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/sortable.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/sortable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/sortable.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/sortable.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/sticky.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/sticky.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/timepicker.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/timepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/timepicker.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/timepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/tooltip.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/tooltip.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/upload.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/upload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/components/upload.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/components/upload.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/alert.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/alert.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/alert.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/button.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/button.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/button.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/core.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/core.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/core.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/cover.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/cover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/cover.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/cover.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/dropdown.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/dropdown.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/grid.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/grid.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/grid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/modal.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/modal.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/nav.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/nav.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/nav.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/offcanvas.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/offcanvas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/offcanvas.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/offcanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/scrollspy.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/scrollspy.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/scrollspy.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/smooth-scroll.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/smooth-scroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/smooth-scroll.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/smooth-scroll.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/switcher.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/switcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/switcher.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/switcher.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/tab.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/tab.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/tab.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/toggle.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/toggle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/toggle.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/toggle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/touch.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/touch.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/utility.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/utility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/core/utility.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/core/utility.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/uikit.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/uikit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/js/uikit.min.js" afterPath="$PROJECT_DIR$/Programa/Vista/js/uikit.min.js" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,14 +260,154 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Inicio.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="86" lean-forward="false" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerfilAdmin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EliminarAlumno.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registrarse.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FIS1201.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="623" column="0" selection-start-line="623" selection-start-column="0" selection-end-line="623" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="531" column="19" lean-forward="false" selection-start-line="531" selection-start-column="19" selection-end-line="531" selection-end-column="19" />
               <folding>
-                <element signature="e#103#157#0" expanded="false" />
-                <element signature="e#198#257#0" expanded="false" />
+                <element signature="n#!!block;n#encaminar#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding>
+                <marker date="1479697463731" expanded="true" signature="16787:16965" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="16830:16962" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17036:17860" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17409:17678" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17465:17599" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17605:17668" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17724:17857" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17916:18035" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="17951:17991" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18083:18129" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18359:18810" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18384:18465" ph="{&quot;mail&quot;: MailActivo...}" />
+                <marker date="1479697463731" expanded="true" signature="18546:18773" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18597:18669" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18675:18763" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18878:19329" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="18903:18984" ph="{&quot;mail&quot;: MailActivo...}" />
+                <marker date="1479697463731" expanded="true" signature="19065:19292" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19116:19188" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19194:19282" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19396:19847" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19421:19502" ph="{&quot;mail&quot;: MailActivo...}" />
+                <marker date="1479697463731" expanded="true" signature="19583:19810" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19634:19706" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19712:19800" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19914:20365" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="19939:20020" ph="{&quot;mail&quot;: MailActivo...}" />
+                <marker date="1479697463731" expanded="true" signature="20101:20328" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="20152:20224" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="20230:20318" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="20441:21306" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="20814:21083" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="20870:21004" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21010:21073" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21129:21262" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21361:22255" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21416:21723" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21455:21509" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21551:21618" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="21655:21717" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="22318:23704" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="22333:22479" ph="//..." />
+                <marker date="1479697463731" expanded="true" signature="22595:22681" ph="//..." />
+                <marker date="1479697463731" expanded="true" signature="22724:22927" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="22739:22876" ph="//..." />
+                <marker date="1479697463731" expanded="true" signature="22974:23072" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="23102:23216" ph="{&quot;unidad&quot;: UnidadActivo...}" />
+                <marker date="1479697463731" expanded="true" signature="23310:23696" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="23441:23575" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="23581:23682" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="23746:26452" ph="{...}" />
+                <marker date="1479697463731" expanded="true" signature="23787:23888" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Inicio.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="23923:24038" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/IniciarSesion.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24071:24182" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Registrarse.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24208:24305" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Test.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24332:24433" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Perfil.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24461:24564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Edicion.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24591:24692" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS120.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24721:24824" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS1201.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="24860:24977" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilProfesor.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25003:25100" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25141:25260" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilAdmin.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25295:25412" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EliminarAlumno.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25447:25564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarProfesor.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25599:25716" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarUnidades.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25753:25874" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/AgregarContenido.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="25904:26006" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="26037:26140" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="26172:26276" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+                <marker date="1479697463731" expanded="true" signature="26307:26410" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
               </folding>
             </state>
           </provider>
@@ -48,20 +420,14 @@
       <list>
         <option value="tsconfig.json" />
         <option value="package_json" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>perfil</find>
-      <find>edicion</find>
-      <find>''</find>
-      <find>eliminarp</find>
-      <find>inline</find>
-      <find>mostrar</find>
-      <find>mostrarUnidades</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,7 +436,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Branch4" />
       </map>
     </option>
     <option name="PUSH_TAGS">
@@ -95,31 +461,27 @@
         <option value="$PROJECT_DIR$/Programa/Modelo/server.js" />
         <option value="$PROJECT_DIR$/Programa/Vista/css/uikitAzul.css" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edición.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil1.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Mail.html" />
         <option value="$PROJECT_DIR$/Programa/server.js" />
         <option value="$PROJECT_DIR$/Programa/Controlador/Consulta.js" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
+        <option value="$PROJECT_DIR$/Programa/package.json" />
         <option value="$PROJECT_DIR$/Programa/Vista/index.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Mail.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" />
-        <option value="$PROJECT_DIR$/Programa/Controlador/mailCtrl.js" />
-        <option value="$PROJECT_DIR$/Programa/package.json" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
-        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
+        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
       </list>
     </option>
@@ -136,20 +498,12 @@
     <handled-path value="$PROJECT_DIR$/Programa/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1378" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -165,7 +519,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -174,12 +527,6 @@
               <option name="myItemId" value="Scrapbook" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Scrapbook" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -214,28 +561,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Vista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scrapbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Programa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Vista" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Paginas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,8 +600,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Documentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,11 +624,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProyectoFisFinder120-master" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.9.1" />
+    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -326,6 +667,12 @@
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -425,20 +772,39 @@
       <workItem from="1478361021439" duration="28817000" />
       <workItem from="1478450997887" duration="14180000" />
       <workItem from="1478470088326" duration="1169000" />
-      <workItem from="1478474301106" duration="12416000" />
-      <workItem from="1478995597265" duration="1096000" />
-      <workItem from="1479142806739" duration="547000" />
-      <workItem from="1479447334087" duration="1897000" />
-      <workItem from="1479451149586" duration="18402000" />
-      <workItem from="1479498800262" duration="14287000" />
-      <workItem from="1479527357723" duration="13922000" />
-      <workItem from="1479568531510" duration="3263000" />
-      <workItem from="1479573527635" duration="3401000" />
-      <workItem from="1479603927060" duration="3004000" />
-      <workItem from="1479611257868" duration="1380000" />
-      <workItem from="1479612901336" duration="20186000" />
-      <workItem from="1479657780156" duration="8835000" />
-      <workItem from="1479692879935" duration="1154000" />
+      <workItem from="1478474301106" duration="12319000" />
+      <workItem from="1479449738236" duration="285000" />
+      <workItem from="1479450081417" duration="1162000" />
+      <workItem from="1479494233661" duration="1304000" />
+      <workItem from="1479702320950" duration="1347000" />
+    </task>
+    <task id="LOCAL-00001" summary="Version nueva de la página">
+      <created>1476976912182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1476976912182</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Version nueva de la página">
+      <created>1476977002911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1476977002911</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Version nueva de la página">
+      <created>1477006449062</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1477006449062</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Version nueva de la página">
+      <created>1477015025334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477015025335</updated>
     </task>
     <task id="LOCAL-00005" summary="Version nueva de la página">
       <created>1477017375160</created>
@@ -608,203 +974,28 @@
       <option name="project" value="LOCAL" />
       <updated>1478484970323</updated>
     </task>
-    <task id="LOCAL-00029" summary="detalles">
-      <created>1478486859693</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1478486859693</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Actualizacion perfiles">
-      <created>1479473172022</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1479473172022</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Actualizacion perfiles">
-      <created>1479504239644</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1479504239644</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Actualizacion perfiles">
-      <created>1479512769355</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1479512769355</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Actualizacion perfiles">
-      <created>1479512936511</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1479512936511</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Actualizacion perfiles">
-      <created>1479528812286</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1479528812286</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Actualizacion edicion">
-      <created>1479530853208</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1479530853208</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Actualizacion edicion">
-      <created>1479533578684</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1479533578684</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Actualizacion edicion">
-      <created>1479533585090</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1479533585090</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Actualizacion edicion">
-      <created>1479537182426</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1479537182426</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Actualizacion edicion">
-      <created>1479541450148</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1479541450148</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Actualizacion edicion">
-      <created>1479570629661</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1479570629661</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Actualizacion en todas las paginas,, el controller datos esta en todo">
-      <created>1479607180217</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1479607180217</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Agregado editar profesor, eliminado eliminar profesor">
-      <created>1479613624563</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1479613624563</updated>
-    </task>
-    <task id="LOCAL-00043" summary="actualizado editar profesor">
-      <created>1479613844350</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1479613844350</updated>
-    </task>
-    <task id="LOCAL-00044" summary="actualizado perfil administrador">
-      <created>1479614523231</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1479614523231</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Actualizado Registrarse e iniciar sesion">
-      <created>1479618302461</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1479618302461</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Cambios en package, instalacion para enviar mail">
-      <created>1479627535277</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1479627535277</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Cambios en package, instalacion para enviar mail">
-      <created>1479627627312</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1479627627312</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Mejorado mostrar unidades">
-      <created>1479654578358</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1479654578358</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor">
-      <created>1479665436783</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1479665436799</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor">
-      <created>1479665446069</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1479665446142</updated>
-    </task>
-    <task id="LOCAL-00051" summary="se volvieron a tener las miles de funciones">
-      <created>1479667921347</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1479667921348</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Boton y funcion para volver al perfil">
-      <created>1479668708992</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1479668708992</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Paginas nuevas">
-      <created>1479693215685</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1479693215711</updated>
-    </task>
-    <option name="localTasksCounter" value="54" />
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331047000" />
+    <option name="totallyTimeSpent" value="243674000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23788546" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12127976" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3056" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.304" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -815,18 +1006,18 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.304" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30651873" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25709778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23788546" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14195584" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -855,33 +1046,34 @@
     <MESSAGE value="Borrado Test" />
     <MESSAGE value="Bloqueo de paginas" />
     <MESSAGE value="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno" />
-    <MESSAGE value="detalles" />
-    <MESSAGE value="Actualizacion perfiles" />
-    <MESSAGE value="Actualizacion edicion" />
-    <MESSAGE value="Actualizacion en todas las paginas,, el controller datos esta en todo" />
-    <MESSAGE value="Agregado editar profesor, eliminado eliminar profesor" />
-    <MESSAGE value="actualizado editar profesor" />
-    <MESSAGE value="actualizado perfil administrador" />
-    <MESSAGE value="Actualizado Registrarse e iniciar sesion" />
-    <MESSAGE value="Cambios en package, instalacion para enviar mail" />
-    <MESSAGE value="Mejorado mostrar unidades" />
-    <MESSAGE value="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor" />
-    <MESSAGE value="se volvieron a tener las miles de funciones" />
-    <MESSAGE value="Boton y funcion para volver al perfil" />
-    <MESSAGE value="Paginas nuevas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paginas nuevas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Test/Views/Test.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/css/uikit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4860">
+          <caret line="930" column="27" lean-forward="false" selection-start-line="930" selection-start-column="27" selection-end-line="930" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Views/js/skel-panels.min.js" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/&lt;h1&gt;About&lt;/h1&gt;  &lt;h3&gt;{{message}}&lt;/h3&gt;.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Imagenes/Bubbles.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="356" column="50" selection-start-line="356" selection-start-column="40" selection-end-line="356" selection-end-column="50" />
+          <caret line="356" column="50" lean-forward="false" selection-start-line="356" selection-start-column="40" selection-end-line="356" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -904,7 +1096,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -915,178 +1107,211 @@
     <entry file="file://$PROJECT_DIR$/Programa/Vista/css/uikitAzul.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-573">
-          <caret line="2441" column="27" selection-start-line="2441" selection-start-column="21" selection-end-line="2441" selection-end-column="27" />
+          <caret line="2441" column="27" lean-forward="false" selection-start-line="2441" selection-start-column="21" selection-end-line="2441" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Modelo/server.js" />
     <entry file="file://$PROJECT_DIR$/Test/Views/Registrarse.html" />
     <entry file="file://$PROJECT_DIR$/Programa/Vista/css/Funciones.css" />
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Consulta.js" />
-    <entry file="file://E:/PFF120V2.1/server.js" />
-    <entry file="file://$PROJECT_DIR$/Test/server.js" />
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil1.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edición.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="305" column="10" selection-start-line="305" selection-start-column="10" selection-end-line="305" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/mailCtrl.js" />
-    <entry file="file://$PROJECT_DIR$/Programa/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="24" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Mail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="280">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Consulta.js" />
+    <entry file="file://E:/PFF120V2.1/server.js" />
+    <entry file="file://$PROJECT_DIR$/Programa/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/server.js" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil1.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edición.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="60" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="60" />
-          <folding />
+        <state relative-caret-position="400">
+          <caret line="1280" column="60" lean-forward="false" selection-start-line="1280" selection-start-column="60" selection-end-line="1280" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/index.html">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="-6">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="98" />
+        <state relative-caret-position="374">
+          <caret line="238" column="9" lean-forward="false" selection-start-line="238" selection-start-column="9" selection-end-line="238" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="86" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="34">
+          <caret line="2" column="86" lean-forward="false" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state relative-caret-position="969">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1479697463731" expanded="true" signature="16787:16965" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="16830:16962" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17036:17860" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17409:17678" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17465:17599" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17605:17668" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17724:17857" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17916:18035" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="17951:17991" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18083:18129" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18359:18810" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18384:18465" ph="{&quot;mail&quot;: MailActivo...}" />
+            <marker date="1479697463731" expanded="true" signature="18546:18773" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18597:18669" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18675:18763" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18878:19329" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="18903:18984" ph="{&quot;mail&quot;: MailActivo...}" />
+            <marker date="1479697463731" expanded="true" signature="19065:19292" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19116:19188" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19194:19282" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19396:19847" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19421:19502" ph="{&quot;mail&quot;: MailActivo...}" />
+            <marker date="1479697463731" expanded="true" signature="19583:19810" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19634:19706" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19712:19800" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19914:20365" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="19939:20020" ph="{&quot;mail&quot;: MailActivo...}" />
+            <marker date="1479697463731" expanded="true" signature="20101:20328" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="20152:20224" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="20230:20318" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="20441:21306" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="20814:21083" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="20870:21004" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21010:21073" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21129:21262" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21361:22255" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21416:21723" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21455:21509" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21551:21618" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="21655:21717" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="22318:23704" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="22333:22479" ph="//..." />
+            <marker date="1479697463731" expanded="true" signature="22595:22681" ph="//..." />
+            <marker date="1479697463731" expanded="true" signature="22724:22927" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="22739:22876" ph="//..." />
+            <marker date="1479697463731" expanded="true" signature="22974:23072" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="23102:23216" ph="{&quot;unidad&quot;: UnidadActivo...}" />
+            <marker date="1479697463731" expanded="true" signature="23310:23696" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="23441:23575" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="23581:23682" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="23746:26452" ph="{...}" />
+            <marker date="1479697463731" expanded="true" signature="23787:23888" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Inicio.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="23923:24038" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/IniciarSesion.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24071:24182" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Registrarse.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24208:24305" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Test.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24332:24433" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Perfil.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24461:24564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Edicion.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24591:24692" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS120.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24721:24824" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS1201.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="24860:24977" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilProfesor.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25003:25100" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25141:25260" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilAdmin.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25295:25412" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EliminarAlumno.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25447:25564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarProfesor.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25599:25716" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarUnidades.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25753:25874" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/AgregarContenido.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="25904:26006" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="26037:26140" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="26172:26276" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
+            <marker date="1479697463731" expanded="true" signature="26307:26410" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarProfesor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="623" column="0" selection-start-line="623" selection-start-column="0" selection-end-line="623" selection-end-column="0" />
+        <state relative-caret-position="439">
+          <caret line="531" column="19" lean-forward="false" selection-start-line="531" selection-start-column="19" selection-end-line="531" selection-end-column="19" />
           <folding>
-            <element signature="e#103#157#0" expanded="false" />
-            <element signature="e#198#257#0" expanded="false" />
+            <element signature="n#!!block;n#encaminar#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

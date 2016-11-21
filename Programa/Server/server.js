@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -191,8 +191,9 @@ function mostrarUnidades(pedido,respuesta){
                     }
                 }
                 for (i=0;i<Object.keys(diccionarioTemp).length;i++){
-                    lista.push(diccionarioTemp[String(i)]);
+                    lista.push(diccionarioTemp[String(i+1)]);
                 }
+                console.log(lista);
                 respuesta.end('OK$'+JSON.stringify(lista));
             }
         });

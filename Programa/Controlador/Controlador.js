@@ -232,8 +232,23 @@ app.controller('Registrarse', function ($scope, $http, $window) {
 });
 
 
-app.controller('EditarUnidades', function ($scope) {
-    $scope.message = 'Hola Desde EditarUnidades';
+app.controller('EditarUnidades', function ($scope, $http) {
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListaActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/Edicion";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
 });
 
 app.controller('IniciarSesion', function ($scope, $http, $window) {

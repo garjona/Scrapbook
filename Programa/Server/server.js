@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -578,7 +578,7 @@ function enviarMail(pedido,respuesta){
         var message = {
 
             // sender info
-            from: 'Sckrapbook <scrapbook.contacto@gmail.com>',
+            from: 'Scrapbook <scrapbook.contacto@gmail.com>',
 
             // Comma separated list of recipients
             to: '"'+formulario["nombre"]+'" <'+formulario["mail"]+'>',
@@ -606,9 +606,18 @@ function enviarMail(pedido,respuesta){
             // if you don't want to use this transport object anymore, uncomment following line
             //transport.close(); // close the connection pool
         });
-        respuesta.end("OK");
+        connection.query("UPDATE alumno SET Tipo_aprendizaje='"+formulario["tipo"]+"' WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else if (rows.length == 0) {
+                respuesta.end('ERROR');
+            } else {
+                respuesta.end("OK");
+            }
+        });
     });
 }
 servidor.listen(9000);
 
-console.log('Servidor web iniciado en http://localhost:8000');
+console.log('Servidor web iniciado en http://localhost:9000');

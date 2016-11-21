@@ -775,7 +775,7 @@
                             <input type="button" class="uk-width-1-2 uk-button uk-button-primary" onclick="validar()"
                                    value="Enviar">
                             <p id="mensaje"></p>
-                            <a id="redirigir" href="#/Mail"></a>
+                            <a id="redirigir" href=""></a>
                         </div>
                     </div>
 
@@ -1049,6 +1049,7 @@
 </script>
 
 <script>
+    var text;
     function validar() {
         var
                 p1a, p1b, p1c, p1d,
@@ -1284,5 +1285,14 @@
         }
         document.getElementById("mensaje").innerHTML = text;
         document.getElementById("redirigir").innerHTML = redireccion;
+        if (text == "Ustes es un Convergente"){
+            document.getElementById("redirigir").href = "/#Convergente";
+        } else if (text == "Ustes es un Divergente"){
+            document.getElementById("redirigir").href = "/#Divergente";
+        } else if (text == "Ustes es un Asimilador"){
+            document.getElementById("redirigir").href = "/#Asimilador";
+        } else if (text == "Ustes es un Adaptador"){
+            document.getElementById("redirigir").href = "/#Adaptador";
+        }
     }
 </script>

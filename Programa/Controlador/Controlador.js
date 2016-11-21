@@ -362,6 +362,18 @@ app.controller('Inicio', function ($scope) {
 });
 
 app.controller('Test', function ($scope, $window) {
+    $scope.reedirigir = function (i) {
+        $scope.palabra = i;
+        if (i == "Usted es un Adaptador") {
+            $window.location = "#/Mail";
+        } else if (i == "Usted es un Divergente") {
+            $window.location = "#/Mail";
+        } else if (i == "Ustes es un Convergent") {
+            $window.location = "#/Mail";
+        } else if (i == "Ustes es un Asimilador") {
+            $window.location = "#/Mail";
+        }
+    };
     $scope.message = 'Hola Desde Registrarse';
 });
 
@@ -433,9 +445,17 @@ app.controller('FIS1201', function ($scope) {
 });
 
 app.controller('Mail', function ($scope, $http) {
+});
+
+app.controller('AgregarContenido', function ($scope, $window) {
+    $scope.message = 'Hola Desde Mail';
+});
+
+app.controller('Adaptador', function ($scope, $http, $window) {
     var data = $.param({
         mail: MailActivo,
-        nombre: NombreActivo
+        nombre: NombreActivo,
+        tipo: "1"
     });
     $http.post("/api/enviarMail", data)
         .success(function (respuesta) {
@@ -445,10 +465,58 @@ app.controller('Mail', function ($scope, $http) {
                 MensajeError = 'Error al conectarse a la base de datos';
             }
         });
+    $window.location = "#/Mail";
 });
 
-app.controller('AgregarContenido', function ($scope, $window) {
-    $scope.message = 'Hola Desde Mail';
+app.controller('Convergente', function ($scope, $http, $window) {
+    var data = $.param({
+        mail: MailActivo,
+        nombre: NombreActivo,
+        tipo: "3"
+    });
+    $http.post("/api/enviarMail", data)
+        .success(function (respuesta) {
+            if (respuesta.split(",")[0] == 'OK') {
+                MensajeError = 'Se ha enviado un mail ';
+            } else {
+                MensajeError = 'Error al conectarse a la base de datos';
+            }
+        });
+    $window.location = "#/Mail";
+});
+
+app.controller('Asimilador', function ($scope, $http, $window) {
+    var data = $.param({
+        mail: MailActivo,
+        nombre: NombreActivo,
+        tipo: "4"
+    });
+    $http.post("/api/enviarMail", data)
+        .success(function (respuesta) {
+            if (respuesta.split(",")[0] == 'OK') {
+                MensajeError = 'Se ha enviado un mail ';
+            } else {
+                MensajeError = 'Error al conectarse a la base de datos';
+            }
+        });
+    $window.location = "#/Mail";
+});
+
+app.controller('Divergente', function ($scope, $http, $window) {
+    var data = $.param({
+        mail: MailActivo,
+        nombre: NombreActivo,
+        tipo: "2"
+    });
+    $http.post("/api/enviarMail", data)
+        .success(function (respuesta) {
+            if (respuesta.split(",")[0] == 'OK') {
+                MensajeError = 'Se ha enviado un mail ';
+            } else {
+                MensajeError = 'Error al conectarse a la base de datos';
+            }
+        });
+    $window.location = "#/Mail";
 });
 
 app.controller('PerfilAdministrador', function ($scope, $http, $window) {
@@ -619,6 +687,22 @@ app.config(function ($routeProvider) {
         .when('/AgregarContenido', {
             templateUrl: '../Vista/Paginas/AgregarContenido.html',
             controller: 'AgregarContenido'
+        })
+        .when('/Adaptador', {
+            templateUrl: '../Vista/Paginas/Mail.html',
+            controller: 'Adaptador'
+        })
+        .when('/Asimilador', {
+            templateUrl: '../Vista/Paginas/Mail.html',
+            controller: 'Asimilador'
+        })
+        .when('/Convergente', {
+            templateUrl: '../Vista/Paginas/Mail.html',
+            controller: 'Convergente'
+        })
+        .when('/Divergente', {
+            templateUrl: '../Vista/Paginas/Mail.html',
+            controller: 'Divergente'
         })
         .otherwise({redirectTo: '/'});
 });

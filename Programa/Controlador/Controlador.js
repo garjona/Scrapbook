@@ -5,6 +5,7 @@ var TipoDeAprendizajeActivo = '';
 var CargoActivo = '';
 var CarreraActivo = '';
 var CampusActivo = '';
+var ImgActiva = '';
 var UnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
@@ -216,6 +217,7 @@ app.controller('Registrarse', function ($scope, $http, $window) {
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                         CarreraActivo = respuesta.split(",")[9];
                         CampusActivo = respuesta.split(",")[8];
+                        ImgActiva = respuesta.split(",")[10];
                         $window.location = "#/Test";
 
                     } else {
@@ -230,8 +232,49 @@ app.controller('Registrarse', function ($scope, $http, $window) {
 });
 
 
-app.controller('EditarUnidades', function ($scope) {
-    $scope.message = 'Hola Desde EditarUnidades';
+app.controller('EditarUnidades', function ($scope, $http) {
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListaActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+    $scope.mostrar = function (unidad, i) {
+        $window.location = "#/Edicion";
+        UnidadActivo = unidad;
+        SubUnidadActivo = i;
+        TipoActivo = '0';
+    };
+    $scope.del = function (numeroU,numeroSub) {
+        posicion1=0;
+        posicion2=0;
+        for (i=0;i<$scope.listas.length;i++){
+            for (j=0;j<$scope.listas[i].SubUnidad.length;j++){
+                if (String($scope.listas[i]['Numero'])==numeroU && String($scope.listas[i]['SubUnidad'][j]==numeroSub)){
+                    posicion1=i;
+                    posicion2=j;
+                }
+            }
+        }
+        var data = $.param({
+            unidad: numeroU,
+            subUnidad : numeroSub
+        });
+        $scope.listas[posicion1].SubUnidad.splice(posicion2, 1);
+        $http.post("/api/eliminarAlumno", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'El mail no se encuentra en la base de datos';
+                }
+            })
+    };
 });
 
 app.controller('IniciarSesion', function ($scope, $http, $window) {
@@ -257,6 +300,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                         CarreraActivo = respuesta.split(",")[9];
                         CampusActivo = respuesta.split(",")[8];
+                        ImgActiva = respuesta.split(",")[10];
                         //NombreActivo = respuesta.split(" ")[2];
                         $window.location = "#/Perfil";
                     } else if (respuesta.split(",")[2] == "Administrador") {
@@ -389,6 +433,7 @@ app.controller('Perfil', function ($scope, $http, $window) {
     $scope.CargoActivo = CargoActivo;
     $scope.CarreraActivo = CarreraActivo;
     $scope.CampusActivo = CampusActivo;
+    $scope.ImgActiva = ImgActiva;
     $http.get("/api/mostrarUnidades")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
@@ -398,7 +443,25 @@ app.controller('Perfil', function ($scope, $http, $window) {
                 MensajeError = 'Hubo un error';
             }
         });
+    $scope.cambiar = function (i) {
+        var data = $.param({
+            nombre: $scope.NombreActivo,
+            imagen: $scope.imagen
+        });
+        if ($scope.imagen == '') return;
+        //$scope.listas.splice(i, 1);
+        $http.post("/api/cambiarImagen", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Se ha cambiado tu imagen!' + respuesta.split(",")[1];
+                    $scope.ImgActiva = $scope.imagen;
+                } else {
+                    MensajeError = 'No funcionó el cambio de imagen!';
+                }
+            })
 
+    };
     $scope.mostrar = function (unidad, i) {
         $window.location = "#/FIS120";
         UnidadActivo = unidad;

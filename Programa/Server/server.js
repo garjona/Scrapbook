@@ -86,6 +86,10 @@ function encaminar(pedido, respuesta, camino) {
             eliminarAlumno(pedido,respuesta);
             break;
         }
+        case 'Vista/api/cambiarImagen':{
+            cambiarImagen(pedido,respuesta);
+            break;
+        }
         case 'Vista/api/eliminarProfesor':{
             eliminarProfesor(pedido,respuesta);
             break;
@@ -102,6 +106,7 @@ function encaminar(pedido, respuesta, camino) {
             mostrarColumnas(pedido,respuesta);
             break;
         }
+
         case 'Vista/api/enviarMail':{
             enviarMail(pedido,respuesta);
             break;
@@ -128,6 +133,10 @@ function encaminar(pedido, respuesta, camino) {
         }
         case 'Vista/api/mostrarUnidad5':{
             mostrarUnidad5(pedido,respuesta);
+            break;
+        }
+        case "/api/mostrarData":{
+            mostrarData(pedido);
             break;
         }
 
@@ -186,8 +195,9 @@ function mostrarUnidades(pedido,respuesta){
                     }
                 }
                 for (i=0;i<Object.keys(diccionarioTemp).length;i++){
-                    lista.push(diccionarioTemp[String(i)]);
+                    lista.push(diccionarioTemp[String(i+1)]);
                 }
+                console.log(lista);
                 respuesta.end('OK$'+JSON.stringify(lista));
             }
         });
@@ -419,7 +429,7 @@ function iniciarSesion(pedido,respuesta){
             }
             else{
 
-                respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera);
+                respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera+","+json[0].image);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
             }
 
@@ -502,6 +512,32 @@ function nuevoProfesor(pedido,respuesta){
             }
 
 
+        });
+    });
+}
+
+function cambiarImagen(pedido,respuesta)
+{
+    var info = '';
+    pedido.on('data', function(datosparciales)
+    {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        //"SELECT * FROM alumno where Mail='"+formulario["mail"]+"';"
+        connection.query("UPDATE alumno SET image ='" + formulario["imagen"] + "' where nombre = '" + formulario["nombre"] + "';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else {
+                //respuesta,mail,cargo,nombre
+                ImgActiva = formulario["imagen"];
+                console.log(formulario["imagen"]);
+                respuesta.end('OK,' + formulario["nombre"]);//respuesta,mail,nombre
+            }
         });
     });
 }
@@ -616,6 +652,19 @@ function enviarMail(pedido,respuesta){
                 respuesta.end("OK");
             }
         });
+    });
+}
+
+function mostrarData(pedido){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        console.log(formulario);
     });
 }
 servidor.listen(9000);

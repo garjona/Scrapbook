@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Adaptador.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Asimilador.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Convergente.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Divergente.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +31,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="615" column="36" selection-start-line="615" selection-start-column="36" selection-end-line="615" selection-end-column="36" />
+            <state relative-caret-position="264">
+              <caret line="623" column="0" selection-start-line="623" selection-start-column="0" selection-end-line="623" selection-end-column="0" />
               <folding>
                 <element signature="e#103#157#0" expanded="false" />
                 <element signature="e#198#257#0" expanded="false" />
@@ -445,14 +438,7 @@
       <workItem from="1479611257868" duration="1380000" />
       <workItem from="1479612901336" duration="20186000" />
       <workItem from="1479657780156" duration="8835000" />
-      <workItem from="1479692879935" duration="311000" />
-    </task>
-    <task id="LOCAL-00004" summary="Version nueva de la página">
-      <created>1477015025334</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1477015025335</updated>
+      <workItem from="1479692879935" duration="1154000" />
     </task>
     <task id="LOCAL-00005" summary="Version nueva de la página">
       <created>1477017375160</created>
@@ -790,22 +776,29 @@
       <option name="project" value="LOCAL" />
       <updated>1479668708992</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Paginas nuevas">
+      <created>1479693215685</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1479693215711</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330204000" />
+    <option name="totallyTimeSpent" value="331047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23788546" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -875,7 +868,8 @@
     <MESSAGE value="Arreglado el de mostrar nombres cargo en perfil alumno y perfil profeosor" />
     <MESSAGE value="se volvieron a tener las miles de funciones" />
     <MESSAGE value="Boton y funcion para volver al perfil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boton y funcion para volver al perfil" />
+    <MESSAGE value="Paginas nuevas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paginas nuevas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1087,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="615" column="36" selection-start-line="615" selection-start-column="36" selection-end-line="615" selection-end-column="36" />
+        <state relative-caret-position="264">
+          <caret line="623" column="0" selection-start-line="623" selection-start-column="0" selection-end-line="623" selection-end-column="0" />
           <folding>
             <element signature="e#103#157#0" expanded="false" />
             <element signature="e#198#257#0" expanded="false" />

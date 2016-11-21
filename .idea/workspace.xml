@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
+    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/js/jquery-3.1.1.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base-de-Datos/scrapbook.sql" afterPath="$PROJECT_DIR$/Base-de-Datos/scrapbook.sql" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,161 +28,7 @@
     <favorites_list name="Scrapbook" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Inicio.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="86" lean-forward="false" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PerfilAdmin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EliminarAlumno.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registrarse.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FIS1201.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="531" column="19" lean-forward="false" selection-start-line="531" selection-start-column="19" selection-end-line="531" selection-end-column="19" />
-              <folding>
-                <element signature="n#!!block;n#encaminar#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-              <folding>
-                <marker date="1479697463731" expanded="true" signature="16787:16965" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="16830:16962" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17036:17860" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17409:17678" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17465:17599" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17605:17668" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17724:17857" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17916:18035" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="17951:17991" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18083:18129" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18359:18810" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18384:18465" ph="{&quot;mail&quot;: MailActivo...}" />
-                <marker date="1479697463731" expanded="true" signature="18546:18773" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18597:18669" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18675:18763" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18878:19329" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="18903:18984" ph="{&quot;mail&quot;: MailActivo...}" />
-                <marker date="1479697463731" expanded="true" signature="19065:19292" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19116:19188" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19194:19282" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19396:19847" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19421:19502" ph="{&quot;mail&quot;: MailActivo...}" />
-                <marker date="1479697463731" expanded="true" signature="19583:19810" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19634:19706" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19712:19800" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19914:20365" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="19939:20020" ph="{&quot;mail&quot;: MailActivo...}" />
-                <marker date="1479697463731" expanded="true" signature="20101:20328" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="20152:20224" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="20230:20318" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="20441:21306" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="20814:21083" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="20870:21004" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21010:21073" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21129:21262" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21361:22255" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21416:21723" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21455:21509" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21551:21618" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="21655:21717" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="22318:23704" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="22333:22479" ph="//..." />
-                <marker date="1479697463731" expanded="true" signature="22595:22681" ph="//..." />
-                <marker date="1479697463731" expanded="true" signature="22724:22927" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="22739:22876" ph="//..." />
-                <marker date="1479697463731" expanded="true" signature="22974:23072" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="23102:23216" ph="{&quot;unidad&quot;: UnidadActivo...}" />
-                <marker date="1479697463731" expanded="true" signature="23310:23696" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="23441:23575" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="23581:23682" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="23746:26452" ph="{...}" />
-                <marker date="1479697463731" expanded="true" signature="23787:23888" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Inicio.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="23923:24038" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/IniciarSesion.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24071:24182" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Registrarse.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24208:24305" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Test.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24332:24433" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Perfil.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24461:24564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Edicion.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24591:24692" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS120.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24721:24824" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS1201.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="24860:24977" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilProfesor.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25003:25100" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25141:25260" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilAdmin.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25295:25412" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EliminarAlumno.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25447:25564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarProfesor.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25599:25716" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarUnidades.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25753:25874" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/AgregarContenido.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="25904:26006" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="26037:26140" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="26172:26276" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-                <marker date="1479697463731" expanded="true" signature="26307:26410" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,6 +43,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>img</find>
+      <find>cambiar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -298,6 +145,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Vista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scrapbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Programa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,7 +382,7 @@
       <workItem from="1479449738236" duration="285000" />
       <workItem from="1479450081417" duration="1162000" />
       <workItem from="1479494233661" duration="1304000" />
-      <workItem from="1479702320950" duration="1868000" />
+      <workItem from="1479702320950" duration="2575000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -668,11 +587,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479703796512</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Mejorado EliminarProfesor, NuevoProfesor, EliminarAlumno">
+      <created>1479704255922</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1479704255922</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244195000" />
+    <option name="totallyTimeSpent" value="244902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -680,11 +606,11 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12127976" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3056" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3056" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -787,13 +713,6 @@
     <entry file="file://$PROJECT_DIR$/Test/Views/index2.js" />
     <entry file="file://$PROJECT_DIR$/Programa/Modelo/scrapbook.sql" />
     <entry file="file://$PROJECT_DIR$/Programa/Modelo/package.json" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Views/IniciarSesion.html" />
     <entry file="file://$PROJECT_DIR$/Test/Views/index.html" />
     <entry file="file://$PROJECT_DIR$/Test/Views/passport.js" />
@@ -912,85 +831,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <marker date="1479697463731" expanded="true" signature="16787:16965" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="16830:16962" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17036:17860" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17409:17678" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17465:17599" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17605:17668" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17724:17857" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17916:18035" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="17951:17991" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18083:18129" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18359:18810" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18384:18465" ph="{&quot;mail&quot;: MailActivo...}" />
-            <marker date="1479697463731" expanded="true" signature="18546:18773" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18597:18669" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18675:18763" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18878:19329" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="18903:18984" ph="{&quot;mail&quot;: MailActivo...}" />
-            <marker date="1479697463731" expanded="true" signature="19065:19292" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19116:19188" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19194:19282" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19396:19847" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19421:19502" ph="{&quot;mail&quot;: MailActivo...}" />
-            <marker date="1479697463731" expanded="true" signature="19583:19810" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19634:19706" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19712:19800" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19914:20365" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="19939:20020" ph="{&quot;mail&quot;: MailActivo...}" />
-            <marker date="1479697463731" expanded="true" signature="20101:20328" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="20152:20224" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="20230:20318" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="20441:21306" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="20814:21083" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="20870:21004" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21010:21073" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21129:21262" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21361:22255" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21416:21723" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21455:21509" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21551:21618" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="21655:21717" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="22318:23704" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="22333:22479" ph="//..." />
-            <marker date="1479697463731" expanded="true" signature="22595:22681" ph="//..." />
-            <marker date="1479697463731" expanded="true" signature="22724:22927" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="22739:22876" ph="//..." />
-            <marker date="1479697463731" expanded="true" signature="22974:23072" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="23102:23216" ph="{&quot;unidad&quot;: UnidadActivo...}" />
-            <marker date="1479697463731" expanded="true" signature="23310:23696" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="23441:23575" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="23581:23682" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="23746:26452" ph="{...}" />
-            <marker date="1479697463731" expanded="true" signature="23787:23888" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Inicio.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="23923:24038" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/IniciarSesion.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24071:24182" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Registrarse.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24208:24305" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Test.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24332:24433" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Perfil.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24461:24564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Edicion.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24591:24692" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS120.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24721:24824" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/FIS1201.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="24860:24977" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilProfesor.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25003:25100" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25141:25260" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/PerfilAdmin.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25295:25412" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EliminarAlumno.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25447:25564" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarProfesor.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25599:25716" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/EditarUnidades.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25753:25874" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/AgregarContenido.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="25904:26006" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="26037:26140" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="26172:26276" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-            <marker date="1479697463731" expanded="true" signature="26307:26410" ph="{&quot;templateUrl&quot;: '../Vista/Paginas/Mail.html'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -998,6 +838,22 @@
           <folding>
             <element signature="n#!!block;n#encaminar#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="404" column="18" lean-forward="false" selection-start-line="404" selection-start-column="11" selection-end-line="404" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

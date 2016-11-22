@@ -7,6 +7,7 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var ImgActiva = '';
 var UnidadActivo = '';
+var NombreUnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
@@ -288,7 +289,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
                 if (respuesta.split(",")[0] == "OK") {
                     if (respuesta.split(",")[2] == "Profesor") {
                         MailActivo = respuesta.split(",")[1];
-                        CargoActivo = respuesta.split(",")[2];
+                        CargoActivo = 'Profesor';
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                         $window.location = "#/PerfilProfesor";
                     } else if (respuesta.split(",")[2] == "Alumno") {
@@ -296,16 +297,16 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
                         $scope.MensajeError = 'Listo';
                         //$window.location.href = 'http://www.google.com';
                         MailActivo = respuesta.split(",")[1];
-                        CargoActivo = respuesta.split(",")[2];
+                        CargoActivo = 'Alumno';
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                         CarreraActivo = respuesta.split(",")[9];
                         CampusActivo = respuesta.split(",")[8];
                         ImgActiva = respuesta.split(",")[10];
-                        //NombreActivo = respuesta.split(" ")[2];
+                        TipoDeAprendizajeActivo = respuesta.split(",")[7];
                         $window.location = "#/Perfil";
                     } else if (respuesta.split(",")[2] == "Administrador") {
                         MailActivo = respuesta.split(",")[1];
-                        CargoActivo = respuesta.split(",")[2];
+                        CargoActivo = 'Administrador';
                         NombreActivo = respuesta.split(",")[3].substr(0, 1).toUpperCase() + respuesta.split(",")[3].substr(1);
                         $window.location = "#/PerfilAdministrador";
                     }
@@ -320,6 +321,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
+    $scope.nombreUnidad = NombreUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -403,6 +405,25 @@ app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
 });
 
 app.controller('Inicio', function ($scope) {
+    $scope.MensajeError = '';
+    $scope.NombreActivo = '';
+    $scope.MailActivo = '';
+    $scope.TipoDeAprendizajeActivo = '';
+    $scope.CargoActivo = '';
+    $scope.CarreraActivo = '';
+    $scope.CampusActivo = '';
+    MensajeError = '';
+    NombreActivo = '';
+    MailActivo = '';
+    TipoDeAprendizajeActivo = '';
+    CargoActivo = '';
+    CarreraActivo = '';
+    CampusActivo = '';
+    ImgActiva = '';
+    UnidadActivo = '';
+    SubUnidadActivo = '';
+    TipoActivo = '0';
+
 });
 
 app.controller('Test', function ($scope, $window) {
@@ -496,11 +517,77 @@ app.controller('PerfilProfesor', function ($scope, $http, $window) {
     };
 });
 
-app.controller('FIS120', function ($scope, $window) {
+app.controller('FIS120', function ($scope, $http, $sce, $window) {
     if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
-    $scope.message = 'Hola Desde FIS120';
+    $scope.nombreUnidad = NombreUnidadActivo;
+    var data = $.param({
+        unidad: UnidadActivo,
+        subUnidad: SubUnidadActivo
+    });
+    $http.post("/api/mostrarColumnas", data)
+        .success(function (respuesta) {
+            //la respuesta es un string con respuesta,mail,cargo,nombre
+            if (respuesta.split("$")[0] == 'OK') {
+                $scope.listaTemp = JSON.parse(respuesta.split("$")[1]);
+                contador=0;
+                $scope.lis1 =[];
+                $scope.lis2 =[];
+                $scope.lis3 =[];
+                for(i=0;i<$scope.listaTemp.length;i++){
+                    $scope.listaTemp[i].Contenido=$sce.trustAsHtml($scope.listaTemp[i].Contenido)
+                    if(String(TipoDeAprendizajeActivo)=='0'){
+                        if (i % 3 == 0){
+                            $scope.lis1.push($scope.listaTemp[i]);
+                        }else if (i % 3 == 1){
+                            $scope.lis2.push($scope.listaTemp[i]);
+                        }else if (i % 3 == 2){
+                            $scope.lis3.push($scope.listaTemp[i]);
+                        }
+                    } else if(String(TipoDeAprendizajeActivo)=='1' && String($scope.listaTemp[i].Uno)=='1'){
+                        if (contador % 3 == 0){
+                            $scope.lis1.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 1){
+                            $scope.lis2.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 2){
+                            $scope.lis3.push($scope.listaTemp[i]);
+                        }
+                        contador++;
+                    } else if(String(TipoDeAprendizajeActivo)=='2' && String($scope.listaTemp[i].Dos)=='1'){
+                        if (contador % 3 == 0){
+                            $scope.lis1.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 1){
+                            $scope.lis2.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 2){
+                            $scope.lis3.push($scope.listaTemp[i]);
+                        }
+                        contador++;
+                    } else if(String(TipoDeAprendizajeActivo)=='3' && String($scope.listaTemp[i].Tres)=='1'){
+                        if (contador % 3 == 0){
+                            $scope.lis1.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 1){
+                            $scope.lis2.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 2){
+                            $scope.lis3.push($scope.listaTemp[i]);
+                        }
+                        contador++;
+                    } else if(String(TipoDeAprendizajeActivo)=='4' && String($scope.listaTemp[i].Cuatro)=='1'){
+                        if (contador % 3 == 0){
+                            $scope.lis1.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 1){
+                            $scope.lis2.push($scope.listaTemp[i]);
+                        }else if (contador % 3 == 2){
+                            $scope.lis3.push($scope.listaTemp[i]);
+                        }
+                        contador++;
+                    }
+                }
+            } else {
+                MensajeError = 'El mail ya está inscrito';
+
+            }
+        });
 });
 
 app.controller('FIS1201', function ($scope) {

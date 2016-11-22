@@ -5,8 +5,6 @@
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
-<p id="mensaje1"></p>
-<p id="mensaje2"></p>
 <div class="uk-grid">
     <div class="uk-width-3-4">
         <div class="uk-flex-right">
@@ -69,16 +67,32 @@
 
     function cargar() {
         var a;
-        document.getElementById("mensaje1").innerHTML=document.getElementById("TipoAprendizaje").textContent;
-        a=parseInt(document.getElementById("TipoAprendizaje").textContent);
-        document.getElementById("mensaje2").innerHTML=a;
+        a=TipoDeAprendizajeActivo;
         if (a==1){
-            document.getElementById("mensaje2").innerHTML="hola";
             $('.Tipo1').show();
             $('.Tipo2').hide();
             $('.Tipo3').hide();
             $('.Tipo4').hide();
         }
+        else if (a==2){
+            $('.Tipo1').hide();
+            $('.Tipo2').show();
+            $('.Tipo3').hide();
+            $('.Tipo4').hide();
+        }
+        else if (a==3){
+            $('.Tipo1').hide();
+            $('.Tipo2').hide();
+            $('.Tipo3').show();
+            $('.Tipo4').hide();
+        }
+        else if (a==4){
+            $('.Tipo1').hide();
+            $('.Tipo2').hide();
+            $('.Tipo3').hide();
+            $('.Tipo4').show();
+        }
+
     }
     window.onload = cargar();
 </script>
@@ -102,9 +116,3 @@
     </div>
 </div>
 
-<script>
-    function codeAddress() {
-        alert('ok');
-    }
-    window.onload = codeAddress;
-</script>

@@ -518,6 +518,7 @@ app.controller('PerfilProfesor', function ($scope, $http, $window) {
 });
 
 app.controller('FIS120', function ($scope, $http, $sce, $window) {
+
     if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
@@ -588,6 +589,30 @@ app.controller('FIS120', function ($scope, $http, $sce, $window) {
 
             }
         });
+
+    // PARA REALIZAR FEEDBACK
+    $scope.titulo = '';
+    $scope.comentario = '';
+    $scope.feedback = function () {
+        var data1 = $.param({
+            titu: $scope.titulo,
+            coment: $scope.comentario
+        });
+        $http.post("/api/darFeedback", data1)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Feedback Realizado!' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'No FeedBack!';
+                }
+            })
+
+    };
+    $scope.limpiar = function(){
+        $scope.titulo = '';
+        $scope.comentario = '';
+    }
 });
 
 app.controller('FIS1201', function ($scope) {

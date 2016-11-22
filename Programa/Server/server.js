@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -139,15 +139,15 @@ function encaminar(pedido, respuesta, camino) {
             mostrarUnidad5(pedido,respuesta);
             break;
         }
-        case "/api/mostrarData":{
+        case "Vista/api/mostrarData":{
             mostrarData(pedido);
             break;
         }
-        case "/api/eliminarUnidad":{
+        case "Vista/api/eliminarUnidad":{
             eliminarUnidad(pedido,respuesta);
             break;
         }
-        case "/api/agregarContenido":{
+        case "Vista/api/agregarContenido":{
             agregarContenido(pedido,respuesta);
             break;
         }
@@ -738,6 +738,27 @@ function eliminarUnidad(pedido,respuesta){
         });
     });
 }
+
+function agregarContenido(pedido, respuesta) {
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        connection.query("INSERT INTO contenido Values (default , " + formulario["unidad"] + ", " + formulario["subUnidad"] + ", " + formulario["uno"] + ", " + formulario["dos"] + "," + formulario["tres"] + "," + formulario["cuatro"] + ", 0, '" + formulario["titulo"] + "','" + formulario["contenido"] + "');", function (err) {
+            if (err) {
+                console.log(err);
+                respuesta.end('ERROR');
+            }
+            else {
+                console.log("contenido agregado");
+                respuesta.end('OK$')
+            }
+        });
+    });
+}
+
 servidor.listen(8000);
 
 console.log('Servidor web iniciado en http://localhost:8000');

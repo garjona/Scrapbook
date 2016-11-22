@@ -7,7 +7,7 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var ImgActiva = '';
 var UnidadActivo = '';
-var NombreUnidadActivo = '';
+var NombreSubUnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
@@ -255,11 +255,12 @@ app.controller('EditarUnidades', function ($scope, $http) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.del = function (numeroU,numeroSub) {
         posicion1=0;
@@ -332,7 +333,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
-    $scope.nombreUnidad = NombreUnidadActivo;
+    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -494,11 +495,12 @@ app.controller('Perfil', function ($scope, $http, $window) {
             })
 
     };
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/FIS120";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
@@ -520,20 +522,20 @@ app.controller('PerfilProfesor', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
 app.controller('FIS120', function ($scope, $http, $sce, $window) {
-
     if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
-    $scope.nombreUnidad = NombreUnidadActivo;
+    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -639,8 +641,86 @@ app.controller('FIS1201', function ($scope) {
 app.controller('Mail', function ($scope, $http) {
 });
 
-app.controller('AgregarContenido', function ($scope, $window) {
-    $scope.message = 'Hola Desde Mail';
+app.controller('AgregarContenido', function ($scope, $http, $window) {
+    $scope.contenido = '';
+    $scope.video = '';
+    $scope.imagen = '';
+    $scope.gif = '';
+    $scope.unidad = '';
+    $scope.subUnidad = '';
+    $scope.adaptador = '';
+    $scope.divergente = '';
+    $scope.convergente = '';
+    $scope.asimilador = '';
+    $scope.titulo = '';
+    $scope.contenidoSeleccionado = '';
+    $scope.campoSeleccionado =1;
+    $http.get("/api/mostrarUnidades")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+                ListaActivo = $scope.listas;
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+    $scope.elegirUnidad = function(){
+        $scope.listaTemp = $scope.listas[parseInt($scope.unidad)-1].SubUnidad;
+    };
+    $scope.seleccionar = function(i){
+        $scope.campoSeleccionado=i;
+    };
+    $scope.enviarInfo = function () {
+        if ($scope.adaptador == true){
+            $scope.uno=1;
+        } else{
+            $scope.uno=0;
+        }
+        if ($scope.divergente == true){
+            $scope.dos=1;
+        } else{
+            $scope.dos=0;
+        }
+        if ($scope.convergente == true){
+            $scope.tres=1;
+        } else{
+            $scope.tres=0;
+        }
+        if ($scope.asimilador == true){
+            $scope.cuatro=1;
+        } else{
+            $scope.cuatro=0;
+        }
+        if ($scope.campoSeleccionado==1){
+            $scope.contenidoSeleccionado = $scope.contenido;
+        } else if ($scope.campoSeleccionado == 2) {
+            $scope.contenidoSeleccionado = $scope.imagen;
+        } else if ($scope.campoSeleccionado == 3) {
+            $scope.contenidoSeleccionado = $scope.video;
+        } else if ($scope.campoSeleccionado == 1) {
+            $scope.contenidoSeleccionado = $scope.gif;
+        }
+
+        var data = $.param({
+            unidad: $scope.unidad,
+            subUnidad: $scope.subUnidad,
+            uno: $scope.uno,
+            dos: $scope.dos,
+            tres: $scope.tres,
+            cuatro: $scope.cuatro,
+            titulo: $scope.titulo,
+            contenido: $scope.contenidoSeleccionado
+        });
+        $http.post("/api/agregarContenido", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split("$")[0] == 'OK') {
+                    MensajeError = "Funciono"
+                } else {
+                    MensajeError = 'El mail ya está inscrito';
+                }
+            });
+    };
 });
 
 app.controller('Adaptador', function ($scope, $http, $window) {
@@ -729,11 +809,12 @@ app.controller('PerfilAdministrador', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i,nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.message = 'Hola Desde Admin';
 });
@@ -742,11 +823,9 @@ app.controller('Datos', function ($scope, $window) {
     $scope.reedirigirAPerfilSegunCargo = function () {
         if (CargoActivo == "Alumno") {
             $window.location = "#/Perfil";
-        }
-        if (CargoActivo == "Administrador") {
+        } else if (CargoActivo == "Administrador") {
             $window.location = "#/PerfilAdministrador";
-        }
-        if (CargoActivo == 'Profesor') {
+        } else if (CargoActivo == "Profesor") {
             $window.location = "#/PerfilProfesor";
         }
     };

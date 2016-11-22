@@ -601,7 +601,35 @@ app.controller('Mail', function ($scope, $http) {
 });
 
 app.controller('AgregarContenido', function ($scope, $window) {
-    $scope.message = 'Hola Desde Mail';
+    $scope.unidadSeleccionado = '';
+    $scope.subUnidadSeleccionado = '';
+    $scope.adaptadorSeleccionado = '';
+    $scope.divergenteSeleccionado = '';
+    $scope.convergenteSeleccionado = '';
+    $scope.asimiladorSeleccionado = '';
+    $scope.tituloSeleccionado = '';
+    $scope.contenidoSeleccionado = '';
+    $scope.enviarInfo = function () {
+        var data = $.param({
+            unidad: $scope.unidadSeleccionado,
+            subUnidad: $scope.subUnidadSeleccionado,
+            uno: $scope.adaptadorSeleccionado,
+            dos: $scope.divergenteSeleccionado,
+            tres: $scope.convergenteSeleccionado,
+            cuatro: $scope.asimiladorSeleccionado,
+            titulo: $scope.tituloSeleccionado,
+            contenido: $scope.contenidoSeleccionado
+        });
+        $http.post("/api/agregarContenido", data)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split("$")[0] == 'OK') {
+                    MensajeError = "Funciono"
+                } else {
+                    MensajeError = 'El mail ya está inscrito';
+                }
+            });
+    };
 });
 
 app.controller('Adaptador', function ($scope, $http, $window) {

@@ -194,11 +194,21 @@ function mostrarUnidades(pedido,respuesta){
                     if (json[i].Unidad in diccionarioTemp){
                         diccionarioTemp[json[i].Unidad].SubUnidad.push({Titulo:json[i].Titulo, Numero:json[i].SubUnidad});
                     } else{
-                        diccionarioTemp[json[i].Unidad]={Numero:json[i].Unidad, TextoParche:"SubUnidad"+String(json[i].Unidad), SubUnidad:[]};
-                        diccionarioTemp[json[i].Unidad].SubUnidad.push({Titulo:json[i].Titulo, Numero:json[i].SubUnidad});
+                        diccionarioTemp[json[i].Unidad] = {
+                            Numero: json[i].Unidad,
+                            TextoParche: "subUnidad" + String(json[i].Unidad),
+                            TextoParche2: "hide" + String(json[i].Unidad),
+                            TextoParche3: "Unidad" + String(json[i].Unidad),
+                            TextoParche4: "subUnidad" + String(json[i].Unidad) + " uk-width-1-1 uk-form-large",
+                            SubUnidad: []
+                        };
+                        diccionarioTemp[json[i].Unidad].SubUnidad.push({
+                            Titulo: json[i].Titulo,
+                            Numero: json[i].SubUnidad
+                        });
                     }
                 }
-                for (i=0;i<Object.keys(diccionarioTemp).length;i++){
+                for (i = 0; i < Object.keys(diccionarioTemp).length; i++) {
                     lista.push(diccionarioTemp[String(i+1)]);
                 }
                 respuesta.end('OK$'+JSON.stringify(lista));

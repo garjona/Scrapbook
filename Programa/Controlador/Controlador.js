@@ -265,13 +265,13 @@ app.controller('EditarUnidades', function ($scope, $http) {
             subUnidad : numeroSub
         });
         $scope.listas[posicion1].SubUnidad.splice(posicion2, 1);
-        $http.post("/api/eliminarAlumno", data)
+        $http.post("/api/eliminarUnidad", data)
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
-                    MensajeError = 'Se ha eliminado exitosamente al alumno de mail ' + respuesta.split(",")[1];
+                    MensajeError = 'Se ha eliminado exitosamente la unidad ';
                 } else {
-                    MensajeError = 'El mail no se encuentra en la base de datos';
+                    MensajeError = 'La unidad no se encuentra en la base de datos';
                 }
             })
     };

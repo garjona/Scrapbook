@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,21 +31,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EditarUnidades.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
+      <file leaf-file-name="Inicio.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+            <state relative-caret-position="54">
+              <caret line="3" column="98" selection-start-line="3" selection-start-column="98" selection-end-line="3" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgregarContenido.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EditarUnidades.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgregarContenido.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1747">
-              <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+            <state relative-caret-position="-900">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -58,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="714" column="43" selection-start-line="714" selection-start-column="43" selection-end-line="714" selection-end-column="43" />
+            <state relative-caret-position="276">
+              <caret line="698" column="63" selection-start-line="698" selection-start-column="63" selection-end-line="698" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -93,6 +105,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
               <caret line="743" column="18" selection-start-line="743" selection-start-column="18" selection-end-line="743" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PerfilProfesor.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -157,20 +179,20 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
-        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
+        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
       </list>
     </option>
   </component>
@@ -484,7 +506,7 @@
       <workItem from="1479706466319" duration="12651000" />
       <workItem from="1479778943903" duration="1010000" />
       <workItem from="1479780501004" duration="8552000" />
-      <workItem from="1479799643062" duration="10227000" />
+      <workItem from="1479799643062" duration="12038000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -738,11 +760,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479816139356</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="modificado agregar contenido">
+      <created>1479820235095</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1479820235096</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277342000" />
+    <option name="totallyTimeSpent" value="279153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -836,7 +865,8 @@
     <MESSAGE value="modificadoAgregarContenido" />
     <MESSAGE value="actualizacion" />
     <MESSAGE value="agregado contenido" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregado contenido" />
+    <MESSAGE value="modificado agregar contenido" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificado agregar contenido" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -921,13 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="86" selection-start-line="2" selection-start-column="86" selection-end-line="2" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS1201.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -980,22 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/node_modules/mysql/lib/protocol/Parser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1028,18 +1035,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="714" column="43" selection-start-line="714" selection-start-column="43" selection-end-line="714" selection-end-column="43" />
+        <state relative-caret-position="54">
+          <caret line="3" column="98" selection-start-line="3" selection-start-column="98" selection-end-line="3" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1747">
-          <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+        <state relative-caret-position="-900">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1050,6 +1065,22 @@
             <element signature="n#style#0;n#a#0;n#div#9;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#9;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="698" column="63" selection-start-line="698" selection-start-column="63" selection-end-line="698" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>

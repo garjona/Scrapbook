@@ -143,7 +143,7 @@ app.controller('MostrarUnidad5', function ($scope, $http, $window) {
         });
 });
 
-app.controller('feedback', function ($scope, $http) {
+app.controller('Feedback', function ($scope, $http) {
     $http.get("/api/mostrarFeedback")
         .then(function (respuesta) {
             if (respuesta.data.split("$")[0] == 'OK') {
@@ -948,6 +948,10 @@ app.config(function ($routeProvider) {
         .when('/EliminarAlumno', {
             templateUrl: '../Vista/Paginas/EliminarAlumno.html',
             controller: 'EliminarAlumno'
+        })
+        .when('/Feedback', {
+            templateUrl: '../Vista/Paginas/Feedback.html',
+            controller: 'Feedback'
         })
         .when('/EditarProfesor', {
             templateUrl: '../Vista/Paginas/EditarProfesor.html',

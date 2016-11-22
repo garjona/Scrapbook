@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'scrapbook'
 });
 
@@ -100,6 +100,10 @@ function encaminar(pedido, respuesta, camino) {
         }
         case 'Vista/api/mostrarAlumnos':{
             mostrarAlumnos(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarFeedback':{
+            mostrarFeedback(pedido,respuesta);
             break;
         }
         case 'Vista/api/mostrarProfesor':{
@@ -460,6 +464,35 @@ function iniciarSesion(pedido,respuesta){
         });
     });
 }
+
+function mostrarFeedback(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM feedbackpagina;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Fecha:json[i].Fecha,Mail:json[i].AlumnoMail,Titulo:json[i].Titulo, Contenido: json[i].Comentario});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
 
 function mostrarAlumnos(pedido,respuesta){
     var info = '';

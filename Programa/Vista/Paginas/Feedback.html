@@ -1,0 +1,59 @@
+<nav class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a onclick="redirigir()">Perfil</a></li>
+        <li><a href="#/">Salir</a></li>
+    </ul>
+</nav>
+
+<h5 id="cargo" ></h5>
+<script>
+    function redirigir() {
+
+        if (CargoActivo=="Profesor"){
+            window.location.href = "#/PerfilProfesor";
+        }
+        else if(CargoActivo=="Administrador"){
+            window.location.href = "#/PerfilAdministrador";
+        }
+
+    }
+</script>
+<div class="uk-panel-space">
+</div>
+<div>
+    <div class="uk-grid">
+        <div class="uk-width-1-10">
+        </div>
+        <div class="uk-width-8-10">
+            <div class="uk-vertical-align uk-text-center uk-height-1-1">
+                <div class="uk-vertical-align-middle" style="width: 100%" >
+                    <form class="uk-panel uk-panel-box uk-form">
+                        <div class="uk-text-center">
+                            <h2>FeedBack</h2>
+                        </div>
+                        <table width="100%">
+                            <div class="uk-vertical-align uk-text-center uk-height-1-1">
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Mail Alumno</th>
+                                    <th>Titulo</th>
+                                    <th>Contenido</th>
+                                    <th></th>
+                                </tr>
+                                <tr ng-repeat="lista in listas">
+                                    <td>{{lista.Fecha}}</td>
+                                    <td>{{lista.Mail}}</td>
+                                    <td>{{lista.Titulo}}</td>
+                                    <td>{{lista.Contenido}}</td>
+                                </tr>
+                            </div>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-10">
+    </div>
+</div>

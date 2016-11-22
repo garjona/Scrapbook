@@ -7,7 +7,7 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var ImgActiva = '';
 var UnidadActivo = '';
-var NombreUnidadActivo = '';
+var NombreSubUnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
@@ -244,11 +244,12 @@ app.controller('EditarUnidades', function ($scope, $http) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.del = function (numeroU,numeroSub) {
         posicion1=0;
@@ -321,7 +322,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
-    $scope.nombreUnidad = NombreUnidadActivo;
+    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -483,11 +484,12 @@ app.controller('Perfil', function ($scope, $http, $window) {
             })
 
     };
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/FIS120";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
@@ -509,11 +511,12 @@ app.controller('PerfilProfesor', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
@@ -522,7 +525,7 @@ app.controller('FIS120', function ($scope, $http, $sce, $window) {
     if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
-    $scope.nombreUnidad = NombreUnidadActivo;
+    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -712,11 +715,12 @@ app.controller('PerfilAdministrador', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i) {
+    $scope.mostrar = function (unidad, i,nombreSubUnidad) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
+        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.message = 'Hola Desde Admin';
 });

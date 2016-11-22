@@ -140,16 +140,16 @@
                         <p class="uk-width-3-10 uk-align-center" id="respuesta1"></p>
                         <a class="hide7 uk-width-3-10 uk-align-center uk-button uk-button-primary uk-button-large"
                            style="display: none"
-                           onclick="enviarInfo()">Enviar</a>
+                           ng-click="enviarInfo()">Enviar</a>
                         <div>
-                            <input class="uk-width-1-1 uk-form-large" id="rUnidad" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rSubUnidad" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rUno" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rDos" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rTres" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rCuatro" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rTitulo" type="text" placeholder="">
-                            <input class="uk-width-1-1 uk-form-large" id="rContenido" type="text" placeholder="">
+                            <input class="uk-width-1-1 uk-form-large" id="rUnidad" type="text" placeholder="" ng-model="unidadSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rSubUnidad" type="text" placeholder="" ng-model="subUnidadSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rUno" type="text" placeholder="" ng-model="adaptadorSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rDos" type="text" placeholder="" ng-model="divergenteSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rTres" type="text" placeholder="" ng-model="convergenteSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rCuatro" type="text" placeholder="" ng-model="asimiladorSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rTitulo" type="text" placeholder="" ng-model="tituloSeleccionado">
+                            <input class="uk-width-1-1 uk-form-large" id="rContenido" type="text" placeholder="" ng-model="contenidoSeleccionado">
                         </div>
                     </div>
                 </div>

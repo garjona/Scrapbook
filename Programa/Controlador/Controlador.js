@@ -7,7 +7,7 @@ var CarreraActivo = '';
 var CampusActivo = '';
 var ImgActiva = '';
 var UnidadActivo = '';
-var NombreSubUnidadActivo = '';
+var NombreUnidadActivo = '';
 var SubUnidadActivo = '';
 var TipoActivo = '0'; //0=todos, 1= tipo1 ,... n=tipon
 var app = angular.module('Controller', ['ngRoute']);
@@ -244,12 +244,11 @@ app.controller('EditarUnidades', function ($scope, $http) {
             }
         });
 
-    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
+    $scope.mostrar = function (unidad, i) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
-        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.del = function (numeroU,numeroSub) {
         posicion1=0;
@@ -322,7 +321,7 @@ app.controller('IniciarSesion', function ($scope, $http, $window) {
 });
 
 app.controller('MostrarEdicion', function ($scope, $http, $sce, $window) {
-    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
+    $scope.nombreUnidad = NombreUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -484,12 +483,11 @@ app.controller('Perfil', function ($scope, $http, $window) {
             })
 
     };
-    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
+    $scope.mostrar = function (unidad, i) {
         $window.location = "#/FIS120";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
-        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
@@ -511,20 +509,20 @@ app.controller('PerfilProfesor', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i, nombreSubUnidad) {
+    $scope.mostrar = function (unidad, i) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
-        NombreSubUnidadActivo = nombreSubUnidad;
     };
 });
 
 app.controller('FIS120', function ($scope, $http, $sce, $window) {
+
     if (CargoActivo != "Alumno") {
         $window.location = "#/";
     }
-    $scope.nombreSubUnidadActivo = NombreSubUnidadActivo;
+    $scope.nombreUnidad = NombreUnidadActivo;
     var data = $.param({
         unidad: UnidadActivo,
         subUnidad: SubUnidadActivo
@@ -591,6 +589,30 @@ app.controller('FIS120', function ($scope, $http, $sce, $window) {
 
             }
         });
+
+    // PARA REALIZAR FEEDBACK
+    $scope.titulo = '';
+    $scope.comentario = '';
+    $scope.feedback = function () {
+        var data1 = $.param({
+            titu: $scope.titulo,
+            coment: $scope.comentario
+        });
+        $http.post("/api/darFeedback", data1)
+            .success(function (respuesta) {
+                //la respuesta es un string con respuesta,mail,cargo,nombre
+                if (respuesta.split(",")[0] == 'OK') {
+                    MensajeError = 'Feedback Realizado!' + respuesta.split(",")[1];
+                } else {
+                    MensajeError = 'No FeedBack!';
+                }
+            })
+
+    };
+    $scope.limpiar = function(){
+        $scope.titulo = '';
+        $scope.comentario = '';
+    }
 });
 
 app.controller('FIS1201', function ($scope) {
@@ -690,12 +712,11 @@ app.controller('PerfilAdministrador', function ($scope, $http, $window) {
             }
         });
 
-    $scope.mostrar = function (unidad, i,nombreSubUnidad) {
+    $scope.mostrar = function (unidad, i) {
         $window.location = "#/Edicion";
         UnidadActivo = unidad;
         SubUnidadActivo = i;
         TipoActivo = '0';
-        NombreSubUnidadActivo = nombreSubUnidad;
     };
     $scope.message = 'Hola Desde Admin';
 });

@@ -1,7 +1,7 @@
 <nav class="uk-navbar">
     <ul class="uk-navbar-nav">
         <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
-        <li><a href="#/Perfil">Perfil</a></li>
+        <li><a ng-click="reedirigirAPerfilSegunCargo">Perfil</a></li>
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
@@ -45,8 +45,10 @@
                 <img class="uk-border-circle" width="120" height="120"
                      ng-src="{{ImgActiva}}"
                      alt="Si ves esto... tu url no contiene una imagen compatible!">
+                <h3>    </h3>
                 <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
                        value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{CarreraActivo}}</h5>
                 <h5>{{CampusActivo}}</h5>

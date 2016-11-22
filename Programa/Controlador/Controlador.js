@@ -143,6 +143,17 @@ app.controller('MostrarUnidad5', function ($scope, $http, $window) {
         });
 });
 
+app.controller('feedback', function ($scope, $http) {
+    $http.get("/api/mostrarFeedback")
+        .then(function (respuesta) {
+            if (respuesta.data.split("$")[0] == 'OK') {
+                $scope.listas = JSON.parse(respuesta.data.split("$")[1]);
+            } else {
+                MensajeError = 'Hubo un error';
+            }
+        });
+
+});
 
 app.controller('EliminarAlumno', function ($scope, $http) {
     $http.get("/api/mostrarAlumnos")

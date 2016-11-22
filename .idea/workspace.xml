@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/feedback.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +55,18 @@
       <file leaf-file-name="PerfilAdmin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="114" lean-forward="false" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
+            <state relative-caret-position="229">
+              <caret line="57" column="94" lean-forward="false" selection-start-line="57" selection-start-column="94" selection-end-line="57" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/feedback.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-423">
+              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -62,8 +75,8 @@
       <file leaf-file-name="PerfilProfesor.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="25" column="117" lean-forward="false" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
+            <state relative-caret-position="309">
+              <caret line="55" column="94" lean-forward="false" selection-start-line="55" selection-start-column="94" selection-end-line="55" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -79,7 +92,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Edicion.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Edicion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -92,7 +105,7 @@
       <file leaf-file-name="EliminarAlumno.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
+            <state relative-caret-position="240">
               <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
@@ -112,8 +125,8 @@
       <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="618" column="31" lean-forward="false" selection-start-line="618" selection-start-column="31" selection-end-line="618" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="155" column="3" lean-forward="false" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -137,6 +150,8 @@
       <find>ima</find>
       <find>fis120</find>
       <find>cambiar</find>
+      <find>eliminar</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,13 +201,14 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
-        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/feedback.html" />
+        <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
       </list>
     </option>
   </component>
@@ -350,16 +366,16 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Programa/Vista/Paginas" />
+      <recent name="$PROJECT_DIR$/Programa/Modelo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jalis\Desktop\analproyecto\Scrapbook\Programa\Vista\Paginas" />
       <recent name="C:\Users\arjon\WebstormProjects\Scrapbook\Programa\Server" />
       <recent name="$PROJECT_DIR$/Programa/Vista/Imagenes" />
       <recent name="$PROJECT_DIR$/Programa/Controlador" />
       <recent name="$PROJECT_DIR$/Programa" />
-      <recent name="$PROJECT_DIR$/Programa/Vista" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Programa/Vista/Paginas" />
-      <recent name="$PROJECT_DIR$/Programa/Modelo" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -608,7 +624,7 @@
       <workItem from="1479706466319" duration="12651000" />
       <workItem from="1479778943903" duration="1010000" />
       <workItem from="1479780501004" duration="1095000" />
-      <workItem from="1479789266098" duration="5141000" />
+      <workItem from="1479789266098" duration="6979000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -855,17 +871,24 @@
       <option name="project" value="LOCAL" />
       <updated>1479794130287</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="feedbaaack">
+      <created>1479794444704</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1479794444704</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264799000" />
+    <option name="totallyTimeSpent" value="266637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18303572" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18303572" sideWeight="0.6772824" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
@@ -958,13 +981,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/css/uikit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="930" column="27" lean-forward="false" selection-start-line="930" selection-start-column="27" selection-end-line="930" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Views/js/skel-panels.min.js" />
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/&lt;h1&gt;About&lt;/h1&gt;  &lt;h3&gt;{{message}}&lt;/h3&gt;.html" />
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Imagenes/Bubbles.jpg">
@@ -1080,22 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="114" lean-forward="false" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1108,22 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
           <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="618" column="31" lean-forward="false" selection-start-line="618" selection-start-column="31" selection-end-line="618" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="117" lean-forward="false" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
           <folding />
         </state>
       </provider>
@@ -1148,6 +1132,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="155" column="3" lean-forward="false" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="55" column="94" lean-forward="false" selection-start-line="55" selection-start-column="94" selection-end-line="55" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="57" column="94" lean-forward="false" selection-start-line="57" selection-start-column="94" selection-end-line="57" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-423">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding />
         </state>
       </provider>

@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -139,6 +139,10 @@ function encaminar(pedido, respuesta, camino) {
             mostrarData(pedido);
             break;
         }
+        case "/api/eliminarUnidad":{
+            eliminarUnidad(pedido,respuesta);
+            break;
+        }
 
         default : {
             fs.exists(camino, function (existe) {
@@ -197,7 +201,6 @@ function mostrarUnidades(pedido,respuesta){
                 for (i=0;i<Object.keys(diccionarioTemp).length;i++){
                     lista.push(diccionarioTemp[String(i+1)]);
                 }
-                console.log(lista);
                 respuesta.end('OK$'+JSON.stringify(lista));
             }
         });
@@ -371,7 +374,7 @@ function registro2(pedido,respuesta){
         var formulario = querystring.parse(info);
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0');", function (err) {
+        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0','http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png');", function (err) {
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -667,6 +670,27 @@ function mostrarData(pedido){
         console.log(formulario);
     });
 }
-servidor.listen(8000);
+function eliminarUnidad(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("DELETE FROM unidades WHERE Unidad="+formulario["unidad"]+" and SubUnidad="+formulario["subUnidad"]+";", function (err, rows) {
+            console.log(formulario["unidad"]);
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else{
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,'+formulario["unidad"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
+servidor.listen(9000);
 
-console.log('Servidor web iniciado en http://localhost:8000');
+console.log('Servidor web iniciado en http://localhost:9000');

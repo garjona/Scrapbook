@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -141,6 +141,10 @@ function encaminar(pedido, respuesta, camino) {
         }
         case "/api/eliminarUnidad":{
             eliminarUnidad(pedido,respuesta);
+            break;
+        }
+        case "/api/agregarContenido":{
+            agregarContenido(pedido,respuesta);
             break;
         }
 

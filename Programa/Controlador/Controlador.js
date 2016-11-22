@@ -742,9 +742,11 @@ app.controller('Datos', function ($scope, $window) {
     $scope.reedirigirAPerfilSegunCargo = function () {
         if (CargoActivo == "Alumno") {
             $window.location = "#/Perfil";
-        } else if (CargoActivo == "Administrador") {
+        }
+        if (CargoActivo == "Administrador") {
             $window.location = "#/PerfilAdministrador";
-        } else if (CargoActivo == "Profesor") {
+        }
+        if (CargoActivo == 'Profesor') {
             $window.location = "#/PerfilProfesor";
         }
     };

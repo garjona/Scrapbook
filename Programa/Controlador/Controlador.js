@@ -696,7 +696,10 @@ app.controller('AgregarContenido', function ($scope, $http, $window) {
         } else if ($scope.campoSeleccionado == 2) {
             $scope.contenidoSeleccionado = $scope.imagen;
         } else if ($scope.campoSeleccionado == 3) {
-            $scope.contenidoSeleccionado = "<iframe width='300' src='"+$scope.video+"' frameborder='0' allowfullscreen></iframe>";
+            var p="<iframe width='300' src='";
+            var q="' frameborder='0' allowfullscreen><";
+            var x ="/iframe>";
+            $scope.contenidoSeleccionado = p+$scope.video+q+x;
         } else if ($scope.campoSeleccionado == 1) {
             $scope.contenidoSeleccionado = $scope.gif;
         }

@@ -22,7 +22,7 @@
                                 <div ng-repeat="unidad in listas">
                                     <li>Unidad {{unidad.Numero}}
                                         <ul ng-repeat="subLista in unidad.SubUnidad">
-                                            <u1><p> <a ng-click='mostrar(unidad.Numero,subLista.Numero)'>{{subLista.Titulo}}</a>
+                                            <u1><p> <a ng-click='mostrar(unidad.Numero,subLista.Numero,subLista.Titulo)'>{{subLista.Titulo}}</a>
                                                 <div class="uk-align-right">
                                                     <button class=" uk-button uk-button-primary uk-button-small"
                                                             >Editar

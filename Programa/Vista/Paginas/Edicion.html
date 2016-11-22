@@ -3,7 +3,6 @@
         <li><a href="/#"><i class="uk-icon-small uk-icon-book"></i> {{Inicio}}</a></li>
         <li><a href="#/PerfilAdministrador">Perfil</a></li>
         <li><a href="/#">Salir</a></li>
-        <li><a><button class="uk-button" data-uk-modal="{target:'#feed'}">FeedBack</button></a></li>
     </ul>
 </nav>
 
@@ -80,36 +79,3 @@
 </div>
 </div>
 
-<div id = 'feed' class="uk-modal">
-    <div class="uk-modal-dialog">
-        <div class="uk-modal-header"><h2>FeedBack</h2></div>
-        ¡Tu opinión es importante! Por favor, expresa tu opinión en el recuadro de abajo respecto a cualquier sugerencia o reclamo del
-        contenido, especificando
-        el título del bloque y tu comentario:
-        <div class="uk-panel">
-        </div>
-        <div class="uk-panel">
-            <br>
-        </div>
-        <form class="uk-form uk-form-stacked">
-
-            <div class="uk-form-row">
-                <label class="uk-form-label" for="form-s-it">Título del bloque:</label>
-                <div class="uk-form-controls">
-                    <input type="text" id="form-s-it" ng-model="titulo" placeholder="Colocar título aquí" style="width: 600px;" class = "uk-form-large uk-form-width-large">
-                </div>
-            </div>
-            <div class="uk-form-row">
-                <label class="uk-form-label" for="form-s-t">Comentario:</label>
-                <div class="uk-form-controls">
-                    <textarea id="form-s-t" cols="30" rows="5" ng-model="comentario" placeholder="Colocar comenario aquí" style="margin: 0px; height: 110px; width: 600px;"></textarea>
-                </div>
-            </div>
-
-        </form>
-        <div class="uk-modal-footer uk-text-right">
-            <button type="button" ng-click = "limpiar()" class="uk-button uk-button-danger uk-modal-close">Cancelar</button>
-            <button type="button" ng-click = "feedback();" onclick="UIkit.modal.alert('¡Muchas gracias!')" class="uk-button uk-button-primary uk-modal-close">Enviar</button>
-        </div>
-    </div>
-</div>

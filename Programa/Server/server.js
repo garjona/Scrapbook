@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'scrapbook'
 });
 
@@ -88,6 +88,10 @@ function encaminar(pedido, respuesta, camino) {
         }
         case 'Vista/api/cambiarImagen':{
             cambiarImagen(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/darFeedback':{
+            darFeedback(pedido,respuesta);
             break;
         }
         case 'Vista/api/eliminarProfesor':{
@@ -535,6 +539,31 @@ function nuevoProfesor(pedido,respuesta){
     });
 }
 
+
+function darFeedback(pedido,respuesta)
+{
+    var info = '';
+    pedido.on('data', function(datosparciales)
+    {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        //"SELECT * FROM alumno where Mail='"+formulario["mail"]+"';"
+        //"INSERT INTO feedbackpagina (AlumnoMail, Titulo, Comentario) values('" + formulario["mail"] + "', '" + formulario["titu"] + "', '" + formulario["coment"]+"');"
+        connection.query("INSERT INTO feedbackpagina (AlumnoMail, Titulo, Comentario) values('" + formulario["mail"] + "', '" + formulario["titu"] + "', '" + formulario["coment"]+"');", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else {
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,' + formulario["mail"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
 function cambiarImagen(pedido,respuesta)
 {
     var info = '';

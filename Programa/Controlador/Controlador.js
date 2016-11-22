@@ -593,26 +593,32 @@ app.controller('FIS120', function ($scope, $http, $sce, $window) {
     // PARA REALIZAR FEEDBACK
     $scope.titulo = '';
     $scope.comentario = '';
+    $scope.limpiar = function(){
+        $scope.titulo = '';
+        $scope.comentario = '';
+    }
     $scope.feedback = function () {
         var data1 = $.param({
             titu: $scope.titulo,
-            coment: $scope.comentario
+            coment: $scope.comentario,
+            mail: MailActivo
         });
         $http.post("/api/darFeedback", data1)
             .success(function (respuesta) {
                 //la respuesta es un string con respuesta,mail,cargo,nombre
                 if (respuesta.split(",")[0] == 'OK') {
                     MensajeError = 'Feedback Realizado!' + respuesta.split(",")[1];
-                } else {
+                    $scope.titulo = '';
+                    $scope.comentario = '';
                     MensajeError = 'No FeedBack!';
+                    $scope.titulo = '';
+                    $scope.comentario = '';
                 }
             })
-
-    };
-    $scope.limpiar = function(){
         $scope.titulo = '';
         $scope.comentario = '';
-    }
+    };
+
 });
 
 app.controller('FIS1201', function ($scope) {

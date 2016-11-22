@@ -4,8 +4,11 @@
     <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EditarUnidades.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EditarUnidades.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="60">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -44,18 +47,8 @@
       <file leaf-file-name="Perfil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
+            <state relative-caret-position="139">
               <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FIS120.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -64,18 +57,28 @@
       <file leaf-file-name="PerfilAdmin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="68" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="68" />
+            <state relative-caret-position="-272">
+              <caret line="25" column="114" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PerfilProfesor.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PerfilProfesor.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+            <state relative-caret-position="397">
+              <caret line="25" column="117" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FIS120.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-40">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -84,8 +87,8 @@
       <file leaf-file-name="Edicion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="1540">
+              <caret line="77" column="10" selection-start-line="68" selection-start-column="4" selection-end-line="77" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -114,8 +117,8 @@
       <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+            <state relative-caret-position="316">
+              <caret line="859" column="0" selection-start-line="859" selection-start-column="0" selection-end-line="859" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,19 +183,19 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Test.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Registrarse.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/IniciarSesion.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Inicio.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarAlumno.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Error404.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EliminarProfesor.html" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
         <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
       </list>
     </option>
   </component>
@@ -505,7 +508,7 @@
       <workItem from="1479702320950" duration="2575000" />
       <workItem from="1479706466319" duration="12651000" />
       <workItem from="1479778943903" duration="1010000" />
-      <workItem from="1479780501004" duration="2722000" />
+      <workItem from="1479780501004" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -731,18 +734,11 @@
       <option name="project" value="LOCAL" />
       <updated>1479742803601</updated>
     </task>
-    <task id="LOCAL-00033" summary="arreglo lo de ver contenido">
-      <created>1479781623989</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1479781623989</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261285000" />
+    <option name="totallyTimeSpent" value="259658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -752,8 +748,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51171875" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16398244" sideWeight="0.32271764" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.48828125" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -831,8 +827,7 @@
     <MESSAGE value="cambios en editar Unidades" />
     <MESSAGE value="Editado eliminar subUnidades" />
     <MESSAGE value="arreglado el tema del registrarse" />
-    <MESSAGE value="arreglo lo de ver contenido" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglo lo de ver contenido" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglado el tema del registrarse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -971,6 +966,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="77" column="10" selection-start-line="68" selection-start-column="4" selection-end-line="77" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="859" column="0" selection-start-line="859" selection-start-column="0" selection-end-line="859" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -979,17 +990,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        <state relative-caret-position="-40">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="25" column="117" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="25" column="114" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Perfil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
+        <state relative-caret-position="139">
           <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding />
         </state>
@@ -997,40 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/EditarUnidades.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilAdmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="68" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/PerfilProfesor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+        <state relative-caret-position="60">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding />
         </state>
       </provider>

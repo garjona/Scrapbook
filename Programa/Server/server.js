@@ -358,6 +358,7 @@ function mostrarColumnas(pedido,respuesta){
                 for (i=0;i<rows.length;i++){
                     lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido, Uno:json[i].Uno, Dos:json[i].Dos, Tres:json[i].Tres, Cuatro:json[i].Cuatro });
                 }
+                console.log(lista);
                 respuesta.end('OK$'+JSON.stringify(lista));
             }
         });
@@ -433,6 +434,7 @@ function iniciarSesion(pedido,respuesta){
             else{
 
                 respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera+","+json[0].image);
+                console.log(json[0].Tipo_aprendizaje);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
             }
 

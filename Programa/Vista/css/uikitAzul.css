@@ -2506,6 +2506,12 @@ select.uk-form-width-mini {
   background-color: #0091ca;
   color: #ffffff;
 }
+
+.uk-button-secundary:active,
+.uk-button-secundary.uk-active {
+  background-color: #f2cb00;
+  color: #ffffff;
+}
 .uk-button-success {
   background-color: #2892d7;
   color: #ffffff;

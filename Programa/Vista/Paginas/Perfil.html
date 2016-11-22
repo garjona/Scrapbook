@@ -5,6 +5,8 @@
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
+<p id="mensaje1"></p>
+<p id="mensaje2"></p>
 <div class="uk-grid">
     <div class="uk-width-3-4">
         <div class="uk-flex-right">
@@ -46,9 +48,15 @@
                      ng-src="{{ImgActiva}}"
                      alt="Si ves esto... tu url no contiene una imagen compatible!">
                 <h3>    </h3>
-                <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
+                <input type="button" class="Tipo1 uk-width-1-1 uk-button uk-button-success uk-active"
                        value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
-                <h5>{{TipoDeAprendizajeActivo}}</h5>
+                <input type="button" class="Tipo2 uk-width-1-1 uk-button uk-button-danger uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <input type="button" class="Tipo3 uk-width-1-1 uk-button uk-button-primary uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <input type="button" class="Tipo4 uk-width-1-1 uk-button uk-button-secundary uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <h5 id="TipoAprendizaje" style="display:none;">{{TipoDeAprendizajeActivo}}</h5>
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{CarreraActivo}}</h5>
                 <h5>{{CampusActivo}}</h5>
@@ -56,6 +64,24 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    function cargar() {
+        var a;
+        document.getElementById("mensaje1").innerHTML=document.getElementById("TipoAprendizaje").textContent;
+        a=parseInt(document.getElementById("TipoAprendizaje").textContent);
+        document.getElementById("mensaje2").innerHTML=a;
+        if (a==1){
+            document.getElementById("mensaje2").innerHTML="hola";
+            $('.Tipo1').show();
+            $('.Tipo2').hide();
+            $('.Tipo3').hide();
+            $('.Tipo4').hide();
+        }
+    }
+    window.onload = cargar();
+</script>
 
 <!-- This is the modal -->
 <div id="my-id" class="uk-modal">
@@ -75,3 +101,10 @@
         </form>
     </div>
 </div>
+
+<script>
+    function codeAddress() {
+        alert('ok');
+    }
+    window.onload = codeAddress;
+</script>

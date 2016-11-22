@@ -105,16 +105,6 @@
                         <a class="hide7 uk-width-3-10 uk-align-center uk-button uk-button-primary uk-button-large"
                            style="display: none"
                            ng-click="enviarInfo()">Enviar</a>
-                        <div>
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rUnidad" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rSubUnidad" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rUno" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rDos" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rTres" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rCuatro" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rTitulo" type="text" placeholder="" >
-                            <input class="uk-width-1-1 uk-form-large" value='' id="rContenido" type="text" placeholder="" >
-                        </div>
                     </div>
                 </div>
             </form>
@@ -442,23 +432,6 @@
             document.getElementById("respuesta1").innerHTML = 'Datos Incorrectos';
         }
         else {
-            document.getElementById("respuesta1").innerHTML = 'Datos Correctos';
-            document.getElementById("rUnidad").placeholder = rUnidad;
-            document.getElementById("rSubUnidad").placeholder = rSubUnidad;
-            document.getElementById("rUno").placeholder = rUno;
-            document.getElementById("rDos").placeholder = rDos;
-            document.getElementById("rTres").placeholder = rTres;
-            document.getElementById("rCuatro").placeholder = rCuatro;
-            document.getElementById("rTitulo").placeholder = rTitulo;
-            document.getElementById("rContenido").placeholder = rContenido;
-            document.getElementById("rUnidad").value = rUnidad;
-            document.getElementById("rSubUnidad").value = rSubUnidad;
-            document.getElementById("rUno").value = rUno;
-            document.getElementById("rDos").value = rDos;
-            document.getElementById("rTres").value = rTres;
-            document.getElementById("rCuatro").value = rCuatro;
-            document.getElementById("rTitulo").value = rTitulo;
-            document.getElementById("rContenido").value = rContenido;
             $('.hide8').hide();
             $('.hide7').show();
         }

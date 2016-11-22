@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="agregado contenido">
+    <list default="true" id="663add62-4d96-4947-82b7-7f8cf223ef22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" afterPath="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Server/server.js" afterPath="$PROJECT_DIR$/Programa/Server/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" afterPath="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
     </list>
     <ignored path="Scrapbook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgregarContenido.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AgregarContenido.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="1747">
+              <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -64,8 +61,8 @@
       <file leaf-file-name="Controlador.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-782">
-              <caret line="657" column="27" selection-start-line="657" selection-start-column="20" selection-end-line="657" selection-end-column="27" />
+            <state relative-caret-position="178">
+              <caret line="714" column="43" selection-start-line="714" selection-start-column="43" selection-end-line="714" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -91,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="754" column="47" selection-start-line="754" selection-start-column="47" selection-end-line="754" selection-end-column="47" />
+            <state relative-caret-position="158">
+              <caret line="743" column="18" selection-start-line="743" selection-start-column="18" selection-end-line="743" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -172,8 +169,8 @@
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/Edicion.html" />
         <option value="$PROJECT_DIR$/Programa/Vista/Paginas/FIS120.html" />
         <option value="$PROJECT_DIR$/Programa/Controlador/Controlador.js" />
-        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
         <option value="$PROJECT_DIR$/Programa/Server/server.js" />
+        <option value="$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html" />
       </list>
     </option>
   </component>
@@ -487,7 +484,7 @@
       <workItem from="1479706466319" duration="12651000" />
       <workItem from="1479778943903" duration="1010000" />
       <workItem from="1479780501004" duration="8552000" />
-      <workItem from="1479799643062" duration="9794000" />
+      <workItem from="1479799643062" duration="10227000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -734,11 +731,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479787159167</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="agregado contenido">
+      <created>1479816139356</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1479816139356</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="276909000" />
+    <option name="totallyTimeSpent" value="277342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1016,10 +1020,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="743" column="18" selection-start-line="743" selection-start-column="18" selection-end-line="743" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="714" column="43" selection-start-line="714" selection-start-column="43" selection-end-line="714" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Programa/Vista/Paginas/AgregarContenido.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="1747">
+          <caret line="108" column="22" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1030,22 +1050,6 @@
             <element signature="n#style#0;n#a#0;n#div#9;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#9;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Controlador/Controlador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="657" column="27" selection-start-line="657" selection-start-column="20" selection-end-line="657" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="754" column="47" selection-start-line="754" selection-start-column="47" selection-end-line="754" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>

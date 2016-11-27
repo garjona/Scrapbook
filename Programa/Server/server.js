@@ -444,7 +444,7 @@ function iniciarSesion(pedido,respuesta){
         });
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"' and Tipo_aprendizaje >< 0", function (err, rows) {
+        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"'", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -454,7 +454,6 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('ERROR');
             }
             else{
-
                 respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera+","+json[0].image);
                 console.log(json[0].Tipo_aprendizaje);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera

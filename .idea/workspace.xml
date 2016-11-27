@@ -102,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="284">
-              <caret line="446" column="156" selection-start-line="446" selection-start-column="156" selection-end-line="446" selection-end-column="156" />
+              <caret line="446" column="140" selection-start-line="446" selection-start-column="140" selection-end-line="446" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -507,7 +507,7 @@
       <workItem from="1479799643062" duration="12038000" />
       <workItem from="1479824709135" duration="1236000" />
       <workItem from="1479834543633" duration="453000" />
-      <workItem from="1480266482264" duration="144000" />
+      <workItem from="1480266482264" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="Version nueva de la página">
       <created>1476976912182</created>
@@ -768,11 +768,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479820235096</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="modificado agregar contenido">
+      <created>1480266634733</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1480266634733</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280986000" />
+    <option name="totallyTimeSpent" value="281041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -1079,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/Programa/Server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
-          <caret line="446" column="156" selection-start-line="446" selection-start-column="156" selection-end-line="446" selection-end-column="156" />
+          <caret line="446" column="140" selection-start-line="446" selection-start-column="140" selection-end-line="446" selection-end-column="140" />
           <folding />
         </state>
       </provider>

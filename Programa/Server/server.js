@@ -444,7 +444,7 @@ function iniciarSesion(pedido,respuesta){
         });
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"' and TipoDeAprendizaje >< 0", function (err, rows) {
+        connection.query("SELECT * FROM alumno where Mail='"+formulario["mail"]+"'and Contrasenia='"+formulario["contrasenia"]+"' and Tipo_aprendizaje >< 0", function (err, rows) {
             if (err) {
                 respuesta.end('ERROR');
             }

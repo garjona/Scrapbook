@@ -441,6 +441,7 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('OK,' + formulario["mail"] + ",Profesor," + json[0].Nombre);
                 //respuesta,mail,cargo,nombre
             }
+
         });
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
@@ -458,6 +459,7 @@ function iniciarSesion(pedido,respuesta){
                 console.log(json[0].Tipo_aprendizaje);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
             }
+
 
 
         });

@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'scrapbook'
 });
 
@@ -454,7 +454,6 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('ERROR');
             }
             else{
-
                 respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera+","+json[0].image);
                 console.log(json[0].Tipo_aprendizaje);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
@@ -708,7 +707,8 @@ function enviarMail(pedido,respuesta){
 
             // HTML body
             html: '<p><b>Hola</b> </p>' +
-            '<p>Tu codigo de confirmacion es 132341<br/></p>'
+            '<p>Tu codigo de confirmacion es 782341</p>'+
+                '<p>ingresa a http://scrapbook.cl/codigo coloca el codigo para cofirmar tu mail</p>'
         };
 
         console.log('Sending Mail');

@@ -33,7 +33,6 @@ var mime = {
     'mp3': 'audio/mpeg3',
     'mp4': 'video/mp4'
 };
-
 var servidor = http.createServer(function (pedido, respuesta) {
     var objetourl = url.parse(pedido.url);
     var camino = objetourl.pathname;
@@ -43,8 +42,6 @@ var servidor = http.createServer(function (pedido, respuesta) {
         camino = 'Controlador/Controlador.js';
     } else if (camino.substring(0, 5) == "/Cont") {
         camino = "Controlador/Controlador.js";
-    } else if (camino.substring(0, 5) == "/Cons") {
-        camino = "Controlador/Consulta.js";
     } else if (camino.substring(0, 4) == "/Vis") {
         camino = camino.substring(1);
     } else if (camino.substring(0, 4) == "/ven") {
@@ -55,6 +52,20 @@ var servidor = http.createServer(function (pedido, respuesta) {
     }
     encaminar(pedido, respuesta, camino);
 });
+
+var nodemailer = require('nodemailer');
+
+// Create a SMTP transport object
+var transport = nodemailer.createTransport("SMTP", {
+    service: 'Gmail',
+    auth: {
+        user: "scrapbook.contacto@gmail.com",
+        pass: "voteporevelyn"
+    }
+});
+
+console.log('SMTP Configured');
+
 
 function encaminar(pedido, respuesta, camino) {
     console.log(camino);
@@ -75,8 +86,73 @@ function encaminar(pedido, respuesta, camino) {
             eliminarAlumno(pedido,respuesta);
             break;
         }
+        case 'Vista/api/cambiarImagen':{
+            cambiarImagen(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/darFeedback':{
+            darFeedback(pedido,respuesta);
+            break;
+        }
         case 'Vista/api/eliminarProfesor':{
             eliminarProfesor(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarAlumnos':{
+            mostrarAlumnos(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarFeedback':{
+            mostrarFeedback(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarProfesor':{
+            mostrarProfesor(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarColumnas':{
+            mostrarColumnas(pedido,respuesta);
+            break;
+        }
+
+        case 'Vista/api/enviarMail':{
+            enviarMail(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidades':{
+            mostrarUnidades(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad1':{
+            mostrarUnidad1(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad2':{
+            mostrarUnidad2(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad3':{
+            mostrarUnidad3(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad4':{
+            mostrarUnidad4(pedido,respuesta);
+            break;
+        }
+        case 'Vista/api/mostrarUnidad5':{
+            mostrarUnidad5(pedido,respuesta);
+            break;
+        }
+        case "Vista/api/mostrarData":{
+            mostrarData(pedido);
+            break;
+        }
+        case "Vista/api/eliminarUnidad":{
+            eliminarUnidad(pedido,respuesta);
+            break;
+        }
+        case "Vista/api/agregarContenido":{
+            agregarContenido(pedido,respuesta);
             break;
         }
 
@@ -107,6 +183,211 @@ function encaminar(pedido, respuesta, camino) {
     }
 }
 
+function mostrarUnidades(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                diccionarioTemp={};
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    if (json[i].Unidad in diccionarioTemp){
+                        diccionarioTemp[json[i].Unidad].SubUnidad.push({Titulo:json[i].Titulo, Numero:json[i].SubUnidad});
+                    } else{
+                        diccionarioTemp[json[i].Unidad] = {
+                            Numero: json[i].Unidad,
+                            TextoParche: "subUnidad" + String(json[i].Unidad),
+                            TextoParche2: "hide" + String(json[i].Unidad),
+                            TextoParche3: "Unidad" + String(json[i].Unidad),
+                            TextoParche4: "subUnidad" + String(json[i].Unidad) + " uk-width-1-1 uk-form-large",
+                            SubUnidad: []
+                        };
+                        diccionarioTemp[json[i].Unidad].SubUnidad.push({
+                            Titulo: json[i].Titulo,
+                            Numero: json[i].SubUnidad
+                        });
+                    }
+                }
+                for (i = 0; i < Object.keys(diccionarioTemp).length; i++) {
+                    lista.push(diccionarioTemp[String(i+1)]);
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarUnidad1(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '1' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarUnidad2(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '2' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarUnidad3(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '3' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarUnidad4(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '4' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarUnidad5(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        connection.query("SELECT * FROM Unidades WHERE Unidad = '5' ORDER by subunidad ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarColumnas(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM Contenido WHERE Unidad ='"+ formulario["unidad"]+"' and SubUnidad='"+formulario["subUnidad"]+ "'ORDER by codigo ASC ;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Titulo:json[i].Titulo, Contenido:json[i].Contenido, Uno:json[i].Uno, Dos:json[i].Dos, Tres:json[i].Tres, Cuatro:json[i].Cuatro });
+                }
+                console.log(lista);
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+
 function registro2(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -116,7 +397,7 @@ function registro2(pedido,respuesta){
         var formulario = querystring.parse(info);
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
-        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0');", function (err) {
+        connection.query("INSERT INTO alumno Values ('" + formulario["mail"] + "', '" + formulario["nombre"] + "', '" + formulario["rol"] + "', '" + formulario["contrasenia"] + "', '0', '0', '0','"+formulario["campus"]+"', '"+ formulario["carrera"]+"','0','http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png');", function (err) {
             if (err) {
                 respuesta.end('ERROR');
                 console.log(err);
@@ -130,6 +411,7 @@ function registro2(pedido,respuesta){
         });
     });
 }
+
 function iniciarSesion(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -160,6 +442,7 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('OK,' + formulario["mail"] + ",Profesor," + json[0].Nombre);
                 //respuesta,mail,cargo,nombre
             }
+
         });
         //console.log(formulario["mail"]);
         //console.log(toString(formulario['mail']));
@@ -173,11 +456,98 @@ function iniciarSesion(pedido,respuesta){
                 respuesta.end('ERROR');
             }
             else{
-                respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera);
+                respuesta.end('OK,'+formulario["mail"]+",Alumno,"+json[0].Nombre+","+json[0].Rol+","+json[0].Confirmacion_mail+","+json[0].Confirmacion_administrador+","+json[0].Tipo_aprendizaje+ ","+json[0].campus+ ","+json[0].carrera+","+json[0].image);
+                console.log(json[0].Tipo_aprendizaje);
                 //respuesta,mail,cargo,nombre,rol,confirmacionMail,ConfirmacionAdm,TipoAprendizaje,campus,carrera
             }
 
 
+
+        });
+
+    });
+}
+
+function mostrarFeedback(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM feedbackpagina;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Fecha:json[i].Fecha,Mail:json[i].AlumnoMail,Titulo:json[i].Titulo, Contenido: json[i].Comentario});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+
+
+function mostrarAlumnos(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM alumno;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail,Rol:json[i].Rol});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
+        });
+    });
+}
+function mostrarProfesor(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("SELECT * FROM profesor;", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            var string = JSON.stringify(rows);
+            var json = JSON.parse(string);
+            if (rows.length == 0) {
+                respuesta.end('ERROR');
+            }else{
+                lista=[];
+                for (i=0;i<rows.length;i++){
+                    lista.push({Nombre:json[i].Nombre,Mail:json[i].Mail});
+                }
+                respuesta.end('OK$'+JSON.stringify(lista));
+            }
         });
     });
 }
@@ -197,13 +567,65 @@ function nuevoProfesor(pedido,respuesta){
             }
             else{
                 //respuesta,mail,cargo,nombre
-                respuesta.end('OK,'+formulario["mail"]+ ',Administrador,'+formulario["nombre"]);//respuesta,mail,nombre
+                respuesta.end('OK,'+formulario["mail"]+ ',Profesor,'+formulario["nombre"]);//respuesta,mail,cargo,nombre
             }
 
 
         });
     });
 }
+
+
+function darFeedback(pedido,respuesta)
+{
+    var info = '';
+    pedido.on('data', function(datosparciales)
+    {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        //"SELECT * FROM alumno where Mail='"+formulario["mail"]+"';"
+        //"INSERT INTO feedbackpagina (AlumnoMail, Titulo, Comentario) values('" + formulario["mail"] + "', '" + formulario["titu"] + "', '" + formulario["coment"]+"');"
+        connection.query("INSERT INTO feedbackpagina (AlumnoMail, Titulo, Comentario) values('" + formulario["mail"] + "', '" + formulario["titu"] + "', '" + formulario["coment"]+"');", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else {
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,' + formulario["mail"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
+function cambiarImagen(pedido,respuesta)
+{
+    var info = '';
+    pedido.on('data', function(datosparciales)
+    {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        //"SELECT * FROM alumno where Mail='"+formulario["mail"]+"';"
+        connection.query("UPDATE alumno SET image ='" + formulario["imagen"] + "' where nombre = '" + formulario["nombre"] + "';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else {
+                //respuesta,mail,cargo,nombre
+                ImgActiva = formulario["imagen"];
+                console.log(formulario["imagen"]);
+                respuesta.end('OK,' + formulario["nombre"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
+
 function eliminarAlumno(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -217,13 +639,12 @@ function eliminarAlumno(pedido,respuesta){
             if (err) {
                 respuesta.end('ERROR');
             }
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
             if (rows.length == 0) {
                 respuesta.end('ERROR');
             }
         });
         connection.query("DELETE FROM alumno WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            console.log(formulario["mail"]);
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -234,6 +655,7 @@ function eliminarAlumno(pedido,respuesta){
         });
     });
 }
+
 function eliminarProfesor(pedido,respuesta){
     var info = '';
     pedido.on('data', function (datosparciales) {
@@ -247,13 +669,12 @@ function eliminarProfesor(pedido,respuesta){
             if (err) {
                 respuesta.end('ERROR');
             }
-            var string = JSON.stringify(rows);
-            var json = JSON.parse(string);
             if (rows.length == 0) {
                 respuesta.end('ERROR');
             }
         });
         connection.query("DELETE FROM profesor WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            console.log(formulario["mail"]);
             if (err) {
                 respuesta.end('ERROR');
             }
@@ -264,6 +685,117 @@ function eliminarProfesor(pedido,respuesta){
         });
     });
 }
+
+function enviarMail(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+
+        // Message object
+        var message = {
+
+            // sender info
+            from: 'Scrapbook <scrapbook.contacto@gmail.com>',
+
+            // Comma separated list of recipients
+            to: '"'+formulario["nombre"]+'" <'+formulario["mail"]+'>',
+
+            // Subject of the message
+            subject: 'Confirmacion mail',
+
+            // plaintext body
+            text: 'Hola!!',
+
+            // HTML body
+            html: '<p><b>Hola</b> </p>' +
+            '<p>Tu codigo de confirmacion es 782341</p>'+
+                '<p>ingresa a http://scrapbook.cl/codigo coloca el codigo para cofirmar tu mail</p>'
+        };
+
+        console.log('Sending Mail');
+        transport.sendMail(message, function (error) {
+            if (error) {
+                console.log('Error occured');
+                console.log(error.message);
+                return;
+            }
+            console.log('El correo se mando al mail'+ formulario["mail"]);
+
+            // if you don't want to use this transport object anymore, uncomment following line
+            //transport.close(); // close the connection pool
+        });
+        connection.query("UPDATE alumno SET Tipo_aprendizaje='"+formulario["tipo"]+"' WHERE Mail='"+formulario["mail"]+"';", function (err, rows) {
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else if (rows.length == 0) {
+                respuesta.end('ERROR');
+            } else {
+                respuesta.end("OK");
+            }
+        });
+    });
+}
+
+function mostrarData(pedido){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        console.log(formulario);
+    });
+}
+
+
+function eliminarUnidad(pedido,respuesta){
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        //console.log(formulario["mail"]);
+        //console.log(toString(formulario['mail']));
+        connection.query("DELETE FROM unidades WHERE Unidad="+formulario["unidad"]+" and SubUnidad="+formulario["subUnidad"]+";", function (err, rows) {
+            console.log(formulario["unidad"]);
+            if (err) {
+                respuesta.end('ERROR');
+            }
+            else{
+                //respuesta,mail,cargo,nombre
+                respuesta.end('OK,'+formulario["unidad"]);//respuesta,mail,nombre
+            }
+        });
+    });
+}
+
+function agregarContenido(pedido, respuesta) {
+    var info = '';
+    pedido.on('data', function (datosparciales) {
+        info += datosparciales;
+    });
+    pedido.on('end', function () {
+        var formulario = querystring.parse(info);
+        connection.query("INSERT INTO contenido Values (default , " + formulario["unidad"] + ", " + formulario["subUnidad"] + ", " + formulario["uno"] + ", " + formulario["dos"] + "," + formulario["tres"] + "," + formulario["cuatro"] + ", 0, '" + formulario["titulo"] + "','" + formulario["contenido"] + "');", function (err) {
+            if (err) {
+                console.log(err);
+                respuesta.end('ERROR');
+            }
+            else {
+                console.log("contenido agregado");
+                respuesta.end('OK$')
+            }
+        });
+    });
+}
+
 servidor.listen(9000);
 
 console.log('Servidor web iniciado en http://localhost:9000');

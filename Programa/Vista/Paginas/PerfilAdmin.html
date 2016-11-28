@@ -1,6 +1,7 @@
-<nav ng-controller="Datos" class="uk-navbar">
+<nav class="uk-navbar">
     <ul class="uk-navbar-nav">
         <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a ng-click="reedirigirAPerfilSegunCargo">Perfil</a></li>
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
@@ -16,27 +17,20 @@
                     </div>
                     <div class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
-                            <li>Unidad I
-                                <ul>
-                                    <li>Ley de Coulomb</li>
-                                    <li>Campo Eléctrico</li>
-                                    <li>Gauss</li>
-                                    <li>Potencia Eléctrica</li>
-                                    <li>Materiales Dielectricos</li>
-                                </ul>
-                            </li>
-                            <div class="uk-panel-space">
+                            <div ng-repeat="unidad in listas">
+                                <div>
+                                    <li>Unidad {{unidad.Numero}}
+                                        <ul
+                                                ng-repeat="subLista in unidad.SubUnidad">
+                                            <u1>
+                                                <a ng-click='mostrar(unidad.Numero,subLista.Numero,subLista.Titulo)'>{{subLista.Titulo}}</a>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
                             </div>
-                            <li>Unidad II
-                                <ul>
-                                    <li>Condensadores</li>
-                                    <li>Corriente Eléctrica</li>
-                                    <li><a href="#/Edicion"> Corriente y FEM</a></li>
-                                    <li>Circuitos Eléctricos</li>
-                                    <li>Campo Magnéticos</li>
-                                </ul>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -47,17 +41,22 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-align-center" style="width: 300px;">
-            <div ng-controller="PerfilAdministrador" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+            <div ng-controller="PerfilAdministrador"
+                 class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
                      src="https://pbs.twimg.com/profile_images/539102307867451392/Xn_fE20q.jpeg"
                      alt="">
                 <h5>Administrador</h5>
                 <div class="uk-form-row">
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#AgregarProfesor">Añadir Profesores</a>
-                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarProfesor">Eliminar Profesor</a>
                     <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EliminarAlumno">Eliminar Alumno</a>
+                    <div class="uk-panel-space">
+                    </div>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#EditarProfesor">Editar
+                        Profesor </a>
+                    <div class="uk-panel-space">
+                    </div>
+                    <a class="uk-width-1-1 uk-button uk-button-primary uk-button-large" href="/#Feedback">Ver Feedback </a>
                 </div>
-                {{MensajeError}}
             </div>
         </div>
     </div>

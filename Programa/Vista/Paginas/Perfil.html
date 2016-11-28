@@ -1,6 +1,7 @@
-<nav ng-controller="Datos" class="uk-navbar">
+<nav class="uk-navbar">
     <ul class="uk-navbar-nav">
         <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a ng-click="reedirigirAPerfilSegunCargo">Perfil</a></li>
         <li><a href="#/">Salir</a></li>
     </ul>
 </nav>
@@ -16,27 +17,20 @@
                     </div>
                     <div class="uk-text-large uk-text-left-medium uk-align-left">
                         <ul>
-                            <li>Unidad I
-                                <ul>
-                                    <li>Ley de Coulomb</li>
-                                    <li>Campo Eléctrico</li>
-                                    <li>Gauss</li>
-                                    <li>Potencia Eléctrica</li>
-                                    <li>Materiales Dielectricos</li>
-                                </ul>
-                            </li>
-                            <div class="uk-panel-space">
+                            <div ng-repeat="unidad in listas">
+                                <div>
+                                    <li>Unidad {{unidad.Numero}}
+                                        <ul
+                                                ng-repeat="subLista in unidad.SubUnidad">
+                                            <u1>
+                                                <a ng-click='mostrar(unidad.Numero,subLista.Numero,subLista.Titulo)'>{{subLista.Titulo}}</a>
+                                            </u1>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="uk-panel-space">
+                                </div>
                             </div>
-                            <li>Unidad II
-                                <ul>
-                                    <li>Condensadores</li>
-                                    <li>Corriente Eléctrica</li>
-                                    <li><a href="#/FIS120"> Corriente y FEM</a></li>
-                                    <li>Circuitos Eléctricos</li>
-                                    <li>Campo Magnéticos</li>
-                                </ul>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -47,12 +41,20 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-align-center" style="width: 300px;">
-            <div ng-controller="Datos" class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
+            <div class="uk-panel uk-panel-box uk-vertical-align-middle uk-text-center">
                 <img class="uk-border-circle" width="120" height="120"
-                     src="http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png"
-                     alt="Pronto podras modificar esta foto!!!">
-                <input type="button" class="uk-width-1-1 uk-button uk-button-success uk-active"
-                           value="{{NombreActivo}}">
+                     ng-src="{{ImgActiva}}"
+                     alt="Si ves esto... tu url no contiene una imagen compatible!">
+                <h3>    </h3>
+                <input type="button" class="Tipo1 uk-width-1-1 uk-button uk-button-success uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <input type="button" class="Tipo2 uk-width-1-1 uk-button uk-button-danger uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <input type="button" class="Tipo3 uk-width-1-1 uk-button uk-button-primary uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <input type="button" class="Tipo4 uk-width-1-1 uk-button uk-button-secundary uk-active"
+                       value="{{NombreActivo}}"  data-uk-modal="{target:'#my-id'}">
+                <h5 id="TipoAprendizaje" style="display:none;">{{TipoDeAprendizajeActivo}}</h5>
                 <h5>{{CargoActivo}}</h5>
                 <h5>{{CarreraActivo}}</h5>
                 <h5>{{CampusActivo}}</h5>
@@ -60,4 +62,58 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    function cargar() {
+        var a;
+        a=TipoDeAprendizajeActivo;
+        if (a==1){
+            $('.Tipo1').show();
+            $('.Tipo2').hide();
+            $('.Tipo3').hide();
+            $('.Tipo4').hide();
+        }
+        else if (a==2){
+            $('.Tipo1').hide();
+            $('.Tipo2').show();
+            $('.Tipo3').hide();
+            $('.Tipo4').hide();
+        }
+        else if (a==3){
+            $('.Tipo1').hide();
+            $('.Tipo2').hide();
+            $('.Tipo3').show();
+            $('.Tipo4').hide();
+        }
+        else if (a==4){
+            $('.Tipo1').hide();
+            $('.Tipo2').hide();
+            $('.Tipo3').hide();
+            $('.Tipo4').show();
+        }
+
+    }
+    window.onload = cargar();
+</script>
+
+<!-- This is the modal -->
+<div id="my-id" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+
+        <form class="uk-form">
+
+            <fieldset data-uk-margin>
+                <legend>Si quieres cambiar tu foto de perfil, ingresa la url de la imagen:</legend>
+                <input type="text" placeholder="Url" ng-model = "imagen">
+
+                <button class="uk-button uk-modal-close" ng-click="cambiar()">Aceptar</button>
+
+            </fieldset>
+
+        </form>
+    </div>
 </div>
+
+

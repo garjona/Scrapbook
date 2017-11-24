@@ -6,6 +6,7 @@
     "express": "3.x",
     "mysql": ">=2.5.0",
     "http-post": "",
-    "private": true
+    "nodemailer": "0.7.1",
+    "nodemailer-smtp-transport": ""
   }
 }

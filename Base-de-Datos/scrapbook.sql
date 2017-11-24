@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2016 a las 17:54:53
--- Versión del servidor: 5.7.9
--- Versión de PHP: 5.6.15
+-- Host: 127.0.0.1
+-- Generation Time: Nov 22, 2016 at 05:34 AM
+-- Server version: 5.7.9
+-- PHP Version: 5.6.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `scrapbook`
+-- Database: `scrapbook`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administrador`
+-- Table structure for table `administrador`
 --
 
 DROP TABLE IF EXISTS `administrador`;
@@ -34,10 +34,17 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   PRIMARY KEY (`Mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `administrador`
+--
+
+INSERT INTO `administrador` (`Mail`, `Nombre`, `Contrasenia`) VALUES
+('admin', 'admin', 'admin');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumno`
+-- Table structure for table `alumno`
 --
 
 DROP TABLE IF EXISTS `alumno`;
@@ -49,13 +56,27 @@ CREATE TABLE IF NOT EXISTS `alumno` (
   `Confirmacion_mail` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Confirmacion_administrador` varchar(2) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'NO',
   `Tipo_aprendizaje` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `campus` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
+  `carrera` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `acepta_encuesta?` tinyint(1) NOT NULL,
+  `image` varchar(300) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png',
   PRIMARY KEY (`Mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `alumno`
+--
+
+INSERT INTO `alumno` (`Mail`, `Nombre`, `Rol`, `Contrasenia`, `Confirmacion_mail`, `Confirmacion_administrador`, `Tipo_aprendizaje`, `campus`, `carrera`, `acepta_encuesta?`, `image`) VALUES
+('alumno', 'Alumno', '201473502-3', '1', NULL, 'NO', '1', 'San Joaquin', 'Informática', 0, 'http://www.mastermagazine.info/termino/wp-content/uploads/Usuario-Icono.jpg'),
+('felipe.monsalve.14@sansano.usm.cl', 'Felipe', '123123', '1', '0', '0', '3', 'Casa Central', 'Informatica', 0, 'http://img03.deviantart.net/6fc1/i/2013/209/1/7/life_is_the_greatest_journey_you_will_ever_be_on__by_kemipo-d6f1jh7.jpg'),
+('gabriel.arjona.14@sansano.usm.cl', 'Gabriel', '2014735234', '1', NULL, 'NO', '4', 'San Joaquin', 'Electrica', 0, 'http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png'),
+('jorge.aliste.14@sansano.usm.cl', 'Jorge', '2014735383', '1', '0', '0', '2', 'Casa Central', 'Electrica', 0, 'http://www.formandoformadores.org.mx/sites/all/themes/ff/images/user.png');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `bloque`
+-- Table structure for table `bloque`
 --
 
 DROP TABLE IF EXISTS `bloque`;
@@ -70,7 +91,40 @@ CREATE TABLE IF NOT EXISTS `bloque` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `contenidoguardado`
+-- Table structure for table `contenido`
+--
+
+DROP TABLE IF EXISTS `contenido`;
+CREATE TABLE IF NOT EXISTS `contenido` (
+  `Codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `Unidad` int(11) NOT NULL,
+  `SubUnidad` int(11) NOT NULL,
+  `Uno` int(11) NOT NULL,
+  `Dos` int(11) NOT NULL,
+  `Tres` int(11) NOT NULL,
+  `Cuatro` int(11) NOT NULL,
+  `Tipo` int(11) NOT NULL COMMENT 'Texto=0 Imagen o video=1',
+  `Titulo` varchar(100) DEFAULT NULL,
+  `Contenido` varchar(10000) NOT NULL,
+  KEY `Codigo` (`Codigo`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contenido`
+--
+
+INSERT INTO `contenido` (`Codigo`, `Unidad`, `SubUnidad`, `Uno`, `Dos`, `Tres`, `Cuatro`, `Tipo`, `Titulo`, `Contenido`) VALUES
+(7, 1, 0, 1, 0, 0, 1, 0, 'Adaptador y Asimilador', 'La carga eléctrica es una propiedad física intrínseca de algunas partículas subatómicas que se manifiesta mediante fuerzas de atracción y repulsión entre ellas por la mediación de campos electromagnéticos.'),
+(8, 1, 0, 0, 1, 0, 0, 0, 'Divergente', 'Una de las principales características de la carga eléctrica es que, en cualquier proceso físico, la carga total de un sistema aislado siempre se conserva. Es decir, la suma algebraica de las cargas positivas y negativas no varía en el tiempo.'),
+(9, 1, 0, 1, 1, 1, 1, 0, 'Todos', 'En 1600 el médico inglés William Gilbert observó que algunos materiales se comportan como el ámbar al frotarlos y que la atracción que ejercen se manifiesta sobre cualquier cuerpo, aun cuando no fuera ligero. Como el nombre griego correspondiente al ámbar es ???????? (?lektron), Gilbert comenzó a utilizar el término eléctrico para referirse a todo material que se comportaba como aquél, lo que originó los términos electricidad y carga eléctrica. Además, en los estudios de Gilbert se puede encontrar la diferenciación de los fenómenos eléctricos y magnéticos.'),
+(11, 1, 0, 0, 0, 1, 0, 0, 'Convergente', '<iframe width="300" height="300" src="https://www.youtube.com/embed/McZPm7tkguQ" frameborder="0" allowfullscreen></iframe>'),
+(12, 1, 1, 1, 0, 1, 0, 0, 'Adaptador y Convergente', 'La Ley de Coulomb dice que "la fuerza electrostática entre dos cargas puntuales es proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia que las separa, y tiene la dirección de la línea que las une.'),
+(13, 1, 1, 0, 0, 0, 1, 0, 'Asimilador', 'La constante de proporcionalidad depende de la constante dieléctrica del medio en el que se encuentran las cargas.\r\nSe nombra en reconocimiento del físico francés Charles-Augustin de Coulomb (1736-1806), que la enunció en 1785 y forma la base de la electroestática.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contenidoguardado`
 --
 
 DROP TABLE IF EXISTS `contenidoguardado`;
@@ -85,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `contenidoguardado_bloque`
+-- Table structure for table `contenidoguardado_bloque`
 --
 
 DROP TABLE IF EXISTS `contenidoguardado_bloque`;
@@ -100,25 +154,32 @@ CREATE TABLE IF NOT EXISTS `contenidoguardado_bloque` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `feedbackpagina`
+-- Table structure for table `feedbackpagina`
 --
 
 DROP TABLE IF EXISTS `feedbackpagina`;
 CREATE TABLE IF NOT EXISTS `feedbackpagina` (
-  `Fecha` datetime NOT NULL,
+  `Fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `AlumnoMail` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  `PaginaUrl` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `Puntaje` int(10) DEFAULT NULL,
+  `PaginaUrl` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `Titulo` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Comentario` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL,
   PRIMARY KEY (`Fecha`),
   KEY `FKFeedbackPa730089` (`AlumnoMail`),
   KEY `FKFeedbackPa134246` (`PaginaUrl`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `feedbackpagina`
+--
+
+INSERT INTO `feedbackpagina` (`Fecha`, `AlumnoMail`, `PaginaUrl`, `Titulo`, `Comentario`) VALUES
+('2016-11-22 02:02:32', 'alumno', NULL, 'Muy bien', 'Buen trabajo');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pagina`
+-- Table structure for table `pagina`
 --
 
 DROP TABLE IF EXISTS `pagina`;
@@ -133,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `pagina` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pregunta`
+-- Table structure for table `pregunta`
 --
 
 DROP TABLE IF EXISTS `pregunta`;
@@ -148,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `pregunta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `pregunta`
+-- Dumping data for table `pregunta`
 --
 
 INSERT INTO `pregunta` (`Id`, `Enunciado`, `Alternativa1`, `Alternativa2`, `Alternativa3`, `Alternativa4`) VALUES
@@ -168,7 +229,7 @@ INSERT INTO `pregunta` (`Id`, `Enunciado`, `Alternativa1`, `Alternativa2`, `Alte
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pregunta_alumno`
+-- Table structure for table `pregunta_alumno`
 --
 
 DROP TABLE IF EXISTS `pregunta_alumno`;
@@ -187,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `pregunta_alumno` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `profesor`
+-- Table structure for table `profesor`
 --
 
 DROP TABLE IF EXISTS `profesor`;
@@ -198,10 +259,19 @@ CREATE TABLE IF NOT EXISTS `profesor` (
   PRIMARY KEY (`Mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `profesor`
+--
+
+INSERT INTO `profesor` (`Mail`, `Nombre`, `Contrasenia`) VALUES
+('profesor', 'Maximiliano', '1'),
+('profesor2', 'Gastón', '1'),
+('profesor3', 'Diego', '1');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ubicacion`
+-- Table structure for table `ubicacion`
 --
 
 DROP TABLE IF EXISTS `ubicacion`;
@@ -214,39 +284,69 @@ CREATE TABLE IF NOT EXISTS `ubicacion` (
   KEY `FKUbicacion547860` (`BloqueId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+-- --------------------------------------------------------
+
 --
--- Restricciones para tablas volcadas
+-- Table structure for table `unidades`
+--
+
+DROP TABLE IF EXISTS `unidades`;
+CREATE TABLE IF NOT EXISTS `unidades` (
+  `Codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `Unidad` int(11) NOT NULL,
+  `SubUnidad` int(11) NOT NULL,
+  `Titulo` varchar(1000) NOT NULL,
+  PRIMARY KEY (`Codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `unidades`
+--
+
+INSERT INTO `unidades` (`Codigo`, `Unidad`, `SubUnidad`, `Titulo`) VALUES
+(1, 1, 0, 'Carga Eléctrica'),
+(2, 1, 1, 'Ley de Coulomb'),
+(3, 1, 2, 'Campo Eléctrico'),
+(4, 1, 3, 'Ley de Gauss'),
+(5, 2, 1, 'Potencial eléctrico'),
+(6, 2, 2, 'Condensadores y dieléctricos'),
+(7, 3, 1, 'Conducción eléctrica'),
+(8, 5, 0, 'Inducción electromagnética'),
+(9, 4, 2, 'Campo magnético: efectos, origen');
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `contenidoguardado_bloque`
+-- Constraints for table `contenidoguardado_bloque`
 --
 ALTER TABLE `contenidoguardado_bloque`
   ADD CONSTRAINT `FKContenidoG687510` FOREIGN KEY (`ContenidoGuardadoId`) REFERENCES `contenidoguardado` (`Id`),
   ADD CONSTRAINT `FKContenidoG848128` FOREIGN KEY (`BloqueId`) REFERENCES `bloque` (`Id`);
 
 --
--- Filtros para la tabla `feedbackpagina`
+-- Constraints for table `feedbackpagina`
 --
 ALTER TABLE `feedbackpagina`
   ADD CONSTRAINT `FKFeedbackPa134246` FOREIGN KEY (`PaginaUrl`) REFERENCES `pagina` (`Url`),
   ADD CONSTRAINT `FKFeedbackPa730089` FOREIGN KEY (`AlumnoMail`) REFERENCES `alumno` (`Mail`);
 
 --
--- Filtros para la tabla `pagina`
+-- Constraints for table `pagina`
 --
 ALTER TABLE `pagina`
   ADD CONSTRAINT `FKPagina56403` FOREIGN KEY (`ProfesorMail`) REFERENCES `profesor` (`Mail`);
 
 --
--- Filtros para la tabla `pregunta_alumno`
+-- Constraints for table `pregunta_alumno`
 --
 ALTER TABLE `pregunta_alumno`
   ADD CONSTRAINT `FKPregunta_A24191` FOREIGN KEY (`PreguntaId`) REFERENCES `pregunta` (`Id`),
   ADD CONSTRAINT `FKPregunta_A98795` FOREIGN KEY (`AlumnoMail`) REFERENCES `alumno` (`Mail`);
 
 --
--- Filtros para la tabla `ubicacion`
+-- Constraints for table `ubicacion`
 --
 ALTER TABLE `ubicacion`
   ADD CONSTRAINT `FKUbicacion547860` FOREIGN KEY (`BloqueId`) REFERENCES `bloque` (`Id`),

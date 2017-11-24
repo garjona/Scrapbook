@@ -2,7 +2,7 @@ html {
   font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  background: #00dbff;
+  background: #0DDBFF;
   color: #444444;
 }
 body {
@@ -2504,6 +2504,12 @@ select.uk-form-width-mini {
 .uk-button-primary:active,
 .uk-button-primary.uk-active {
   background-color: #0091ca;
+  color: #ffffff;
+}
+
+.uk-button-secundary:active,
+.uk-button-secundary.uk-active {
+  background-color: #f2cb00;
   color: #ffffff;
 }
 .uk-button-success {

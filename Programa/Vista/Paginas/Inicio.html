@@ -1,9 +1,9 @@
-<nav ng-controller="Datos" class="uk-navbar">
+<nav class="uk-navbar">
     <ul class="uk-navbar-nav">
         <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
     </ul>
 </nav>
-<div ng-controller="Datos" class="uk-grid">
+<div class="uk-grid">
     <div class="uk-width-1-10">
     </div>
     <div class="uk-width-4-10">
@@ -35,7 +35,7 @@
         <div class="uk-panel-space">
         </div>
         <div class=" uk-text-center">
-            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="NuevoIniciarSesion">
+            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="IniciarSesion">
                 <form class="uk-panel uk-panel-box uk-form">
                     <div class="uk-form-row">
                         <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail Sansano" ng-model="mail">
@@ -57,13 +57,13 @@
         <div class="uk-panel-space">
         </div>
         <div class="uk-vertical-align uk-text-center">
-            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="NuevoRegistro">
-                <form class="uk-panel uk-panel-box uk-form">
+            <div class="uk-vertical-align-middle" style="width: 300px;" ng-controller="Registrarse">
+                <form class="uk-panel uk-panel-box uk-form" name="registrarseForm">
                     <div class="uk-text-left">
                         <h2>{{Registrarse}}</h2>
                     </div>
                     <div class="uk-form-row">
-                        <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Nombre" ng-model="nombre">
+                        <input class="uk-width-1-1 uk-form-large" type="text" name="nombre" placeholder="Nombre" ng-model="nombre">
                     </div>
                     <div class="uk-form-row">
                         <input class="uk-width-1-1 uk-form-large" type="text" placeholder="Mail_Sansano" ng-model="mail">

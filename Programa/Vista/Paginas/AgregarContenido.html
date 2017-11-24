@@ -1,0 +1,439 @@
+<nav  class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a href="#/"><i class="uk-icon-small uk-icon-book"></i>{{Inicio}}</a></li>
+        <li><a href="#/PerfilProfesor">Perfil</a></li>
+        <li><a href="#/">Salir</a></li>
+    </ul>
+</nav>
+<div class="uk-panel-space">
+</div>
+<div class="Añadir">
+    <div class="uk-grid">
+        <div class="uk-width-1-10">
+        </div>
+        <div class="uk-width-8-10">
+            <form id="test" name="test" class="uk-panel-box uk-align-center">
+                <div class="uk-width-1-1 ">
+                    <div class="uk-text-left">
+                        <h2>Agregar Contenido</h2>
+                    </div>
+                    <div class="uk-form-row">
+                        <select id="unidad" name="unidad" class="uk-width-6-10 uk-form-large" ng-model="unidad">
+                            <option value="">Seleccione Unidad</option>
+                            <option value="1">Unidad I</option>
+                            <option value="2">Unidad II</option>
+                            <option value="3">Unidad III</option>
+                            <option value="4">Unidad IV</option>
+                            <option value="5">Unidad V</option>
+                        </select>
+                        <a class="uk-width-3-10 uk-align-right uk-button uk-button-primary uk-button-large"
+                           onclick="elegirUnidad()" ng-click="elegirUnidad()">Seleccionar</a>
+                    </div>
+
+                    <div class="hide1" style="display: none">
+                        <select id="subUnidad1" name="subUnidad1" class="subUnidad1 uk-width-1-1 uk-form-large" ng-model="subUnidad">
+                            <option value="">Seleccione SubUnidad</option>
+                            <option ng-repeat="lista in listaTemp" value="{{lista.Numero}}">
+                                {{lista.Titulo}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="hide6 uk-panel-space" style="display: none">
+                    </div>
+
+
+
+
+                    <div class="hide6 uk-align-center" style="display: none">
+                        <h4 class="uk-text-left">Tipo de Contenido a Subir</h4>
+                        <a class="TipoDatos uk-width-1-10 uk-button uk-button-primary uk-button-large"
+                           onclick="mostrarContenidoEspecifico(1)" ng-click="seleccionar(1)">Texto</a>
+                        <a class="TipoDatos uk-width-1-10 uk-button uk-button-primary uk-button-large"
+                           onclick="mostrarContenidoEspecifico(2)" ng-click="seleccionar(2)">Imágen</a>
+                        <a class="TipoDatos uk-width-1-10  uk-button uk-button-primary uk-button-large"
+                           onclick="mostrarContenidoEspecifico(3)" ng-click="seleccionar(3)">Video</a>
+                        <a class="TipoDatos uk-width-1-10  uk-button uk-button-primary uk-button-large"
+                           onclick="mostrarContenidoEspecifico(4)" ng-click="seleccionar(4)">GIF</a>
+                    </div>
+
+                    <div class="hide6 uk-form-row" style="display: none">
+                        <input class="Titulo uk-width-1-1 uk-form-large" id="Titulo" type="text" placeholder="Titulo"
+                               ng-model="titulo" >
+                        <h3></h3>
+                        <input class="Contenido uk-width-1-1 uk-form-large" id="Contenido" type="text"
+                               ng-model="contenido" placeholder="Contenido"
+                         >
+
+                        <input class="Imagen uk-width-1-1 uk-form-large" id="Imagen" type="text"
+                               ng-model="imagen" placeholder="Link Imagen"
+                             >
+
+                        <input class="Video uk-width-1-1 uk-form-large" id="Video" type="text" placeholder="Link Video"
+                               ng-model="video">
+
+                        <input class="GIF uk-width-1-1 uk-form-large" id="GIF" type="text" placeholder="Link GIF"
+                               ng-model="gif">
+                    </div>
+                    <div class="hide6 uk-panel-space">
+                    </div>
+
+                    <div class="hide6 TipoPersona uk-form uk-align-center" style="display: none">
+                        <div class="hide6 uk-text-left">
+                            <h4>Tipo de Aprendizaje</h4>
+                        </div>
+                        <fieldset data-uk-margin>
+                            <input type="checkbox" name="action" class="Adaptador" id="Adaptador" ng-model="adaptador"/><label
+                                for="Adaptador">Adaptador</label>
+                            <input type="checkbox" name="action" class="Divergente" id="Divergente" ng-model="divergente"/><label
+                                for="Divergente">Divergente</label>
+                            <input type="checkbox" name="action" class="Convergente" id="Convergente"  ng-model="convergente"/><label
+                                for="Convergente">Convergente</label>
+                            <input type="checkbox" name="action" class="Asimilador" id="Asimilador"  ng-model="asimilador"/><label
+                                for="Asimilador">Asimilador</label>
+                        </fieldset>
+                    </div>
+                    <div class="hide6 uk-panel-space" style="display: none">
+                    </div>
+                    <div>
+                        <div class="uk-width-7-10">
+                        </div>
+                        <a class="hide6 hide8 uk-width-3-10 uk-align-center uk-button uk-button-primary uk-button-large"
+                           style="display: none"
+                           onclick="enviarInfo()">Validar Contenido</a>
+                        <p class="uk-width-3-10 uk-align-center" id="respuesta1"></p>
+                        <a class="hide7 uk-width-3-10 uk-align-center uk-button uk-button-primary uk-button-large"
+                           style="display: none"
+                           ng-click="enviarInfo()">Enviar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="uk-width-1-10">
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <p>Unidad</p><br>
+    <p id="mensajeUnidad"></p><br>
+    <p>SubUnidad</p><br>
+    <p id="mensajeSubUnidad"></p><br>
+    <p>Uno</p><br>
+    <p id="mensajeUno"></p><br>
+    <p>Dos</p><br>
+    <p id="mensajeDos"></p><br>
+    <p>Tres</p><br>
+    <p id="mensajeTres"></p><br>
+    <p>Cuatro</p><br>
+    <p id="mensajeCuatro"></p><br>
+    <p>Tipo</p><br>
+    <p id="mensajeTipo"></p><br>
+    <p>Titulo</p><br>
+    <p id="mensajeTitulo"></p><br>
+    <p>Contenido</p><br>
+    <p id="mensajeContenido"></p><br>
+</div>
+
+<div class="uk-panel-space">
+</div>
+<div class="uk-panel-space">
+</div>
+
+<script>
+    var contenido;
+    function elegirUnidad() {
+        var selectBox = document.getElementById("unidad");
+        var selected = selectBox.options[selectBox.selectedIndex].value;
+        if (selected == '1') {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').show();
+            $('.TipoDatos').show();
+            $('.hide1').show();
+            $('.hide6').show();
+            contenido = 1;
+
+        }
+        else if (selected == '2') {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').show();
+            $('.TipoDatos').show();
+            $('.hide1').show();
+            $('.hide6').show();
+            contenido = 1;
+
+        }
+        else if (selected == '3') {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').show();
+            $('.TipoDatos').show();
+            $('.hide1').show();
+            $('.hide6').show();
+            contenido = 1;
+
+        }
+        else if (selected == '4') {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').show();
+            $('.TipoDatos').show();
+            $('.hide1').show();
+            $('.hide6').show();
+            contenido = 1;
+
+        }
+        else if (selected == '5') {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').show();
+            $('.TipoDatos').show();
+            $('.hide1').show();
+            $('.hide6').show();
+            contenido = 1;
+
+        }
+        else {
+            $('.Titulo').hide();
+            $('.Contenido').hide();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            $('.TipoPersona').hide();
+            $('.TipoDatos').hide();
+            $('.hide1').show();
+            $('.hide6').hide();
+            contenido = 1;
+        }
+    }
+</script>
+
+<script>
+    var contenido;
+    function mostrarContenidoEspecifico(i) {
+        if (i == 1) {
+            $('.Titulo').show();
+            $('.Contenido').show();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').hide();
+            contenido = 1;
+
+            document.getElementById("Imagen").value = '';
+            document.getElementById("Video").value = '';
+            document.getElementById("GIF").value = '';
+
+            document.getElementById("Imagen").placeholder = 'Link Imagen';
+            document.getElementById("Video").placeholder = 'Link Video';
+            document.getElementById("GIF").placeholder = 'Link GIF';
+
+        }
+        else if (i == 2) {
+            $('.Titulo').show();
+            $('.Contenido').hide();
+            $('.Imagen').show();
+            $('.Video').hide();
+            $('.GIF').hide();
+            contenido = 2;
+            document.getElementById("Contenido").value = '';
+            document.getElementById("Video").value = '';
+            document.getElementById("GIF").value = '';
+
+            document.getElementById("Contenido").placeholder = 'Contenido';
+            document.getElementById("Video").placeholder = 'Link Video';
+            document.getElementById("GIF").placeholder = 'Link GIF';
+        }
+        else if (i == 3) {
+            $('.Titulo').show();
+            $('.Contenido').hide();
+            $('.Imagen').hide();
+            $('.Video').show();
+            $('.GIF').hide();
+
+            contenido = 3;
+            document.getElementById("Contenido").value = '';
+            document.getElementById("Imagen").value = '';
+            document.getElementById("GIF").value = '';
+
+            document.getElementById("Contenido").placeholder = 'Contenido';
+            document.getElementById("Imagen").placeholder = 'Link Imagen';
+            document.getElementById("GIF").placeholder = 'Link GIF';
+
+        }
+        else if (i == 4) {
+            $('.Titulo').show();
+            $('.Contenido').hide();
+            $('.Imagen').hide();
+            $('.Video').hide();
+            $('.GIF').show();
+            contenido = 4;
+            document.getElementById("Contenido").value = '';
+            document.getElementById("Imagen").value = '';
+            document.getElementById("Video").value = '';
+
+            document.getElementById("Contenido").placeholder = 'Contenido';
+            document.getElementById("Imagen").placeholder = 'Link Imagen';
+            document.getElementById("Video").placeholder = 'Link Video';
+        }
+    }
+</script>
+
+<script>
+    var rUnidad;
+    var rSubUnidad;
+    var rUno;
+    var rDos;
+    var rTres;
+    var rCuatro;
+    var rTitulo;
+    var rContenido;
+
+
+    function enviarInfo() {
+        var subUnidad1;
+        var selectUnidad = document.getElementById("unidad");
+        var selectedUnidad = selectUnidad.options[selectUnidad.selectedIndex].index;
+        rUnidad = selectedUnidad;
+        document.getElementById("mensajeUnidad").innerHTML = rUnidad;
+        subUnidad1 = selectedUnidad;
+
+        if (subUnidad1 == 0) {
+            rSubUnidad = subUnidad1;
+            document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+
+        }
+        else {
+            if (subUnidad1 == 1) {
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                rSubUnidad = selectedSubUnidad;
+                document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+
+            }
+            if (subUnidad1 == 2) {
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                rSubUnidad = selectedSubUnidad;
+                document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+            }
+            if (subUnidad1 == 3) {
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                rSubUnidad = selectedSubUnidad;
+                document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+            }
+            if (subUnidad1 == 4) {
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                rSubUnidad = selectedSubUnidad;
+                document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+            }
+            if (subUnidad1 == 5) {
+                var selectSubUnidad = document.getElementById("subUnidad1");
+                var selectedSubUnidad = selectSubUnidad.options[selectSubUnidad.selectedIndex].index;
+                rSubUnidad = selectedSubUnidad;
+                document.getElementById("mensajeSubUnidad").innerHTML = rSubUnidad;
+            }
+        }
+
+        var selectUno = document.getElementsByClassName('Adaptador');
+        if (selectUno[0].checked === true) {
+            rUno = '1';
+            document.getElementById("mensajeUno").innerHTML = rUno;
+
+        }
+        else {
+            rUno = '0';
+            document.getElementById("mensajeUno").innerHTML = rUno;
+
+        }
+
+        var selectDos = document.getElementsByClassName('Divergente');
+        if (selectDos[0].checked === true) {
+            rDos = '1';
+            document.getElementById("mensajeDos").innerHTML = rDos;
+
+        }
+        else {
+            rDos = '0';
+            document.getElementById("mensajeDos").innerHTML = rDos;
+
+        }
+
+        var selectTres = document.getElementsByClassName('Convergente');
+        if (selectTres[0].checked === true) {
+            rTres = '1';
+            document.getElementById("mensajeTres").innerHTML = rTres;
+
+        }
+        else {
+            rTres = '0';
+            document.getElementById("mensajeTres").innerHTML = rTres;
+
+        }
+
+        var selectCuatro = document.getElementsByClassName('Asimilador');
+        if (selectCuatro[0].checked === true) {
+            rCuatro = '1';
+            document.getElementById("mensajeCuatro").innerHTML = rCuatro;
+
+        }
+        else {
+            rCuatro = '0';
+            document.getElementById("mensajeCuatro").innerHTML = rCuatro;
+        }
+
+        if (contenido == 1) {
+            document.getElementById("mensajeTipo").innerHTML = contenido;
+            rTitulo = document.getElementById("Titulo").value;
+            rContenido = document.getElementById("Contenido").value;
+            document.getElementById("mensajeTitulo").innerHTML = rTitulo;
+            document.getElementById("mensajeContenido").innerHTML = rContenido;
+        }
+        else if (contenido == 2) {
+            document.getElementById("mensajeTipo").innerHTML = contenido;
+            rTitulo = document.getElementById("Titulo").value;
+            rContenido = document.getElementById("Imagen").value;
+            document.getElementById("mensajeTitulo").innerHTML = rTitulo;
+            document.getElementById("mensajeContenido").innerHTML = rContenido;
+
+        }
+        else if (contenido == 3) {
+            rTitulo = document.getElementById("Titulo").value;
+            rContenido = document.getElementById("Video").value;
+            document.getElementById("mensajeTitulo").innerHTML = rTitulo;
+            document.getElementById("mensajeContenido").innerHTML = rContenido;
+        }
+        else if (contenido == 4) {
+            rTitulo = document.getElementById("Titulo").value;
+            rContenido = document.getElementById("GIF").value;
+            document.getElementById("mensajeTitulo").innerHTML = rTitulo;
+            document.getElementById("mensajeContenido").innerHTML = rContenido;
+        }
+
+
+        if ((rUnidad == 0) || (rSubUnidad == '0') || (rTitulo == '') || (rContenido == '')) {
+            document.getElementById("respuesta1").innerHTML = 'Datos Incorrectos';
+        }
+        else {
+            $('.hide8').hide();
+            $('.hide7').show();
+        }
+    }
+</script>
